@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .box {
+        display: inline-block;
+        margin: 50px;
+        border: 1px solid #ccc;
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        position: relative;
+        cursor: pointer;
+      }
+      .child {
+        position: absolute;
+        background-color: #fee;
+        text-align: center;
+        line-height: 150px;
+        width: 100%;
+        transition: 0.35s;
+      }
+
+      .translateX:hover .child {
+        transform: translateX(100px);
+      }
+
+      .translateY:hover .child {
+        transform: translateY(100px);
+      }
+
+      .rotate:hover .child {
+        transform: rotate(45deg);
+      }
+      .translate:hover .child {
+        transform: translate(100px, 100px) rotate(45deg);
+      }
+      .skew:hover .child {
+        transform: skew(45deg);
+      }
+
+      .skew:hover .child span {
+        display: block;
+        transform: skew(-45deg);
+      }
+      .scale:hover .child {
+        transform: scale(1.5);
+      }
+      .scale {
+        overflow: hidden;
+      }
+      .rotateY {
+        perspective: 500px;
+        /* 원근감!!! 부모에 이걸 설정해줘야 rotateY 등 3D 연출이 제대로 먹을 수 있음 */
+      }
+      .rotateA:hover .child {
+        transform: rotateY(80deg);
+      }
+      .rotateA .child {
+        transform-origin: left center;
+      }
+      .translateZ {
+        perspective: 500px;
+        /* 원근감!!! 부모에 이걸 설정해줘야 rotateY 등 3D 연출이 제대로 먹을 수 있음 */
+        overflow: hidden;
+      }
+      .translateZ:hover .child {
+        transform: translateZ(-200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="translateX box">
+      <div class="child">translateX</div>
+    </div>
+    <div class="translateY box">
+      <div class="child">translateY</div>
+    </div>
+    <div class="rotate box">
+      <div class="child">rotate</div>
+    </div>
+    <div class="translate box">
+      <div class="child">translate</div>
+    </div>
+    <div class="skew box">
+      <div class="child"><span>skew</span></div>
+      <!-- skew는 내용물까지 같이 늘여서 모양을 비틀기 때문에 내용물을 다른 태그로 한번 더 싸서 반대로 늘려줘야 똑바로 보임, 감싸는 태그는 인라인이면 안먹기때문에 블럭으로 만들어줘야함 -->
+    </div>
+    <div class="scale box">
+      <div class="child">scale</div>
+    </div>
+    <div class="rotateA box">
+      <div class="child">rotateY</div>
+    </div>
+    <div class="translateZ box">
+      <div class="child">translateZ</div>
+    </div>
+  </body>
+</html>

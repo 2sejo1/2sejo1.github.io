@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      .wrap {
+        display: flex;
+        width: 300px;
+        margin: 50px auto;
+      }
+      .menu {
+        order: 2;
+      }
+      .menu a {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid red;
+      }
+      .menu a.on {
+        background-color: cornflowerblue;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .desc {
+        order: 1;
+      }
+      .desc div {
+        display: none;
+        width: 200px;
+        height: 150px;
+        background-color: slateblue;
+        color: #fff;
+        border: 1px solid red;
+        text-align: center;
+        line-height: 150px;
+      }
+      .desc div.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="menu">
+        <li><a href="#desc1" class="on">메뉴 1</a></li>
+        <li><a href="#desc2">메뉴 2</a></li>
+        <li><a href="#desc3">메뉴 3</a></li>
+        <li><a href="#desc4">메뉴 4</a></li>
+      </ul>
+      <div class="desc">
+        <div id="desc1" class="on">내용 1</div>
+        <div id="desc2">내용 2</div>
+        <div id="desc3">내용 3</div>
+        <div id="desc4">내용 4</div>
+      </div>
+    </div>
+    <script>
+      $(".menu li a").click(function () {
+        $(".menu li a").removeClass("on");
+        $(this).addClass("on");
+
+        let href = $(this).attr("href");
+        console.log(href);
+        $(".desc div").removeClass("on");
+        $(href).addClass("on");
+      });
+    </script>
+  </body>
+</html>

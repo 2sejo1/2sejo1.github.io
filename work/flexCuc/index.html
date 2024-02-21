@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexcuc</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-scrollbar {
+        background: #ed6d00;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="img/logo_on.png" alt="" /></h1>
+      <p>당신이 상상했던 <b>Stylish Kitchen Life</b></p>
+    </header>
+    <main>
+      <div class="main-content">
+        <div class="video">
+          <video
+            src="img/flexcuc_launching_movie.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <ul class="btn flex">
+          <li class="story">Story</li>
+          <li class="recipe">Recipe</li>
+        </ul>
+      </div>
+
+      <div class="mainImg">
+        <img src="img/flex.png" alt="" />
+      </div>
+    </main>
+    <section id="sect1">
+      <span class="top"></span>
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
+      <div class="content">
+        <a href="#" class="sect1-close close-btn"
+          ><img src="img/close.png" alt=""
+        /></a>
+        <img src="img/scene1.jpg" alt="" />
+      </div>
+    </section>
+    <section id="sect2">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/recipe_ (1).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/recipe_ (1).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/recipe_ (2).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/recipe_ (2).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/recipe_ (3).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/recipe_ (4).jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <a href="#" class="sect2-close close-btn"
+        ><img src="img/close.png" alt=""
+      /></a>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="front.js"></script>
+  </body>
+</html>

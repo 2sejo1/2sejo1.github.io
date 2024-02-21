@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: fa-solid-900;
+  src: url(../font/fa-solid-900.woff2);
+}
+
+@font-face {
+  font-family: NotoSerifKR-Medium;
+  src: url(../font/NotoSerifKR-Medium.woff2);
+}
+
+@font-face {
+  font-family: NotoSerifKR-Regular;
+  src: url(../font/NotoSerifKR-Regular.woff2);
+}
+
+@font-face {
+  font-family: NotoSerifKR-SemiBold;
+  src: url(../font/NotoSerifKR-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: PretendardVariable;
+  src: url(../font/PretendardVariable.woff2);
+}
+
+@font-face {
+  font-family: xeicon;
+  src: url(../font/xeicon.woff2);
+}

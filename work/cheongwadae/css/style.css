@@ -1,0 +1,32 @@
+@import "reset.css";
+@import "font.css";
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  border-bottom: 1px solid #fff;
+  font-family: var(--title-font);
+  background-color: #dbdbdb;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#sect2 {
+  background-image: url(../img/section02.jpg);
+}
+
+#sect3 {
+  background-image: url(../img/section03.jpg);
+}
+
+#sect4 {
+  background-image: url(../img/section04.jpg);
+  background-position: right;
+} /*# sourceMappingURL=style.css.map */

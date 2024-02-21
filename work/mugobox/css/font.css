@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: Binggrae-Bold;
+  src: url(../font/Binggrae-Bold.woff);
+}
+
+@font-face {
+  font-family: Binggrae;
+  src: url(../font/Binggrae.woff);
+}
+
+@font-face {
+  font-family: jt-font;
+  src: url(../font/jt-font.woff);
+}
+
+@font-face {
+  font-family: mugo-font;
+  src: url(../font/mugo-font.woff);
+}
