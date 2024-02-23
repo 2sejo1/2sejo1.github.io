@@ -1,0 +1,39 @@
+@import url(reset.css);
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+header .header-box {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-box .logo-box {
+  display: flex;
+}
+header .header-box .nav-box {
+  display: flex;
+}
+header .header-box .nav-box nav {
+  display: flex;
+}
+header .header-box .nav-box nav .main-mn-list {
+  display: flex;
+}
+header .header-box .nav-box nav .mini-mn-list {
+  display: flex;
+}
+header .header-box .nav-box .search-box {
+  width: 330px;
+  height: 40px;
+  display: flex;
+}
+header .header-box .nav-box .search-box input {
+  background-color: transparent;
+}
+header .header-box .nav-box .gnb {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

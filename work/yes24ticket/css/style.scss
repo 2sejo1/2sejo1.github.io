@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url(reset.css);
+
+// @mixin
+// // @mixin
+
+// common
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+// //common
+
+// header
+header {
+  .header-box {
+    display: flex;
+    justify-content: space-between;
+    .logo-box {
+      display: flex;
+    }
+    .nav-box {
+      display: flex;
+      nav {
+        display: flex;
+        .main-mn-list {
+          display: flex;
+        }
+        .mini-mn-list {
+          display: flex;
+        }
+      }
+      .search-box {
+        width: 330px;
+        height: 40px;
+        input {
+          background-color: transparent;
+        }
+        display: flex;
+      }
+      .gnb {
+        display: flex;
+      }
+    }
+  }
+}
+// //header
+
+// main
+// //main
+
+// footer
+// //footer

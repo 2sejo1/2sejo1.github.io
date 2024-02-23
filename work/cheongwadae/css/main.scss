@@ -17,6 +17,20 @@ img {
   max-width: 100%;
 }
 
+.title {
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 7rem;
+  margin: 0 0 40px 0;
+}
+
+.title-desc {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0 0 50px 0;
+  line-height: 3.5rem;
+}
+
 /* //common */
 /* header */
 header {
@@ -24,7 +38,7 @@ header {
   z-index: 5;
   width: 100%;
   border-bottom: 1px solid #fff;
-  font-family: var(--title-font);
+  font-family: var(--pre-font);
   padding: 0 40px;
   color: var(--white);
   transition: 0.35s;
@@ -223,6 +237,7 @@ section {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 #sect1 {
@@ -359,7 +374,50 @@ section {
 }
 
 #sect2 {
+  position: relative;
   background-image: url(../img/section01.jpg);
+  .sect2-box {
+    color: #fff;
+    text-align: center;
+    margin: 220px 0 0 0;
+    .application-btn {
+      font-family: var(--pre-font);
+
+      display: block;
+      margin: auto;
+      width: 350px;
+      padding: 25px 0;
+      font-size: 2.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      &::after {
+        content: "\e907";
+        font-family: var(--icon-font-xe);
+        display: inline-block;
+        margin: 0 0 0 10px;
+      }
+    }
+    ul {
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      left: 50%;
+      width: 1200px;
+      transform: translateX(-50%);
+      li {
+        a {
+          display: block;
+          width: 400px;
+          height: 220px;
+          font-size: 2rem;
+          background-color: rgba(0, 0, 0, 0.5);
+          text-align: center;
+          font-family: var(--pre-font);
+        }
+      }
+    }
+  }
 }
 
 #sect3 {
@@ -374,18 +432,7 @@ section {
     height: 100%;
     .event-desc-box {
       margin: 0 300px 0 0;
-      h2 {
-        font-size: 5.5rem;
-        font-weight: 600;
-        line-height: 7rem;
-        margin: 0 0 30px 0;
-      }
-      p {
-        font-size: 2.5rem;
-        font-weight: 500;
-        margin: 0 0 50px 0;
-        line-height: 3.5rem;
-      }
+
       ul {
         li {
           font-size: 2rem;
@@ -399,7 +446,7 @@ section {
       overflow: hidden;
       width: 470px;
       height: 520px;
-      font-family: var(--title-font);
+      font-family: var(--pre-font);
 
       .swiper-slide {
         padding: 90px 0 0 50px;
