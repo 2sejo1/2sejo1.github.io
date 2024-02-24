@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- jquery 연결 -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>안녕</h1>
+    <div id="list"></div>
+    <script>
+      let names1 = "수진";
+      let names2 = "수연";
+      let names3 = "윤희";
+      let names4 = "수정";
+      let names5 = "지원";
+      let names6 = "현주";
+
+      console.log(names1);
+      console.log(names3);
+
+      let names = ["수진", "윤희", "수연", "지원", "수정", "현주"];
+      console.log(names);
+      console.log(names[0]);
+      console.log(names[4]);
+      console.log(names[name.length]);
+
+      // for (let 시작값=0; 최종값; 시작값++)
+
+      // for (let 시작값=0; 시작값<names.length; 시작값++)
+
+      // for (let i = 0; i <= 5; i++) {
+      //   console.log(i + "번째" + names[i]);
+      // }
+
+      // for (let i = 0; i < names.length; i++) {
+      //   console.log(names[i]);
+      //   $("#list").append(names[i] + "<br/>");
+      // }
+
+      // for 문으로 했는데 이제 더 쉽게 하고 싶어서 나온게 each
+
+      // $.each(names, function (번째, 데이터) {
+      //   $("#list").append(데이터 + "<br/>");
+      // });
+
+      // 헐 한글로 해도 되네 신기하다
+
+      // $.each(names, function (i, name) {
+      //   $("#list").append(name + "<br/>");
+      // });
+
+      // 여기까지 jquery
+      //
+    </script>
+  </body>
+</html>

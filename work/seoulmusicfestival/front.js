@@ -1,7 +1,35 @@
 $(document).ready(function () {
   // 스크롤 발생 시 페이지 이동
-
+  $("section").mousewheel(function (e, delta) {
+    if (delta > 0) {
+      // alert("up");
+      let prev = $(this).prev().offset().top;
+      $("html").stop().animate({ scrollTop: prev }, 500);
+    } else if (delta < 0) {
+      // alert("down");
+      let next = $(this).next().offset().top;
+      $("html").stop().animate({ scrollTop: next }, 500);
+    }
+  });
   // //스크롤 발생 시 페이지 이동
+
+  // //스크롤 발생 시 페이지 이동하면서 우측 메뉴 on
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop();
+    // $("h5").text(scrTop);
+
+    $("section").each(function (i) {
+      let secTop = $(this).offset().top;
+      // console.log(secTop);
+
+      if (scrTop >= secTop) {
+        $(".side-mn-icon li a").removeClass("on");
+        $(".side-mn-icon li").eq(i).find("a").addClass("on");
+      }
+    });
+  });
+  // //스크롤 발생 시 페이지 이동하면서 우측 메뉴 on
+
   //side-mn-icon
 
   $(".side-mn-icon li a").click(function (e) {
