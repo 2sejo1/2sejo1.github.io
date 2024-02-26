@@ -15,27 +15,26 @@
     <div class="wrap flex">
         <header>
             <div class="header-inner flex">
-                <h1 class="flex"><a href="">NAVER <b>웹툰</b></a>
+                <h1 class="flex"><a href=""><img src="./imgs/logoimg.png" alt=""></a>
                 </h1>
                 <nav>
                     <ul class="menu">
-                        <li><a href="#">홈</a></li>
+                        <li>홈</li>
                         <li><a href="#" class="on">웹툰</a></li>
-                        <li><a href="#">베스트도전</a></li>
-                        <li><a href="#">도전만화</a></li>
-                        <li><a href="#">마이페이지</a></li>
+                        <li>베스트도전</li>
+                        <li>도전만화</li>
+                        <li>마이페이지</li>
                     </ul>
                 </nav>
                 <ul class="menu">
-                    <li><a href="#">웹툰</a></li>
-                    <li><a href="#">웹소설</a></li>
-                    <li><a href="#">시리즈</a>
+                    <li>웹소설</li>
+                    <li class="webtoon"><a href="../naverseries/index.html">시리즈</a>
                         <ul class="sub-menu">
                             <li><a href="#">-웹소설</a></li>
                             <li><a href="#">-만화</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">시리즈온</a>
+                    <li>시리즈온
                         <ul class="sub-menu">
                             <li><a href="#">-영화</a></li>
                             <li><a href="#">-방송</a></li>
@@ -50,9 +49,6 @@
                             이를 무단으로 이용하는 경우 관련 법령에 따라 법적 책임을 질 수 있습니다.</li>
                     </ul>
                 </div>
-                <ul>
-                    <li><a href="#"><img class="banner" src="./imgs/ico_gnb_membership.png" alt=""></a></li>
-                </ul>
             </div>
         </header>
         <div class="bg"><video src="./imgs/videoplayback (5).mp4" autoplay muted loop></video></div>
@@ -71,9 +67,7 @@
                     비가
                     ∙
                     원작
-                    수요웹툰
-                    ∙
-                    15세 이용가</p>
+                    수요웹툰</p>
                 <p class="story-text">대 화산파 13대 제자.천하삼대검수 매화검존 청명. <br>
                     천하를 혼란에 빠뜨린 고금제일마 천마의 목을 치고 십만대산의 정상에서 영면.
                     백 년의 시간을 뛰어넘어 아이의 몸으로 다시 살아나다.
@@ -108,9 +102,7 @@
                     황금비둘기
                     ∙
                     원작
-                    토요웹툰
-                    ∙
-                    전체연령가</p>
+                    토요웹툰</p>
                 <p class="story-text">대한민국의 평범한 고3이었던 김민준은 갑자기 이세계로 소환 당해 흑마법사가 되었다.
                     집으로 돌아가겠다는 일념으로 온갖 고난을 뚫고 흑마법으로 이세계를 구한 민준.
                     영웅으로서의 삶과 보장된 부귀영화를 뿌리치고 지구로 복귀한다.
@@ -141,9 +133,7 @@
                     달비트
                     ∙
                     원작
-                    목요웹툰
-                    ∙
-                    전체연령가</p>
+                    목요웹툰</p>
                 <p class="story-text">세계 최초 SSS랭크 천재 헌터 김준우. 어느 날 습격을 당해 죽게 되고, 10년 전으로 회귀한다.​
                     스킬은 모두 봉인됐고, 해제를 위해서는 극한 직업인 던전 청소부로 일을 해야 하는데?!
                     ​하지만 이 청소부, 남다르다! 현직 헌터보다 더 강한 전직 헌터의 망나니식 청소가 시작된다!
@@ -182,9 +172,7 @@
                     니콜로
                     ∙
                     원작
-                    화요웹툰
-                    ∙
-                    전체연령가</p>
+                    화요웹툰</p>
                 <p class="story-text">인류를 구하고 홀로 희생한 영웅, 최강의 초인 서문엽.
                     죽었다고 알려진 그가 17년 후의 평화로운 세상에 돌연 귀환하면서
                     초인들의 스포츠 <배틀필드>에는 지각변동이 일어나기 시작한다.
@@ -217,9 +205,7 @@
                     제나
                     ∙
                     그림
-                    수요웹툰
-                    ∙
-                    12세 이용가</p>
+                    수요웹툰</p>
                 <p class="story-text">
                     <노블레스> 손제호 작가와 <소녀더와일즈> 제나 작가가 만났다!
                             고양이 몸에 깃든 각성자 카이든과 각성능력을 숨겨온 고등학생 지우
@@ -291,7 +277,7 @@
     $(document).ready(function () {
         var articleCount = 5;
         var count = 0;
-        var articleMargin = 360;
+        var articleMargin = 380;
 
         $("article").mCustomScrollbar({
             theme: "minimal-dark",
@@ -316,7 +302,7 @@
         $(".left-a").hide();
         $(".arrow .right").click(function () {
             if (count === articleCount - 1) {
-                $(".article5").animate({"margin-left":"-180px"},function(){
+                $(".article5").animate({"margin-left":"-190px"},function(){
                     $('section').css("margin-left","0px"),
                     $(".article5").css("margin-left","0px")
                 });
@@ -335,6 +321,10 @@
             }
         });
     });
+    $('.menu li a').click(function(){
+        $('.menu li a').removeClass('on')
+        $(this).addClass('on')
+    })
     </script>
 
 </body>

@@ -38,7 +38,7 @@ img {
 header {
     position: fixed;
     z-index: 30;
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(0, 0, 0);
     color: white;
     height: 100vh;
     width: 230px;
@@ -51,8 +51,15 @@ header {
 }
 
 h1 {
+    margin: 0;
     font-size: 25px;
     align-items: center;
+}
+
+h1 img {
+    width: 220px;
+    margin-left: -30px;
+    margin-top: -20px;
 }
 
 h1 b {
@@ -61,33 +68,35 @@ h1 b {
 }
 
 nav {
-    margin: 30px 0;
+    margin: 0 0 20px;
 }
 
 .menu {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .menu li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .menu li a.on {
-    color: gold;
+    color: #00e164;
 }
 
 .menu li:hover {
-    color: gold;
+    color: #00e164;
 }
-
+.menu li:hover a::after{
+    color: #00e164;
+}
 .sub-menu {
-    margin-left: 10px;
-    font-size: 17px;
+    margin-left: 15px;
+    font-size: 15px;
     color: #9c9c9c;
 }
 
 .sub-menu li:hover {
-    color: rgb(252, 236, 150);
+    color: 00e164;
 }
 
 .banner {
@@ -97,7 +106,7 @@ nav {
 
 /* footer */
 .footer {
-    margin: 20px 0;
+    margin: 70px 0 0;
     border-top: 1px solid #ffffff;
 }
 
@@ -105,12 +114,19 @@ nav {
     margin: 20px 0;
 }
 
+.footer ul a b {
+    font-size: 17px;
+    font-weight: 500;
+}
+
 .footer ul li {
     margin: 20px 0;
 }
 
 .small-text {
-    font-size: 12px;
+    color: #747373;
+    line-height: 18px;
+    font-size: 14px;
 }
 
 /* section */
@@ -121,15 +137,17 @@ section {
     transition: .35s;
 }
 
-article {background-color: white;
-    border-right: 1px solid #313131;
-    width: 360px;
+article {
+    background-color: white;
+    width: 380px;
     height: 100vh;
     overflow: auto;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.438) 0px 0px 20px;
 }
 
 .main-img img {
+    width: 100%;
     border-bottom: 5px solid #00e164;
 }
 
@@ -145,18 +163,19 @@ article {background-color: white;
 }
 
 article h2 {
-    margin: 30px 15px 10px;
+    margin: 0px 15px 5px;
     font-weight: bold;
     font-size: 28px;
 }
 
 .who {
     margin: 0 15px;
+    font-size: 15px;
     color: #747373;
 }
 
 .story-text {
-    margin: 10px 15px;
+    margin: 25px 15px;
     line-height: 23px;
 }
 
@@ -170,13 +189,14 @@ article h2 {
     border-radius: 3px;
     background-color: #f5f5f5;
     padding: 3px;
+    color: #474747;
     box-shadow: 1px 1px 3px .1px;
 }
 
 .imgs {
     margin-top: 50px;
 }
-
+.imgs img{width: 100%;}
 .arrow {
     position: fixed;
     right: 1%;
@@ -205,5 +225,29 @@ article h2 {
     transform: rotate(180deg);
 }
 
-.bg{position: absolute;
+.bg {
+    position: absolute;
+}
+.webtoon >a{position: relative;}
+.webtoon >a::after {
+    content: "click!";
+    top: 3px;
+    left: 57px;
+    font-size: 16px;
+    color: #a2a2a2;
+    animation: move 1s infinite;
+    position: absolute;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
