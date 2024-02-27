@@ -18,6 +18,35 @@ img {
   margin: 0 auto;
 }
 
+header .header-box.on {
+  background-color: #fff;
+  color: #000;
+}
+header .header-box.on .logo-box .mn-btn span {
+  background-color: #000;
+}
+header .header-box.on .logo-box h1.logo a img.basic {
+  display: none;
+}
+header .header-box.on .logo-box h1.logo a img.fixed {
+  display: block;
+}
+header .header-box.on .logo-box .nav-box nav .search-box input {
+  border-color: #000;
+  color: #000;
+}
+header .header-box.on .logo-box .nav-box nav .search-box a img.basic {
+  display: none;
+}
+header .header-box.on .logo-box .nav-box nav .search-box a img.fixed {
+  display: block;
+}
+header .header-box.on .logo-box .nav-box nav .gnb .ticket {
+  background: url(../img/pf-ticket-b.png) no-repeat center center/100%;
+}
+header .header-box.on .logo-box .nav-box nav .gnb .global {
+  background: url(../img/pf-global-b.png) no-repeat center center/100%;
+}
 header .header-box {
   position: fixed;
   display: flex;
@@ -33,7 +62,8 @@ header .header-box .logo-box {
   align-items: center;
 }
 header .header-box .logo-box .mn-btn {
-  padding: 0 20px 0 0;
+  width: 30px;
+  margin: 0 20px 0 0;
 }
 header .header-box .logo-box .mn-btn span {
   display: block;
@@ -112,6 +142,9 @@ header .header-box .nav-box .search-box input {
 }
 header .header-box .nav-box .search-box input:focus {
   outline: none;
+}
+header .header-box .nav-box .search-box a img.fixed {
+  display: none;
 }
 header .header-box .nav-box .gnb {
   display: flex;
@@ -323,7 +356,7 @@ header .header-box .nav-box .gnb li .global {
 }
 
 .ranking-sect .ranking-box {
-  padding: 50px 0;
+  padding: 50px 0 150px 0;
 }
 .ranking-sect .ranking-box h2 {
   text-align: center;
@@ -355,7 +388,7 @@ header .header-box .nav-box .gnb li .global {
   display: block;
   width: 380px;
   height: 420px;
-  border: 2px solid red;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .ranking-sect .ranking-box .item-box ul li a:hover .img-box .bg {
   transform: translate(-50%, -50%) scale(1.5);
@@ -432,4 +465,188 @@ header .header-box .nav-box .gnb li .global {
 }
 .ranking-sect .ranking-box .item-box.on {
   display: block;
+}
+
+.recommend-sect .recommend-box {
+  width: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+.recommend-sect .recommend-box .weekly-box {
+  width: 480px;
+  height: 488px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 50px 40px;
+}
+.recommend-sect .recommend-box .weekly-box .title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #333;
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid #000;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li:last-child a {
+  border-bottom: 1px solid #000;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on {
+  height: 140px;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .rank-box .rank {
+  position: relative;
+  font-weight: 600;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .rank-box .rank::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  bottom: 0;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .rank-box .state {
+  display: block;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .item-box .img-box {
+  display: block;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .item-box .desc-box p.title {
+  font-weight: 700;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a.on .item-box .desc-box .location {
+  display: block;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a {
+  display: flex;
+  gap: 20px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+  height: 45px;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .rank-box {
+  text-align: center;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .rank-box .rank {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .rank-box .state {
+  display: none;
+  margin: 15px 0 0 0;
+  font-size: 12px;
+  color: #ec7d2c;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .rank-box .state::before {
+  content: "↑";
+  display: inline-block;
+  margin: 0 3px 0 0;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box .img-box {
+  display: none;
+  width: 80px;
+  height: 112px;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box .img-box img {
+  width: 100%;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box .desc-box p.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box .desc-box .location {
+  display: none;
+  margin: 15px 0 0 0;
+}
+.recommend-sect .recommend-box .weekly-box .ranking-box ul li a .item-box .desc-box .location p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #999;
+}
+.recommend-sect .recommend-box .area-box {
+  width: 688px;
+  height: 486px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 50px 80px;
+}
+.recommend-sect .recommend-box .area-box h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #333;
+  padding: 0 0 25px 0;
+  text-align: center;
+}
+.recommend-sect .recommend-box .area-box .item-box {
+  display: flex;
+  gap: 30px;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a {
+  display: block;
+  width: 160px;
+  height: 327px;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a:hover .img-box img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .img-box {
+  position: relative;
+  width: 100%;
+  height: 224px;
+  background-color: #000;
+  overflow: hidden;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .img-box img {
+  transition: 0.35s;
+  opacity: 1;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .img-box span {
+  position: absolute;
+  display: block;
+  background-color: #ec7d2c;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 62px;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .text-box {
+  padding: 20px 0;
+  text-align: center;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .text-box .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 15px 0;
+}
+.recommend-sect .recommend-box .area-box .item-box .item a .text-box .location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
 }/*# sourceMappingURL=style.css.map */
