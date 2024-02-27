@@ -9,13 +9,18 @@
     <!-- custom scrollbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- CDN 연결 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="wrap">
       <!-- header -->
       <header>
-        
         <div class="header-box">
           <div class="logo-box">
             <a href="#" class="mn-btn">
@@ -25,7 +30,8 @@
             </a>
             <h1 class="logo">
               <a href="#">
-                <img src="img/pf-logoN-w.png" alt="yes24" />
+                <img src="img/pf-logoN-w.png" alt="yes24" class="basic" />
+                <img src="img/pf-logoN.png" alt="yes24" class="fixed" />
               </a>
             </h1>
           </div>
@@ -52,15 +58,13 @@
             </div>
             <ul class="gnb">
               <li>
-                <a href="#;">
-                  <img src="img/pf-ticket-w.png" alt="" />
-                  <p>My티켓</p>
+                <a href="#;" class="ticket">
+                  <span>MY티켓</span>
                 </a>
               </li>
               <li>
-                <a href="#;">
-                  <img src="img/pf-global-w.png" alt="" />
-                  <p>GLOBAL</p>
+                <a href="#;" class="global">
+                  <span>GLOBAL</span>
                 </a>
               </li>
             </ul>
@@ -72,139 +76,615 @@
       <main>
         <section class="main-visual-sect">
           <div class="main-visual-box">
-            <div class="main-visual-slide">
-              <div class="main-visual-wrapper">
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_47720.jpg" alt="" />
+            <div class="main-visual-swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_47720.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48103.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48103.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48234.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48234.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48339_cdc9c4.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48339_cdc9c4.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48398_82559c.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48398_82559c.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48485_349fd8.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48485_349fd8.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48552.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48552.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48601.png" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48601.png" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48619.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48619.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48648.png" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48648.png" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48649_fdfdfd.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48649_fdfdfd.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48752.png" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48752.png" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48819.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48819.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="main-visual-slide">
-                  <h2 class="indent9999">제목</h2>
-                  <p class="indent9999">내용</p>
-                  <img src="img/slide/wel_mv_48828.png" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <p class="indent9999">내용</p>
+                    <img src="img/slide/wel_mv_48828.png" alt="" />
+                  </a>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="slide-nav-box">
+              <div class="slide-nav-wrapper">
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_47720_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48103_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48234_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48339_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48398_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48485_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48552_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48601_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48619_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48648_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48649_s_2.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48752_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48819_s.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="slide-nav-item">
+                  <a href="#;">
+                    <p class="indent9999">제목</p>
+                    <img src="img/slide/wel_mv_48828_s.jpg" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="slide-nav">
-              <div class="slide-nav-wrapper">
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_47720_s.jpg" alt="" />
+          </div>
+        </section>
+        <section class="whats-hot-sect">
+          <div class="whats-hot-box wrapper">
+            <h2><img src="img/tit1.png" alt="WHAT'S HOT" /></h2>
+            <div class="poster-box">
+              <div class="item big-one">
+                <img src="img/poster/20231218-48144.jpg" alt="" />
+                <span class="etc">30%</span>
+                <p class="title">뮤지컬 여기, 피화당</p>
+                <p class="desc">
+                  2024. 02. 07.~2024. 04. 14. 플러스씨어터 /
+                  <b>대학생 할인 30%</b>
+                </p>
+              </div>
+              <div class="flex-box">
+                <div class="item">
+                  <img src="img/poster/20240122-47720.jpg" alt="" />
+                  <span class="etc">30%</span>
+                  <div class="txt-box">
+                    <p class="title">뮤지컬 스쿨 오브 락 월드투어</p>
+                    <p class="desc">
+                      2024. 01. 12.~2024. 03. 24.<br />
+                      예술의전당 오페라극장<br />
+                    </p>
+                    <b>패키지 할인 30%</b>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48103_s.jpg" alt="" />
+                <div class="item">
+                  <img src="img/poster/20240413.jpeg" alt="" />
+                  <div class="txt-box">
+                    <p class="title">더 글로우 2024</p>
+                    <p class="desc">
+                      2024. 04. 13.~2024. 04. 14.<br />
+                      일산 킨텍스 제1전시장
+                    </p>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48234_s.jpg" alt="" />
+                <div class="item">
+                  <img src="img/poster/20240206-48644.jpg" alt="" />
+                  <div class="txt-box">
+                    <p class="title">2am Concert "One Take"</p>
+                    <p class="desc">
+                      2024. 03. 16.~2024. 03. 24.<br />
+                      서울, 부산
+                    </p>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48339_s.jpg" alt="" />
+                <div class="item">
+                  <img src="img/poster/20240122-48419.jpg" alt="" />
+                  <span class="etc">30%</span>
+                  <div class="txt-box">
+                    <p class="title">창작가무극 다윈 영의 악의 기원</p>
+                    <p class="desc">
+                      2024. 03. 08.~2024. 03. 24.<br />
+                      예술의전당 CJ토월극장<br />
+                    </p>
+                    <b>청소년 할인 30%</b>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48398_s.jpg" alt="" />
+                <div class="item">
+                  <img src="img/poster/20240215-48667.jpg" alt="" />
+                  <span class="etc">단독</span>
+                  <div class="txt-box">
+                    <p class="title">SMINO LIVE IN SEOUL 2024</p>
+                    <p class="desc">
+                      2024. 04. 04.<br />
+                      상상마당 라이브홀<br />
+                    </p>
+                    <b>단독판매</b>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48485_s.jpg" alt="" />
+                <div class="item">
+                  <img src="img/poster/20240420.jpeg" alt="" />
+                  <div class="txt-box">
+                    <p class="title">
+                      지브리 & 히사이시 조 : 디 오케스트라 - 부천
+                    </p>
+                    <p class="desc">
+                      2024. 04. 20.<br />
+                      부천아트센터 콘서트홀
+                    </p>
+                  </div>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48552_s.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bnr-slide-sect">
+          <div class="bnr-slide-box">
+            <!-- Slider main container -->
+            <div class="bnr-slide-swiper swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/wel_wide_47595.png" alt="" />
+                  </a>
                 </div>
-
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48601_s.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/wel_wide_47873_2.png" alt="" />
+                  </a>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48619_s.jpg" alt="" />
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/wel_wide_48277_f9dfdf.png" alt="" />
+                  </a>
                 </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48648_s.jpg" alt="" />
-                </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48649_s_2.jpg" alt="" />
-                </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48752_s.jpg" alt="" />
-                </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48819_s.jpg" alt="" />
-                </div>
-                <div class="slide-nav-box">
-                  <h2 class="indent9999">제목</h2>
-                  <img src="img/slide/wel_mv_48828_s.jpg" alt="" />
-                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ranking-sect">
+          <div class="ranking-box wrapper">
+            <h2><img src="img/tit3.png" alt="RANKING" /></h2>
+            <div class="ranking-nav">
+              <ul>
+                <li><a href="#musical" class="on">#뮤지컬</a></li>
+                <li><a href="#CONCERT">#콘서트</a></li>
+                <li><a href="#PLAY">#연극</a></li>
+                <li><a href="#CLASSIC">#클래식</a></li>
+                <li><a href="#EXHIBITION">#전시</a></li>
+              </ul>
+            </div>
+            <div class="ranking-item">
+              <div id="musical" class="item-box on">
+                <ul>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="CONCERT" class="item-box">
+                <ul>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="PLAY" class="item-box">
+                <ul>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="CLASSIC" class="item-box">
+                <ul>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li><a href="#;"></a></li>
+                  <li><a href="#;"></a></li>
+                </ul>
+              </div>
+              <div id="EXHIBITION" class="item-box">
+                <ul>
+                  <li>
+                    <a href="#;">
+                      <div class="img-box">
+                        <img
+                          class="poster"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="bg"
+                          src="img/poster/20230908-47130.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="rank">
+                          <span>1위</span>
+                          <span>36</span>
+                        </div>
+                        <p class="title">제목</p>
+                        <p class="desc">날짜</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li><a href="#;"></a></li>
+                  <li><a href="#;"></a></li>
+                </ul>
               </div>
             </div>
           </div>
