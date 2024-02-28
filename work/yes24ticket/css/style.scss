@@ -26,6 +26,48 @@ img {
 
 // header
 header {
+  .fixed-mn.on {
+    display: block;
+  }
+  .fixed-mn {
+    display: none;
+    .fixed-mn-box {
+      display: flex;
+      justify-content: space-between;
+      background-color: #000;
+      color: #999;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 12px 30px;
+      .yes-mn {
+        display: flex;
+        gap: 50px;
+        > li {
+          &:first-child {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 1px;
+              height: 100%;
+              top: 0;
+              right: -25px;
+              background-color: #999;
+            }
+          }
+          ul {
+            display: flex;
+            gap: 20px;
+          }
+        }
+      }
+      .util-mn {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
   .header-box.on {
     background-color: #fff;
     color: #000;
@@ -748,6 +790,248 @@ header {
   }
 }
 // //recommend
+
+// yes24 pick
+.yes24-pick-sect {
+  .yes24-pick-box {
+    padding: 100px 0;
+    h2 {
+      text-align: center;
+      margin: 0 0 50px 0;
+    }
+  }
+  .whats-pick {
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .pick-nav {
+      ul {
+        width: 200px;
+        height: 400px;
+        li {
+          width: 100%;
+          height: 25%;
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            font-weight: 500;
+            border: 1px solid red;
+          }
+          a.on {
+            background-color: #ec7d2c;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .pick-item {
+      width: 100%;
+      .item-box.on {
+        display: block;
+      }
+      .item-box {
+        display: none;
+        padding: 20px 30px;
+        ul {
+          display: flex;
+          gap: 30px;
+          justify-content: center;
+          align-items: center;
+          li {
+            a {
+              .img-box {
+                width: 180px;
+                height: 260px;
+                margin: 0 0 15px 0;
+              }
+              .text-box {
+                text-align: center;
+                p.title {
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: #000;
+                  margin: 0 0 5px 0;
+                }
+                p.desc {
+                  font-size: 15px;
+                  font-weight: 400;
+                  color: #999;
+                  margin: 0 0 15px 0;
+                }
+                b {
+                  font-size: 20px;
+                  font-weight: 700;
+                  color: #ec7d2c;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// //yes24 pick
+// focus on
+.focus-on-sect {
+  width: 100%;
+  height: 560px;
+  background-color: #000;
+  .focus-on-box {
+    display: flex;
+    align-items: center;
+    width: 1500px;
+    height: 100%;
+    .title-box {
+      color: #fff;
+      width: 500px;
+      padding: 0 0 0 150px;
+      &:hover {
+        h2 {
+          &::after {
+            width: 172px;
+          }
+        }
+      }
+      h2 {
+        position: relative;
+        display: block;
+        width: 172px;
+        margin: 0 0 70px 0;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -10px;
+          right: 0;
+          width: 50px;
+          height: 5px;
+          background-color: #ec7d2c;
+          transition: 0.8s;
+        }
+      }
+      a {
+        display: block;
+        .title {
+          font-size: 50px;
+          font-weight: 800;
+          margin: 0 0 30px 0;
+        }
+        .desc {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+    .video-box.on {
+      .video-item {
+        display: block;
+      }
+      a {
+        display: none;
+      }
+    }
+    .video-box {
+      position: relative;
+      width: 1000px;
+      height: 100%;
+      overflow: hidden;
+      .video-item {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+      }
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 85px;
+          height: 85px;
+          z-index: 20;
+          background: url(../img/kv-movie.png) no-repeat center center/100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .video-img {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+// //focus on
+
+// review
+.review-sect {
+  .review-box {
+    width: 100%;
+    padding: 100px 0;
+    h2 {
+      text-align: center;
+      margin: 0 0 50px 0;
+    }
+    .review-swiper {
+      width: 100%;
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 840px;
+          height: 441px;
+          .title-box {
+            position: relative;
+            img {
+              height: 100%;
+            }
+            span {
+              position: absolute;
+              display: block;
+              width: 60px;
+              height: 60px;
+              left: 30px;
+              bottom: 60px;
+              z-index: 2;
+              background-color: #ec7d2c;
+              color: #fff;
+              text-align: center;
+              line-height: 60px;
+              font-size: 18px;
+              font-weight: 500;
+            }
+            p {
+              position: absolute;
+              display: block;
+              width: 100%;
+              height: 90px;
+              font-size: 25px;
+              font-weight: 600;
+              line-height: 90px;
+              text-align: center;
+              bottom: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.6);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// //review
 
 // //main
 

@@ -40,4 +40,23 @@ $(document).ready(function () {
     },
   });
   // //bnr slide
+  //review
+  const reviewSwiper = new Swiper(".review-swiper", {
+    // 추가 옵션 설정
+    slidesPerView: "auto", // 한 화면에 나올 슬라이드 개수
+    spaceBetween: 50, // 슬라이드 사이 간격 px
+    loop: true, // 무한 반복 여부
+    centeredSlides: true, //활성 슬라이드를 항상 가운데에 배치
+
+    // 자동 재생 설정
+    autoplay: {
+      delay: 5000,
+    },
+    // Navigation arrows 좌/우 컨트롤 버튼
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  // //review
 });
