@@ -38,6 +38,11 @@ $(document).ready(function () {
     autoplay: {
       delay: 5000,
     },
+
+    // If we need pagination 슬라이드 개수 표시 인디케이터
+    pagination: {
+      el: ".swiper-pagination",
+    },
   });
   // //bnr slide
   //review
