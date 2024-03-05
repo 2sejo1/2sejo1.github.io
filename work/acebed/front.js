@@ -92,6 +92,7 @@ $(document).ready(function () {
   });
   // // science sect
 
+
   // collection
 
   // tab mn
@@ -180,29 +181,27 @@ $(document).ready(function () {
   });
   // news
 
+  var mySwiper = new Swiper(".mySwiper3", {
+    on: {
+      slideChange: function () {
+        // 현재 활성화된 슬라이드의 인덱스 가져오기
+        var activeSlideIndex = this.activeIndex;
 
-    var mySwiper = new Swiper('.mySwiper3', {
-        on: {
-            slideChange: function () {
-                // 현재 활성화된 슬라이드의 인덱스 가져오기
-                var activeSlideIndex = this.activeIndex;
+        // 모든 탭에서 'on' 클래스 제거 및 현재 활성화된 슬라이드에 해당하는 탭에 'on' 클래스 추가
+        $(".tab-tab li a")
+          .removeClass("on")
+          .eq(activeSlideIndex)
+          .addClass("on");
+      },
+    },
+  });
 
-                // 모든 탭에서 'on' 클래스 제거 및 현재 활성화된 슬라이드에 해당하는 탭에 'on' 클래스 추가
-                $('.tab-tab li a').removeClass('on').eq(activeSlideIndex).addClass('on');
-            }
-        }
-    });
-    
+  $(".tab-tab li a").click(function () {
+    // 클릭한 탭에 'on' 클래스 추가
+    $(this).addClass("on");
 
-    $('.tab-tab li a').click(function () {
-        
-
-        // 클릭한 탭에 'on' 클래스 추가
-        $(this).addClass('on');
-
-        // 클릭한 탭의 인덱스를 가져와 해당 슬라이드로 이동
-        var tabIndex = $(this).parent().index();
-        mySwiper.slideTo(tabIndex);
-    });
-
+    // 클릭한 탭의 인덱스를 가져와 해당 슬라이드로 이동
+    var tabIndex = $(this).parent().index();
+    mySwiper.slideTo(tabIndex);
+  });
 });

@@ -1,1 +1,84 @@
-@import url(reset.css);/*# sourceMappingURL=style.css.map */
+@import url(reset.css);
+@import url(font.css);
+@import url(global.css);
+.flex {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 30px;
+}
+header .header-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-box .mn-btn {
+  display: block;
+  text-indent: -9999px;
+  padding: 10px;
+}
+header .header-box .mn-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 8px;
+  background-color: #000;
+  transition: 0.35s;
+}
+header .header-box .mn-btn span:nth-child(2n-1) {
+  width: 20px;
+}
+header .header-box .mn-btn span:last-child {
+  margin-bottom: 0;
+}
+header .header-box .mn-btn:hover span:nth-child(2n-1) {
+  width: 25px;
+}
+header .header-box .mn-btn:hover span:nth-child(2n) {
+  width: 20px;
+}
+header .header-box .mn-box {
+  display: flex;
+  gap: 30px;
+}
+header .header-box nav {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.main-visual-sect {
+  width: 100%;
+  height: 100vh;
+}
+.main-visual-sect > div {
+  width: 50%;
+}
+.main-visual-sect .main-visual-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-visual-sect .main-visual-box h1 {
+  margin: 0 0 30px 0;
+}
+.main-visual-sect .img-box {
+  background: url(../img/mainBG.png) no-repeat right center/50%;
+  background-attachment: fixed;
+}
