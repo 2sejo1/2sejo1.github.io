@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>새우깡</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <!--  mobile nav -->
@@ -48,65 +49,86 @@
     <div class="wrap">
       <!-- header -->
       <header>
-        <div class="header-box">
+        <div class="header-box wrapper">
           <h1>
-            <a href="#;"><img src="img/pop-logo.jpg" alt="농심" /></a>
+            <a href="#"><img src="img/logo.png" alt="농심" /></a>
           </h1>
           <!-- nav -->
           <nav>
-            <ul>
+            <ul class="nav-list">
               <li>
                 <ul>
-                  <a href="#;">
-                    <li>손이가요 새우깡</li>
-                    <li>새우깡 이야기</li>
-                  </a>
+                  <li>
+                    <a href="#hand">
+                      <ul class="mn-text">
+                        <li>손이가요 새우깡</li>
+                        <li>새우깡 이야기</li>
+                      </ul>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <a href="#;">
-                    <li>어른손 아이손</li>
-                    <li>새우깡 만들기</li>
-                  </a>
+                  <li>
+                    <a href="#again">
+                      <ul class="mn-text">
+                        <li>어른손 아이손</li>
+                        <li>새우깡 만들기</li>
+                      </ul>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <a href="#;">
-                    <li>언제든지 새우깡</li>
-                    <li>새우깡 변천사</li>
-                  </a>
+                  <li>
+                    <a href="#anytime">
+                      <ul class="mn-text">
+                        <li>언제든지 새우깡</li>
+                        <li>새우깡 변천사</li>
+                      </ul>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <a href="#;">
-                    <li>누구든지 즐겨요</li>
-                    <li>새우깡 이벤트</li>
-                  </a>
+                  <li>
+                    <a href="#somebody">
+                      <ul class="mn-text">
+                        <li>누구든지 즐겨요</li>
+                        <li>새우깡 이벤트</li>
+                      </ul>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
           </nav>
           <!-- //nav -->
         </div>
-        <div class="side-mn-box">
-          <ul>
-            <li class="home"><a href="#"></a></li>
-            <li><a href="#;"></a></li>
-            <li><a href="#;"></a></li>
-            <li><a href="#;"></a></li>
-            <li><a href="#;"></a></li>
-          </ul>
-        </div>
       </header>
       <!-- // header -->
       <!-- main -->
       <main>
+        <!-- bg img -->
+        <div class="bg-img"></div>
+        <!-- //bg img -->
+        <!-- side mn -->
+        <div class="side-mn-box">
+          <ul>
+            <li class="home"><a href="#"></a></li>
+            <li><a href="#hand"></a></li>
+            <li><a href="#again"></a></li>
+            <li><a href="#anytime"></a></li>
+            <li><a href="#somebody"></a></li>
+          </ul>
+        </div>
+        <!-- side mn -->
         <!-- main visual -->
-        <section class="main-visual-sect">
-          <div class="main-visual-box">
+        <section id="main-visual" class="main-visual-sect">
+          <div class="main-visual-box wrapper">
             <div class="title-box">
               <h2>
                 <img
@@ -116,122 +138,211 @@
               </h2>
               <p>출시 50주년, 국민스낵 새우깡의 진화</p>
             </div>
-            <div class="ani-box">
-              <img class="shrimp1" src="img/shrimp01.png" alt="" />
-              <img class="shrimp2" src="img/shrimp02.png" alt="" />
-              <img class="shrimp3" src="img/shrimp03.png" alt="" />
-              <img class="shrimp4" src="img/shrimp04.png" alt="" />
-              <img class="pdt_hot" src="img/pdt_hot_01.png" alt="" />
-              <img class="pdt_rice" src="img/pdt_rice.png" alt="" />
-              <img class="pdt_basic" src="img/pdt_basic_02.png" alt="" />
-              <img
-                src="img/bgSnack_real_01.png"
-                alt="이탈리아산 블랙트러플과 새우깡의 만남 / 기존 대비 새우함량 2배 / 재생원료(R-PET) 포장지 사용"
-              />
-            </div>
-            <!-- mobile visual -->
-            <div class="m-img-box">
-              <img
-                src="bgMain_m_01.png"
-                alt="이탈리아산 블랙트러플과 새우깡의 만남 / 기존 대비 새우함량 2배 / 재생원료(R-PET) 포장지 사용"
-              />
-            </div>
-            <!-- mobile visual -->
-            <aside>
-              <div class="sns-box">
-                <div class="fb-banner">
-                  <a class="profile-img" href="#;">
-                    <img src="img/sns-profile.jpg" alt="인생을 맛있게 농심" />
-                  </a>
-                  <a class="sns-name" href="#;">
-                    <p>농심 (Nongshim)</p>
-                  </a>
-                  <a class="follow-btn" href="#;"><p>페이지 팔로우</p></a>
-                  <a class="follow-count" href="#;">
-                    <p>26만 팔로</p>
-                  </a>
+            <div class="main-content-box">
+              <div class="side-img">
+                <img src="img/banner-default.png" alt="" />
+              </div>
+              <div class="main-img-box">
+                <div class="ani-box">
+                  <img class="bg" src="img/bgMusic.gif" alt="" />
+                  <img class="shrimp1 ab" src="img/shrimp01.png" alt="" />
+                  <img class="shrimp2 ab" src="img/shrimp02.png" alt="" />
+                  <img class="shrimp3 ab" src="img/shrimp03.png" alt="" />
+                  <img class="shrimp4 ab" src="img/shrimp04.png" alt="" />
+                  <img class="pdt_hot ab" src="img/pdt_hot_01.png" alt="" />
+                  <img class="pdt_rice ab" src="img/pdt_rice.png" alt="" />
+                  <img class="pdt_basic ab" src="img/pdt_basic_02.png" alt="" />
+                  <img
+                    class="desc ab"
+                    src="img/bgSnack_real_01.png"
+                    alt="이탈리아산 블랙트러플과 새우깡의 만남 / 기존 대비 새우함량 2배 / 재생원료(R-PET) 포장지 사용"
+                  />
                 </div>
-                <div class="post-box">
-                  <div class="post-wrapper">
-                    <div class="post">
-                      <p>
-                        ❝2023 타로 운세❞ 농심과 함께 하는 여러분의 2023 운세는?
-                        여섯 장의 카드 중 한 장을 선택! 너구리, 짜파게티,
-                        안성탕면, 신라면, 라면왕김통깨, 새우깡과 함께 여러분의
-                        2023 타로 운세를 알려드립니다! 여러분이 선택한 브랜드를
-                        댓글로 남겨주세요~
-                      </p>
-                      <p class="date">2023.01.25</p>
+                <!-- mobile visual -->
+                <div class="m-img-box">
+                  <img
+                    src="img/bgMain_m_01.png"
+                    alt="이탈리아산 블랙트러플과 새우깡의 만남 / 기존 대비 새우함량 2배 / 재생원료(R-PET) 포장지 사용"
+                  />
+                </div>
+                <!-- mobile visual -->
+              </div>
+              <aside>
+                <div class="sns-box">
+                  <div class="fb-banner">
+                    <a class="profile-img" href="#;">
+                      <img src="img/sns-profile.jpg" alt="인생을 맛있게 농심" />
+                    </a>
+                    <ul>
+                      <li>
+                        <a class="sns-name" href="#;">
+                          <p>농심 (Nongshim)</p>
+                        </a>
+                      </li>
+                      <li>
+                        <ul class="follow-mn">
+                          <li>
+                            <a class="follow-btn" href="#;"
+                              ><p>페이지 팔로우</p></a
+                            >
+                          </li>
+                          <li>
+                            <a class="follow-count" href="#;">
+                              <p>26만 팔로</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="post-box">
+                    <div class="post-wrapper">
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            ❝2023 타로 운세❞ 농심과 함께 하는 여러분의 2023
+                            운세는? 여섯 장의 카드 중 한 장을 선택! 너구리,
+                            짜파게티, 안성탕면, 신라면, 라면왕김통깨, 새우깡과
+                            함께 여러분의 2023 타로 운세를 알려드립니다!
+                            여러분이 선택한 브랜드를 댓글로 남겨주세요~
+                          </p>
+                          <p class="date">2023.01.25</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            2023년 계묘년 🗓 깡총깡총~ 검은 토끼의 해! 🐰 그래서
+                            만들어본 ❝농심 깡시리즈 총정리❞ 깡! 총! * #새우깡
+                            (1971): 71년부터 지금까지 국민과자! * #매운새우깡
+                            (2000): 중독성 있는 매운맛! * #쌀새우깡 (2004): 쌀로
+                            만들어 더 고소하다! * #새우깡블랙 (2021): 더욱 진한
+                            풍미와 식감! * #감자깡 (1972): 담백한 매력의 소유자!
+                            * #고구마깡 (1973): 깡시리즈 중 유일한 달콤 스낵! *
+                            #양파깡 (1973): 먹으면 먹을수록 묘한 매력! *
+                            #옥수수깡 (2020): 통옥수수 모양 그대로! 1일 8깡
+                            가능?
+                          </p>
+                          <p class="date">2023.01.06</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            『새우깡 FC 봉황당 초대 #EVENT』 축구에 진심인
+                            사람들을 위해 새우깡 FC가 축구 응원의 메카
+                            '봉황당'으로 초대합니다 ⚽ | #이벤트 참여하기 　-
+                            http://bit.ly/3UXE5JE ✔ 기간 : 11/9(수) ~
+                            11/18(금)까지 ✔ 발표 : 11/21(월) 당첨자 개별 연락 🎉
+                            | 응원전 안내 　- 일시 : 11/24(목) 오후 10시 　-
+                            장소 : 봉황당 (서울 마포구 양화로23길 24) ⛔
+                            유의사항 　* 해당 입장권은 타인에게 판매 및 양도할
+                            수 없으며 경품은 11/24일 당일에 한해서만
+                            사용가능합니다 　* 입장권은 현장에서 개인정보 확인
+                            후 수령 받을 수 있습니다 　* 당첨자 본인은 반드시
+                            현장에 방문하셔야 합니다 　* 응모 시 부정확한 정보를
+                            기입하지 않도록 주의해 주세요
+                          </p>
+                          <p class="date">2022.11.17</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            『새우깡 FC 응원 KIT 출시』 "짝짝~ 짝짝짝!"
+                            🙏🙏~🙏🙏🙏 응원! 제대로 해야 하지 않겠어? 축구⚽
+                            관람을 200% 즐기게 해 줄 '새우깡 응원 KIT'! 🦐 |
+                            새우깡 FC의 아이덴티티가 고스란히 담긴 　「새우깡 FC
+                            응원 KIT」를 소개합니다 　- 👕깔끔해서 평소에도 입고
+                            다니고 싶은 유니폼 　- 🚩펄럭이면 모두 시선 집중!
+                            응원 깃발 　- 🧣번쩍 들고 응원하다가 목에 두르면
+                            따뜻한 머플러 　- 👹응원할 때 빠지면 섭섭한 타투
+                            스티커 세계 최대 축구 디지털 미디어 골닷컴의 브랜드
+                            골스튜디오와 머리 맞대고 만들었으니 퀄리티도
+                            완벽하다랄깡? ⚽ | #이벤트 참여하고 KIT 받으러 가기
+                            　- https://bit.ly/3WFIWkx
+                          </p>
+                          <p class="date">2022.11.14</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            『새우깡 x 골스튜디오 x 무신사』 새우깡 FC 1971
+                            한정판 응원 KIT를 무신사에서 만나보세요! 🛒 축구
+                            경기를 보며 "축구는 깡이다!" 외치고 싶다면 📢 지금
+                            무신사에서 '새우깡 FC 1971' 한정판 응원 KIT를
+                            확인하세요 ⚽ | 어디서 살 수 있어요? 　국내 최대
+                            규모 온라인 편집숍 '무신사'와 함께합니다 유니폼 &
+                            응원 깃발 & 응원 머플러 & 타투 스티커까지 응원에 꼭
+                            필요한 아이템으로만 구성했어요 ⚽ | #이벤트 참여하고
+                            KIT 받으러 가기 　https://bit.ly/3WFIWkx @musinsacom
+                            @goalstudio_korea
+                          </p>
+                          <p class="date">2022.11.10</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            『#축구는깡이다 ⚽』 우리의 승리를 위한 대국민
+                            프로젝트! 대.한.민.국.깡.력.충.전.
+                            ￣￣￣￣￣￣￣￣￣￣" 📣 여러분과 함께 대한민국의
+                            승리를 외쳐봅니다! 지금 바로 '새우깡 FC 1971
+                            써포터즈'가 되어보세요 추첨을 통해 '새우깡 FC 1971
+                            한정판 응원 굿즈"를 드립니다 ⚽ | 새우깡, 축구는
+                            깡이다 캠페인 바로가기 　: https://bit.ly/3WFIWkx
+                          </p>
+                          <p class="date">2022.11.09</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            『 #인싸력테스트 』 요새 인싸들은 이렇게 뜯는다며?
+                            과자 뜯는 방법으로 보는 #인싸력테스트 Are you 인싸
+                            or 아싸?
+                          </p>
+                          <p class="date">2022.08.25</p>
+                        </a>
+                      </div>
+                      <div class="post">
+                        <a href="#;">
+                          <p class="sub">
+                            #COMINGSOON 2022.08.03 반응이 너무 HOT 뜨거???
+                            대한민국 국민스낵 새우깡의 재탄생! 올 여름을 핫하게
+                            달굴 "제대로" 만든 맥주가 옵니다! 🍺🍻 기대해도
+                            좋아! *지나친 음주는 뇌졸중, 기억력 손상이나 치매를
+                            유발합니다. 임신 중 음주는 기형아 출생 위험을
+                            높입니다.
+                          </p>
+                          <p class="date">2022.08.01</p>
+                        </a>
+                      </div>
                     </div>
-                    <div class="post">
-                      <p>
-                        2023년 계묘년 🗓 깡총깡총~ 검은 토끼의 해! 🐰 그래서
-                        만들어본 ❝농심 깡시리즈 총정리❞ 깡! 총! * #새우깡
-                        (1971): 71년부터 지금까지 국민과자! * #매운새우깡
-                        (2000): 중독성 있는 매운맛! * #쌀새우깡 (2004): 쌀로
-                        만들어 더 고소하다! * #새우깡블랙 (2021): 더욱 진한
-                        풍미와 식감! * #감자깡 (1972): 담백한 매력의 소유자! *
-                        #고구마깡 (1973): 깡시리즈 중 유일한 달콤 스낵! *
-                        #양파깡 (1973): 먹으면 먹을수록 묘한 매력! * #옥수수깡
-                        (2020): 통옥수수 모양 그대로! 1일 8깡 가능?
-                      </p>
-                      <p class="date">2023.01.06</p>
-                    </div>
-                    <div class="post">
-                      <p>
-                        『새우깡 FC 봉황당 초대 #EVENT』 축구에 진심인 사람들을
-                        위해 새우깡 FC가 축구 응원의 메카 '봉황당'으로
-                        초대합니다 ⚽ | #이벤트 참여하기 　-
-                        http://bit.ly/3UXE5JE ✔ 기간 : 11/9(수) ~ 11/18(금)까지
-                        ✔ 발표 : 11/21(월) 당첨자 개별 연락 🎉 | 응원전 안내 　-
-                        일시 : 11/24(목) 오후 10시 　- 장소 : 봉황당 (서울
-                        마포구 양화로23길 24) ⛔ 유의사항 　* 해당 입장권은
-                        타인에게 판매 및 양도할 수 없으며 경품은 11/24일 당일에
-                        한해서만 사용가능합니다 　* 입장권은 현장에서 개인정보
-                        확인 후 수령 받을 수 있습니다 　* 당첨자 본인은 반드시
-                        현장에 방문하셔야 합니다 　* 응모 시 부정확한 정보를
-                        기입하지 않도록 주의해 주세요
-                      </p>
-                      <p class="date">2022.11.17</p>
-                    </div>
-                    <div class="post">
-                      <p>
-                        『새우깡 FC 응원 KIT 출시』 "짝짝~ 짝짝짝!" 🙏🙏~🙏🙏🙏
-                        응원! 제대로 해야 하지 않겠어? 축구⚽ 관람을 200% 즐기게
-                        해 줄 '새우깡 응원 KIT'! 🦐 | 새우깡 FC의 아이덴티티가
-                        고스란히 담긴 　「새우깡 FC 응원 KIT」를 소개합니다 　-
-                        👕깔끔해서 평소에도 입고 다니고 싶은 유니폼 　-
-                        🚩펄럭이면 모두 시선 집중! 응원 깃발 　- 🧣번쩍 들고
-                        응원하다가 목에 두르면 따뜻한 머플러 　- 👹응원할 때
-                        빠지면 섭섭한 타투 스티커 세계 최대 축구 디지털 미디어
-                        골닷컴의 브랜드 골스튜디오와 머리 맞대고 만들었으니
-                        퀄리티도 완벽하다랄깡? ⚽ | #이벤트 참여하고 KIT 받으러
-                        가기 　- https://bit.ly/3WFIWkx
-                      </p>
-                      <p class="date">2022.11.14</p>
+                    <div class="btn-box">
+                      <p class="btn btn-prev">이전</p>
+                      <p class="btn btn-next on">다음</p>
                     </div>
                   </div>
-                  <div class="btn-box">
-                    <p class="btn btn-prev">이전</p>
-                    <p class="btn btn-next">다음</p>
-                  </div>
                 </div>
-              </div>
-              <div class="cf-box">
-                <div class="img-box">
-                  <img src="img/imgSample.jpg" alt="" />
+                <div class="cf-box">
+                  <a href="#;" class="inner-box">
+                    <div class="img-box">
+                      <img src="img/imgSample.jpg" alt="" />
+                      <img class="play" src="img/btnPlay.png" alt="" />
+                    </div>
+                  </a>
+                  <a href="#;" class="other-cf"> 다른 CF 보러가기 </a>
                 </div>
-                <a href="#;">
-                  <p>다른 CF 보러가기</p>
-                </a>
-              </div>
-            </aside>
+              </aside>
+            </div>
           </div>
         </section>
         <!-- //main visual -->
         <!-- hand -->
-        <section class="hand-sect">
-          <div class="hand-box">
+        <section id="hand" class="hand-sect">
+          <div class="hand-box wrapper">
             <div class="title-box">
               <h2>
                 <img
@@ -274,11 +385,12 @@
               </ul>
             </div>
           </div>
+          <div class="objGroup sect1"></div>
         </section>
         <!-- //hand -->
         <!-- again -->
-        <section class="again-sect">
-          <div class="again-box">
+        <section id="again" class="again-sect">
+          <div class="again-box wrapper">
             <div class="title-box">
               <h2>
                 <img
@@ -305,11 +417,12 @@
               </ul>
             </div>
           </div>
+          <div class="objGroup sect2"></div>
         </section>
         <!-- //again -->
         <!-- anytime -->
-        <section class="anytime-sect">
-          <div class="anytime-box">
+        <section id="anytime" class="anytime-sect">
+          <div class="anytime-box wrapper">
             <div class="title-box">
               <h2>
                 <img
@@ -344,11 +457,12 @@
               </ul>
             </div>
           </div>
+          <div class="objGroup sect3"></div>
         </section>
         <!-- //anytime -->
         <!-- somebody -->
-        <section class="somebody-sect">
-          <div class="somebody-box">
+        <section id="somebody" class="somebody-sect">
+          <div class="somebody-box wrapper">
             <div class="title-box">
               <h2>
                 <img
@@ -390,14 +504,16 @@
               </ul>
             </div>
           </div>
+          <div class="objGroup sect4"></div>
         </section>
         <!-- //somebody -->
+        <div class="last-bg"></div>
       </main>
       <!-- //main -->
       <!-- footer -->
       <footer>
         <div class="footer-box">
-          <ul>
+          <ul class="footer-mn">
             <li><a href="#;">개인정보처리방침</a></li>
             <li><a href="#;">이메일주소무단수집거부</a></li>
             <li><a href="#;">관계사 사이트 바로가기</a></li>
@@ -406,13 +522,13 @@
             <span>NO TRANS FAT</span> 믿을 수 있는 식품 농심에서 생산되는 모든
             스낵에는 인체에 해로운 트랜스지방이 없습니다.
           </p>
-          <ul>
+          <ul class="info">
             <li>(주)농심</li>
             <li>서울특별시 동작구 여의대방로 112 (신대방동)</li>
             <li>사업자 등록번호 : 18-81-03914</li>
             <li>대표이사 : 이병학</li>
           </ul>
-          <ul>
+          <ul class="contact">
             <li>TEL : <a href="tel:+82028305181">02-830-5181</a></li>
             <li>Copyright &copy; 2013 NONGSHIM All right reserved.</li>
           </ul>
