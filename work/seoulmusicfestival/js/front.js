@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
   // //스크롤 발생 시 페이지 이동
 
-  // //스크롤 발생 시 페이지 이동하면서 우측 메뉴 on
+  // 스크롤 발생 시 페이지 이동하면서 우측 메뉴 on
   $(window).scroll(function () {
     let scrTop = $(this).scrollTop();
     // $("h5").text(scrTop);

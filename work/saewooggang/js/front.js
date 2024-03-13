@@ -104,6 +104,7 @@ $(document).ready(function () {
   // document.querySelectorAll(".close-btn").forEach(function (element) {
   //   element.focus();
   // });
+
   // //close btn : focus
 
   //  close btn click : content close
@@ -123,4 +124,58 @@ $(document).ready(function () {
   });
 
   // // close btn click : content close
+
+  //  새우깡 fixed img : scroll - op:0 > op1
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop();
+    console.log(scrTop);
+    if (scrTop > 200) {
+      $(".fixed-img").stop().css({ opacity: "1" });
+    } else {
+      $(".fixed-img").stop().css({ opacity: "0" });
+    }
+  });
+
+  // // 새우깡 fixed img : scroll - op:0 > op1
+
+  //  새우깡 fixed img : & content open : move left
+  //
+  // .fixed-img를 선택합니다.
+  let fixedImg = document.querySelector(".fixed-img");
+
+  // .content의 부모인 <li>를 선택합니다.
+  let liParent = document.querySelector(".content").parentNode;
+
+  // 스크롤 이벤트 리스너를 추가합니다.
+  document.addEventListener("scroll", function () {
+    // .content의 부모 <li>의 maxHeight 값을 가져옵니다.
+    let liMaxHeight = window.getComputedStyle(liParent).maxHeight;
+
+    // .fixed-img가 .content를 지나가는지 여부를 확인합니다.
+    let fixedImgRect = fixedImg.getBoundingClientRect();
+    let contentRect = document
+      .querySelector(".content")
+      .getBoundingClientRect();
+
+    if (
+      fixedImgRect.bottom > contentRect.top &&
+      fixedImgRect.top < contentRect.bottom
+    ) {
+      // .content의 부모 <li>의 maxHeight가 0이 아니라면
+      if (liMaxHeight !== "0px") {
+        fixedImg.style.transform = "translate(30px, -50%)";
+        fixedImg.style.left = 0;
+      } else {
+        // .content의 부모 <li>의 maxHeight가 0이라면
+        fixedImg.style.transform = "translate(-50%, -50%)";
+        fixedImg.style.left = 50 + "%";
+      }
+    } else {
+      // .fixed-img가 .content를 지나가지 않을 때
+      fixedImg.style.transform = "translate(-50%, -50%)";
+      fixedImg.style.left = 50 + "%";
+    }
+  });
+
+  // // 새우깡 fixed img : & content open : move left
 });

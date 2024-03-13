@@ -40,6 +40,16 @@ section {
   z-index: 17;
 }
 
+.fixed-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.8s;
+}
+
 .content-list {
   position: relative;
   z-index: 2;
