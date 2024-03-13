@@ -39,7 +39,7 @@ section .wrapper .title-box p {
   position: relative;
   z-index: 2;
 }
-.content-list li {
+.content-list > li {
   display: block;
   overflow: hidden;
   max-height: 0;
@@ -90,7 +90,7 @@ section .wrapper .title-box p {
 .content-list .content .content-bg {
   position: absolute;
   display: block;
-  bottom: -10px;
+  bottom: -5px;
   width: 100%;
   height: 50px;
   background: url(../img/bgBodyBottom.png) 0 bottom repeat-x;
@@ -142,7 +142,19 @@ section .wrapper .title-box p {
 .content-list .content .inner-box .tab-mn li:last-child a {
   border-radius: 0 20px 20px 0;
 }
-.content-list .content .inner-box .tab-wrap h4 {
+.content-list .content .inner-box .tab-wrap {
+  display: flex;
+  width: 200%;
+  align-items: flex-start;
+}
+.content-list .content .inner-box .tab-wrap .tab-box.on {
+  display: block;
+}
+.content-list .content .inner-box .tab-wrap .tab-box {
+  display: none;
+  width: 1000px;
+}
+.content-list .content .inner-box .tab-wrap h4.tab-title {
   color: #fff;
   font-size: 25px;
   font-weight: 600;
@@ -155,6 +167,13 @@ section .wrapper .title-box p {
   font-weight: 500;
   line-height: 20px;
   color: #ffda4c;
+}
+.content-list .content .inner-box h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 30px;
 }
 .content-list .content .inner-box .block {
   padding: 30px 0;
@@ -220,7 +239,7 @@ header {
 header .header-box {
   display: flex;
   align-items: center;
-  gap: 200px;
+  gap: 150px;
   margin-top: 20px;
 }
 header .header-box h1 a {
@@ -557,17 +576,10 @@ main {
 .hand-sect .content-list #secret .inner-box .flex-box .block .img-box {
   margin-bottom: 40px;
 }
-.hand-sect .content-list #cmsong .inner-box .tab-wrap {
-  display: flex;
-  width: 200%;
-  align-items: flex-start;
-}
 .hand-sect .content-list #cmsong .inner-box .tab-wrap .tab-box.on {
   display: flex;
 }
 .hand-sect .content-list #cmsong .inner-box .tab-wrap .tab-box {
-  display: none;
-  width: 1000px;
   gap: 30px;
   align-items: flex-end;
 }
@@ -583,16 +595,91 @@ main {
   justify-content: space-between;
   padding-top: 420px;
 }
+.again-sect .content-list #process .img-box {
+  text-align: center;
+}
+
 .anytime-sect .anytime-box {
   display: flex;
   justify-content: space-between;
   padding-top: 420px;
+}
+.anytime-sect .content-list #packaging .inner-box .first-block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.anytime-sect .content-list #packaging .inner-box .first-block .img-box {
+  width: 60px;
+}
+.anytime-sect .content-list #packaging .inner-box .first-block .text-box {
+  width: calc(100% - 70px);
+}
+.anytime-sect .content-list #packaging .inner-box .flex-box {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.anytime-sect .content-list #packaging .inner-box .flex-box .img-box {
+  width: 483px;
+}
+.anytime-sect .content-list #packaging .inner-box .flex-box .block-wrap {
+  width: calc(100% - 490px);
 }
 .somebody-sect .somebody-box {
   display: flex;
   justify-content: space-between;
   padding-top: 420px;
 }
+.somebody-sect .content-list #contest .inner-box .block-list {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li {
+  display: block;
+  width: 32%;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .img-box {
+  width: 163px;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .img-box img {
+  width: 100%;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .text-box {
+  width: 170px;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .text-box h5 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .text-box p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 0;
+}
+.somebody-sect .content-list #contest .inner-box .block-list li .block .text-box p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+.somebody-sect .content-list #event .inner-box .block {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2039215686);
+}
+.somebody-sect .content-list #event .inner-box .block .text-box {
+  padding: 100px 0;
+  text-align: center;
+}
+
 .last-bg {
   position: absolute;
   bottom: 0;

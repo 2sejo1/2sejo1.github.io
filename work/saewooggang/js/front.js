@@ -87,22 +87,29 @@ $(document).ready(function () {
 
   document
     .querySelectorAll(".content-box .btn-list li a")
-    .forEach(function (e) {
-      e.addEventListener("click", function () {
+    .forEach(function (element) {
+      element.addEventListener("click", function (e) {
+        e.preventDefault();
         let contentID = this.getAttribute("href");
         let contentElement = document.getElementById(contentID.slice(1));
         let contentH = contentElement.clientHeight;
 
-        contentElement.parentElement.style.maxHeight = contentH + 10 + "px";
+        contentElement.parentElement.style.maxHeight = contentH + 60 + "px";
       });
     });
 
   // // side btn click : content open
 
+  // close btn : focus
+  // document.querySelectorAll(".close-btn").forEach(function (element) {
+  //   element.focus();
+  // });
+  // //close btn : focus
+
   //  close btn click : content close
-  document
-    .querySelector(".content-list")
-    .addEventListener("click", function (e) {
+  document.querySelectorAll(".content-list").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      console.log(e.target);
       if (e.target.classList.contains("close-btn")) {
         // close-btn을 클릭했을 때만 처리 (이벤트 위임)
         var closestLi = e.target.closest("li");
@@ -113,6 +120,7 @@ $(document).ready(function () {
         }
       }
     });
+  });
 
   // // close btn click : content close
 });

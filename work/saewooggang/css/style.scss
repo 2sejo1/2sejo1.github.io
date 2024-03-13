@@ -43,7 +43,7 @@ section {
 .content-list {
   position: relative;
   z-index: 2;
-  li {
+  > li {
     display: block;
     overflow: hidden;
     max-height: 0;
@@ -93,7 +93,7 @@ section {
     .content-bg {
       position: absolute;
       display: block;
-      bottom: -10px;
+      bottom: -5px;
       width: 100%;
       height: 50px;
       background: url(../img/bgBodyBottom.png) 0 bottom repeat-x;
@@ -151,7 +151,17 @@ section {
         }
       }
       .tab-wrap {
-        h4 {
+        display: flex;
+        width: 200%;
+        align-items: flex-start;
+        .tab-box.on {
+          display: block;
+        }
+        .tab-box {
+          display: none;
+          width: 1000px;
+        }
+        h4.tab-title {
           color: #fff;
           font-size: 25px;
           font-weight: 600;
@@ -167,6 +177,13 @@ section {
             color: #ffda4c;
           }
         }
+      }
+      h4 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 35px;
+        margin-bottom: 30px;
       }
       .block {
         padding: 30px 0;
@@ -239,7 +256,7 @@ header {
   .header-box {
     display: flex;
     align-items: center;
-    gap: 200px;
+    gap: 150px;
     margin-top: 20px;
     h1 {
       a {
@@ -625,15 +642,10 @@ main {
     #cmsong {
       .inner-box {
         .tab-wrap {
-          display: flex;
-          width: 200%;
-          align-items: flex-start;
           .tab-box.on {
             display: flex;
           }
           .tab-box {
-            display: none;
-            width: 1000px;
             gap: 30px;
             align-items: flex-end;
             .inner-text {
@@ -658,7 +670,12 @@ main {
     padding-top: 420px;
   }
   .content-list {
-    // #
+    // #process
+    #process {
+      .img-box {
+        text-align: center;
+      }
+    }
   }
 }
 // //again
@@ -671,7 +688,39 @@ main {
     padding-top: 420px;
   }
   .content-list {
-    // #
+    // #packaging
+    #packaging {
+      .inner-box {
+        .first-block {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          margin-bottom: 20px;
+          padding: 0;
+          .img-box {
+            width: 60px;
+          }
+          .text-box {
+            width: calc(100% - 70px);
+          }
+        }
+        .flex-box {
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          .img-box {
+            width: 483px;
+          }
+          .block-wrap {
+            width: calc(100% - 490px);
+          }
+        }
+      }
+    }
+    // #cf
+    #cf {
+      //
+    }
   }
 }
 // //anytime
@@ -684,7 +733,66 @@ main {
     padding-top: 420px;
   }
   .content-list {
-    // #
+    // #contest
+    #contest {
+      .inner-box {
+        .block-list {
+          display: flex;
+          gap: 2%;
+          flex-wrap: wrap;
+          li {
+            display: block;
+            width: 32%;
+            .block {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              .img-box {
+                width: 163px;
+                img {
+                  width: 100%;
+                }
+              }
+              .text-box {
+                width: calc(170px);
+                h5 {
+                  font-size: 17px;
+                  font-weight: 600;
+                  margin-bottom: 10px;
+                }
+                p {
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 20px;
+                  padding: 0;
+                  &:last-child {
+                    font-size: 12px;
+                    font-weight: 300;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // #photogenic
+    #photogenic {
+      //
+    }
+    // #event
+    #event {
+      .inner-box {
+        .block {
+          border-radius: 10px;
+          background-color: #ffffff34;
+          .text-box {
+            padding: 100px 0;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 }
 // //somebody
