@@ -54,19 +54,23 @@ section {
 }
 
 .wrapper > .title-box {
+  opacity: 0;
   transition: 0.8s;
   transform: translateX(-300%);
 }
 .wrapper > .title-box.on {
+  opacity: 1;
   transform: translateX(0);
 }
 
 .wrapper > .content-box {
+  opacity: 0;
   transition: 0.8s;
   transform: translateX(300%);
 }
 
 .wrapper > .content-box.on {
+  opacity: 1;
   transform: translateX(0);
 }
 
@@ -293,7 +297,47 @@ section {
 
 // mobile nav
 .m-nav {
-  display: none;
+  position: fixed;
+  display: block;
+  width: 44px;
+  height: 207px;
+  z-index: 20;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: url(../img/remote_bg.png) no-repeat 0 0;
+  ul {
+    padding-bottom: 20px;
+    li {
+      a {
+        display: block;
+        width: 100%;
+        font-size: 0px;
+        text-indent: -9999px;
+      }
+      .home {
+        height: 43px;
+        background: url(../img/remote_mainOff.png.png) no-repeat 0 0;
+        &:hover {
+          background: url(../img/remote_mainOn.png) no-repeat 0 0;
+        }
+      }
+      .home.on {
+        background: url(../img/remote_mainOn.png) no-repeat 0 0;
+      }
+      .sect-btn {
+        height: 40px;
+        background: url(../img/remote_btnOff.png) no-repeat center center;
+
+        &:hover {
+          background: url(../img/remote_btnOn.png) no-repeat center center;
+        }
+      }
+      .sect-btn.on {
+        background: url(../img/remote_btnOn.png) no-repeat center center;
+      }
+    }
+  }
 }
 
 // //mobile nav
@@ -373,6 +417,7 @@ main {
   margin-top: 76px;
   padding: 50px 0 150px;
   background-color: #fffdf6;
+  overflow: hidden;
 }
 
 // bg img

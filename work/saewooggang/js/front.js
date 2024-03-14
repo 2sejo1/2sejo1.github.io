@@ -1,4 +1,22 @@
 $(document).ready(function () {
+  //  side nav icon : on-off
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop();
+    // $("h5").text(scrTop);
+
+    $("section").each(function (i) {
+      let secTop = $(this).offset().top;
+      // console.log(secTop);
+
+      if (scrTop >= secTop) {
+        $(".m-nav li a").removeClass("on");
+        $(".m-nav li").eq(i).find("a").addClass("on");
+      }
+    });
+  });
+
+  // // side nav icon : on-off
+
   // sns - post slide (main visual sect)
 
   let count = 0;
