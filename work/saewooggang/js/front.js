@@ -142,10 +142,14 @@ $(document).ready(function () {
   window.addEventListener("scroll", function () {
     //스크롤 시 fixed img의 opacity 0 > 1
     let scrTop = window.scrollY;
-    if (scrTop > 200) {
-      document.querySelector(".fixed-img").style.opacity = 1;
+    let fixedImg = document.querySelector(".fixed-img");
+    if (scrTop > 300) {
+      // document.querySelector(".fixed-img").style.opacity = 1;
+      fixedImg.classList.add("op");
     } else {
-      document.querySelector(".fixed-img").style.opacity = 0;
+      // document.querySelector(".fixed-img").style.opacity = 0;
+      fixedImg.classList.remove("op");
+      fixedImg.classList.remove("on");
     }
   });
 
@@ -223,17 +227,66 @@ $(document).ready(function () {
         fixedImgRect.top < contentRect.bottom
       ) {
         if (liMaxH !== "0px") {
-          fixedImg.style.transform = "translate(30px, -50%)";
-          fixedImg.style.left = 0;
-          fixedImg.style.opacity = 0;
+          // fixedImg.style.transform = "translate(30px, -50%)";
+          // fixedImg.style.left = 0;
+          // fixedImg.style.opacity = 0;
+          fixedImg.classList.add("on");
         } else {
-          fixedImg.style.transform = "translate(-50%, -50%)";
-          fixedImg.style.left = "50%";
-          fixedImg.style.opacity = 1;
+          // fixedImg.style.transform = "translate(-50%, -50%)";
+          // fixedImg.style.left = "50%";
+          // fixedImg.style.opacity = 1;
+          fixedImg.classList.remove("on");
         }
       }
     });
   });
 
   // // 새우깡 fixed img : moving
+
+  // objGroup (moving bg) & title-box, content-box moving
+  // document.addEventListener("scroll", function () {
+  //   let sect = document.querySelectorAll("section");
+  //   let objBG = document.querySelectorAll(".objGroup ");
+
+  //   sect.forEach(function (section) {
+  //     let sectRect = section.getBoundingClientRect();
+
+  //     console.log(sectRect);
+  //     console.log(window.innerHeight);
+
+  //     // 만약 section이 화면에 보인다면
+  //     if (sectRect.top < window.innerHeight && sectRect.bottom >= 0) {
+  //       objBG.classList.add("on");
+  //     } else {
+  //       objBG.classList.remove("on");
+  //     }
+  //   });
+  // });
+  document.addEventListener("scroll", function () {
+    let sections = document.querySelectorAll("section");
+
+    sections.forEach(function (section) {
+      let sectRect = section.getBoundingClientRect();
+      let objBG = section.querySelector(".objGroup");
+      let titleBox = section.querySelector(".title-box");
+      let contentBox = section.querySelector(".content-box");
+
+      // 오류 방지
+      if (objBG) {
+        if (sectRect.top + 600 < window.innerHeight && sectRect.bottom >= 0) {
+          // section이 화면에 보이면
+          objBG.classList.add("on");
+          titleBox.classList.add("on");
+          contentBox.classList.add("on");
+        } else {
+          // section이 화면에 안 보이면
+          objBG.classList.remove("on");
+          titleBox.classList.remove("on");
+          contentBox.classList.remove("on");
+        }
+      }
+    });
+  });
+
+  // //objGroup (moving bg) & title-box, content-box moving
 });

@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  // 좌상단에 현재 스크롤 위치 띄우기
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop();
+    $("h5").text(scrTop);
+  });
+  // //좌상단에 현재 스크롤 위치 띄우기
+
   // 스크롤 발생 시 페이지 이동
   $("section").mousewheel(function (e, delta) {
     if (delta > 0) {
@@ -43,11 +50,6 @@ $(document).ready(function () {
     $(".side-mn-icon li a").removeClass("on");
     $(this).addClass("on");
     // //클래스 on 붙이기
-  });
-
-  $(window).scroll(function () {
-    let scrTop = $(this).scrollTop();
-    $("h5").text(scrTop);
   });
 
   // //side-mn-icon

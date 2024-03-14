@@ -18,6 +18,7 @@ img {
 
 section {
   position: relative;
+  margin-top: 50px;
   .wrapper {
     .title-box {
       padding: 15px 20px;
@@ -40,6 +41,35 @@ section {
   z-index: 17;
 }
 
+#main-visual {
+  margin-top: 0;
+  .wrapper {
+    .title-box {
+      transform: translateX(0);
+    }
+    .content-box {
+      transform: translateX(0);
+    }
+  }
+}
+
+.wrapper > .title-box {
+  transition: 0.8s;
+  transform: translateX(-300%);
+}
+.wrapper > .title-box.on {
+  transform: translateX(0);
+}
+
+.wrapper > .content-box {
+  transition: 0.8s;
+  transform: translateX(300%);
+}
+
+.wrapper > .content-box.on {
+  transform: translateX(0);
+}
+
 .fixed-img {
   position: fixed;
   top: 50%;
@@ -48,6 +78,16 @@ section {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: 0.8s;
+}
+
+.fixed-img.op {
+  opacity: 1;
+}
+
+.fixed-img.on {
+  left: 0;
+  transform: translate(30px, -50%);
+  opacity: 0.8;
 }
 
 .content-list {
@@ -223,7 +263,11 @@ section {
   left: 50%;
   transform: translate(-50%);
   z-index: 0;
-  animation: objGroup 10s ease-in-out infinite;
+  // animation: objGroup 10s ease-in-out infinite;
+}
+
+.objGroup.on {
+  animation: objGroup 6s ease-in-out infinite;
 }
 
 .objGroup.sect1 {
@@ -233,7 +277,7 @@ section {
 .objGroup.sect2 {
   height: 700px;
   background: url(../img/objGroup02.png) center center/100%;
-  animation-delay: 1s;
+  // animation-delay: 1s;
 }
 .objGroup.sect3 {
   height: 770px;
@@ -242,7 +286,7 @@ section {
 .objGroup.sect4 {
   height: 544px;
   background: url(../img/objGroup04.png) center center/100%;
-  animation-delay: 1s;
+  // animation-delay: 1s;
 }
 
 // //common
