@@ -92,7 +92,6 @@ $(document).ready(function () {
   });
   // // science sect
 
-
   // collection
 
   // tab mn

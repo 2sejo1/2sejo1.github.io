@@ -40,9 +40,11 @@ section .wrapper .title-box p {
   margin-top: 0;
 }
 #main-visual .wrapper .title-box {
+  opacity: 1;
   transform: translateX(0);
 }
 #main-visual .wrapper .content-box {
+  opacity: 1;
   transform: translateX(0);
 }
 
@@ -173,6 +175,9 @@ section .wrapper .title-box p {
   display: flex;
   margin-bottom: 50px;
 }
+.content-list .content .inner-box .tab-mn li.on a {
+  background-color: #d41111;
+}
 .content-list .content .inner-box .tab-mn li a {
   display: block;
   width: 130px;
@@ -186,9 +191,6 @@ section .wrapper .title-box p {
 .content-list .content .inner-box .tab-mn li a:hover {
   background-color: #d41111;
 }
-.content-list .content .inner-box .tab-mn li a.on {
-  background-color: #d41111;
-}
 .content-list .content .inner-box .tab-mn li:first-child a {
   border-radius: 20px 0 0 20px;
 }
@@ -196,16 +198,11 @@ section .wrapper .title-box p {
   border-radius: 0 20px 20px 0;
 }
 .content-list .content .inner-box .tab-wrap {
-  display: flex;
-  width: 200%;
-  align-items: flex-start;
-}
-.content-list .content .inner-box .tab-wrap .tab-box.on {
-  display: block;
+  position: relative;
+  height: 800px;
 }
 .content-list .content .inner-box .tab-wrap .tab-box {
-  display: none;
-  width: 1000px;
+  position: absolute;
 }
 .content-list .content .inner-box .tab-wrap h4.tab-title {
   color: #fff;
@@ -422,44 +419,52 @@ main {
   position: absolute;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .shrimp1 {
-  top: -5%;
-  left: -20%;
-  opacity: 0;
+  top: 0px;
+  left: -130px;
+  opacity: 1;
+  animation: shrimp1 2s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .shrimp2 {
-  top: -10%;
-  left: 15%;
-  opacity: 0;
+  top: -20px;
+  left: 90px;
+  opacity: 1;
+  animation: shrimp2 2s 0.4s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .shrimp3 {
-  top: -10%;
-  left: 50%;
-  opacity: 0;
+  top: -20px;
+  left: 300px;
+  opacity: 1;
+  animation: shrimp3 2s 0.8s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .shrimp4 {
-  top: 0%;
-  left: 80%;
-  opacity: 0;
+  top: 10px;
+  left: 480px;
+  opacity: 1;
+  animation: shrimp4 2s 1.2s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .pdt_hot {
-  top: 30%;
-  left: -1%;
-  opacity: 1;
+  bottom: -45px;
+  left: -20px;
+  opacity: 0;
+  animation: snack 1s 4s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .pdt_rice {
-  top: 30%;
-  right: 0%;
-  opacity: 1;
+  bottom: -45px;
+  right: 0;
+  opacity: 0;
+  animation: snack 1s 4s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .pdt_basic {
-  top: 5%;
-  left: 25%;
-  opacity: 1;
+  bottom: -50px;
+  left: 145px;
+  opacity: 0;
+  animation: snack 1s 3.5s linear forwards;
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .ani-box .desc {
-  bottom: -25%;
-  left: 22%;
+  bottom: -110px;
+  left: 50%;
   z-index: 10;
+  transform: translateX(-50%);
 }
 .main-visual-sect .main-visual-box .main-content-box .main-img-box .m-img-box {
   display: none;
@@ -668,10 +673,8 @@ main {
 .hand-sect .content-list #secret .inner-box .flex-box .block .img-box {
   margin-bottom: 40px;
 }
-.hand-sect .content-list #cmsong .inner-box .tab-wrap .tab-box.on {
-  display: flex;
-}
 .hand-sect .content-list #cmsong .inner-box .tab-wrap .tab-box {
+  display: flex;
   gap: 30px;
   align-items: flex-end;
 }
@@ -862,7 +865,82 @@ footer .footer-box .contact::before {
   background: url(../img/icoTel.png) center center/100%;
 }
 
-@keyframes shrimp {}
+@keyframes shrimp1 {
+  0% {
+    left: -130px;
+  }
+  33% {
+    top: 300px;
+    left: -80px;
+  }
+  60% {
+    top: 100px;
+    left: 100px;
+  }
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+@keyframes shrimp2 {
+  0% {
+    left: 90px;
+  }
+  33% {
+    top: 255px;
+    left: -10px;
+  }
+  60% {
+    top: 100px;
+    left: 140px;
+  }
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+@keyframes shrimp3 {
+  0% {
+    left: 300px;
+  }
+  33% {
+    top: 250px;
+    left: 200px;
+  }
+  60% {
+    top: 80px;
+    left: 150px;
+  }
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+@keyframes shrimp4 {
+  0% {
+    left: 480px;
+  }
+  33% {
+    top: 300px;
+    left: 180px;
+  }
+  60% {
+    top: 80px;
+    left: 230px;
+  }
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+@keyframes snack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes objGroup {
   50% {
     transform: translate(-50%, 30%);

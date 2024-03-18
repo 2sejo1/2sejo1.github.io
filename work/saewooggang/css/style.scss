@@ -45,9 +45,11 @@ section {
   margin-top: 0;
   .wrapper {
     .title-box {
+      opacity: 1;
       transform: translateX(0);
     }
     .content-box {
+      opacity: 1;
       transform: translateX(0);
     }
   }
@@ -175,6 +177,11 @@ section {
       .tab-mn {
         display: flex;
         margin-bottom: 50px;
+        li.on {
+          a {
+            background-color: #d41111;
+          }
+        }
         li {
           a {
             display: block;
@@ -189,9 +196,7 @@ section {
               background-color: #d41111;
             }
           }
-          a.on {
-            background-color: #d41111;
-          }
+
           &:first-child {
             a {
               border-radius: 20px 0 0 20px;
@@ -204,16 +209,14 @@ section {
           }
         }
       }
+
       .tab-wrap {
-        display: flex;
-        width: 200%;
-        align-items: flex-start;
-        .tab-box.on {
-          display: block;
-        }
+        position: relative;
+        // width: 100%;
+        height: 800px;
         .tab-box {
-          display: none;
-          width: 1000px;
+          position: absolute;
+          // top: 0;
         }
         h4.tab-title {
           color: #fff;
@@ -232,6 +235,7 @@ section {
           }
         }
       }
+
       h4 {
         color: #fff;
         font-size: 20px;
@@ -460,44 +464,52 @@ main {
             position: absolute;
           }
           .shrimp1 {
-            top: -5%;
-            left: -20%;
-            opacity: 0;
+            top: 0px;
+            left: -130px;
+            opacity: 1;
+            animation: shrimp1 2s linear forwards;
           }
           .shrimp2 {
-            top: -10%;
-            left: 15%;
-            opacity: 0;
+            top: -20px;
+            left: 90px;
+            opacity: 1;
+            animation: shrimp2 2s 0.4s linear forwards;
           }
           .shrimp3 {
-            top: -10%;
-            left: 50%;
-            opacity: 0;
+            top: -20px;
+            left: 300px;
+            opacity: 1;
+            animation: shrimp3 2s 0.8s linear forwards;
           }
           .shrimp4 {
-            top: 0%;
-            left: 80%;
-            opacity: 0;
+            top: 10px;
+            left: 480px;
+            opacity: 1;
+            animation: shrimp4 2s 1.2s linear forwards;
           }
           .pdt_hot {
-            top: 30%;
-            left: -1%;
-            opacity: 1;
+            bottom: -45px;
+            left: -20px;
+            opacity: 0;
+            animation: snack 1s 4s linear forwards;
           }
           .pdt_rice {
-            top: 30%;
-            right: 0%;
-            opacity: 1;
+            bottom: -45px;
+            right: 0;
+            opacity: 0;
+            animation: snack 1s 4s linear forwards;
           }
           .pdt_basic {
-            top: 5%;
-            left: 25%;
-            opacity: 1;
+            bottom: -50px;
+            left: 145px;
+            opacity: 0;
+            animation: snack 1s 3.5s linear forwards;
           }
           .desc {
-            bottom: -25%;
-            left: 22%;
+            bottom: -110px;
+            left: 50%;
             z-index: 10;
+            transform: translateX(-50%);
           }
         }
         .m-img-box {
@@ -741,10 +753,8 @@ main {
     #cmsong {
       .inner-box {
         .tab-wrap {
-          .tab-box.on {
-            display: flex;
-          }
           .tab-box {
+            display: flex;
             gap: 30px;
             align-items: flex-end;
             .inner-text {
@@ -997,9 +1007,102 @@ footer {
 // //footer
 
 //animation
-@keyframes shrimp {
-  // animation: linear
+
+// main visual ani
+@keyframes shrimp1 {
+  0% {
+    left: -130px;
+  }
+
+  33% {
+    top: 300px;
+    left: -80px;
+  }
+
+  60% {
+    top: 100px;
+    left: 100px;
+  }
+
+  100% {
+    top: 150px;
+    left: 250px;
+  }
 }
+
+@keyframes shrimp2 {
+  0% {
+    left: 90px;
+  }
+
+  33% {
+    top: 255px;
+    left: -10px;
+  }
+
+  60% {
+    top: 100px;
+    left: 140px;
+  }
+
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+
+@keyframes shrimp3 {
+  0% {
+    left: 300px;
+  }
+
+  33% {
+    top: 250px;
+    left: 200px;
+  }
+
+  60% {
+    top: 80px;
+    left: 150px;
+  }
+
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+
+@keyframes shrimp4 {
+  0% {
+    left: 480px;
+  }
+
+  33% {
+    top: 300px;
+    left: 180px;
+  }
+
+  60% {
+    top: 80px;
+    left: 230px;
+  }
+
+  100% {
+    top: 150px;
+    left: 250px;
+  }
+}
+
+@keyframes snack {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+// main visual ani
 
 @keyframes objGroup {
   50% {

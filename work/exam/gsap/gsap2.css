@@ -1,0 +1,127 @@
+@charset 'utf-8';
+@import url(../reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-img {
+  width: 25vw;
+  height: 25vw;
+  margin-bottom: 1vw;
+  background-position: center;
+  background-size: cover;
+}
+
+.item-num {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 5vw;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section:nth-child(2n-1) {
+  background: #222;
+  color: #fff;
+}
+
+#section1,
+#section2,
+#section7 {
+  flex-direction: column;
+}
+/* sect1 */
+
+#section1 .item-text {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#section1 .item-img {
+  background-image: url(img/cat.png);
+}
+/* sect1 */
+/* sect2 */
+
+#section2 .item-text {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#section2 .item-img {
+  background-image: url(img/dog.png);
+}
+/* sect2 */
+/* sect3 */
+#section3 .item-text img {
+  display: block;
+  width: 300px;
+  text-align: center;
+}
+/* sect3 */
+/* sect4 */
+#section4 .item-text {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  margin-right: 50px;
+}
+
+#section4 .item-text:last-child {
+  margin-right: 0;
+}
+/* sect4 */
+
+/* sect5 */
+#section5 .item-text {
+  font-size: 4vw;
+  font-weight: bold;
+}
+/* sect5 */
+
+/* sect6 */
+#section6 .item-img {
+  width: 300px;
+}
+/* sect6 */
+/* sect7 */
+#section7 .item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  width: 100%;
+  padding: 30px;
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+}
+/* sect7 */
+
+/* sect8 */
+/* sect8 */

@@ -38,7 +38,7 @@ $(document).ready(function () {
         document.querySelector(".post-box .btn-next").classList.add("on");
       }
 
-      console.log(count);
+      // console.log(count);
     });
 
   // next
@@ -128,9 +128,9 @@ $(document).ready(function () {
   //  close btn click : content close
   document.querySelectorAll(".content-list").forEach(function (element) {
     element.addEventListener("click", function (e) {
-      console.log(e.target);
+      // console.log(e.target);
       if (e.target.classList.contains("close-btn")) {
-        // close-btn을 클릭했을 때만 처리 (이벤트 위임)
+        // close-btn을 클릭했을 때만 처리 (이벤트 위임) / contains = 해당 요소가 속해있는가?
         var closestLi = e.target.closest("li");
         // 현재 close-btn이 속한 가장 가까운 li 요소 찾기
         if (closestLi) {
@@ -307,4 +307,44 @@ $(document).ready(function () {
   });
 
   // //objGroup (moving bg) & title-box, content-box moving
+
+  //  tab mn : post on-off
+
+  document.querySelectorAll(".content").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      if (e.target.classList.contains("tab-mn")) {
+        let closestA = e.target.closest("a");
+        if (closestA) {
+          closestA.classList.add("on");
+        }
+      }
+    });
+  });
+
+  //
+
+  document.querySelectorAll(".content-list").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      // console.log(e.target);
+      if (e.target.classList.contains("close-btn")) {
+        // close-btn을 클릭했을 때만 처리 (이벤트 위임) / contains = 해당 요소가 속해있는가?
+        var closestLi = e.target.closest("li");
+        // 현재 close-btn이 속한 가장 가까운 li 요소 찾기
+        if (closestLi) {
+          // 가장 가까운 li 요소가 있으면 해당 li 요소의 max-height를 0으로 설정
+          closestLi.style.maxHeight = "0";
+        }
+      }
+    });
+  });
+
+  // 버튼 눌러 < e.target 써서 이벤트 위임으로 처리
+  // tab-box에 붙은 class 'on' 지워
+  // 누른 버튼의 href 읽어
+  // 그 href에 써진 아이디를 가진 tab-box 찾아
+  // 그 tab 박스에 class 'on' 붙여
+  // 그리고 그 tab box의 높이값 구해
+  // 구한 높이값을 tab-wrap에 적용해
+
+  // // tab mn : post on-off
 });
