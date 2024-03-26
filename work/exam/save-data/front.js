@@ -55,7 +55,9 @@ document.querySelector("#data-view").addEventListener("click", function () {
 
   createP.classList.add("view-complete");
   createP.style.display = "block";
+
   // createP.innerText = JSON.parse(localStorage.getItem("응답")).이름;
+
   createP.innerText =
     "이름: " +
     parseData.이름 +

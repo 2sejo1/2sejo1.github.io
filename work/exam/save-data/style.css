@@ -28,4 +28,6 @@
 }
 .save-data .guide-box p {
   display: none;
+  color: #009a7b;
+  font-weight: 500;
 }
