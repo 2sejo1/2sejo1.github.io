@@ -5,29 +5,70 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
 }
 
-.wrap {
-  position: relative;
+#wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
 }
 
+#wrap.on1 {
+  background-color: #ffb7b7;
+}
+
+#wrap.on2 {
+  background-color: #47cfaf;
+}
+
+#wrap.on3 {
+  background-color: #cf6b47;
+}
+
+#wrap.on4 {
+  background-color: #4796cf;
+}
+
+section.on {
+  transform: rotateY(-5deg);
+}
 section {
-  position: relative;
+  position: fixed;
   width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform-origin: right center;
 }
 
 article.on {
-  display: block;
+  z-index: 20;
+  opacity: 1;
+  > .img-box {
+    div {
+      transform: rotateY(0deg);
+    }
+  }
 }
 article {
   position: absolute;
-  display: none;
-  width: 1780px;
+  width: 1800px;
   height: 940px;
   padding: 10px;
+  z-index: 10;
+  opacity: 0;
   transition: 0.8s;
+  background: #fff;
+
   .title {
     position: absolute;
     display: block;
@@ -41,11 +82,13 @@ article {
     gap: 10px;
     width: 100%;
     height: 100%;
+    perspective: 2000px;
     > div {
       // border: 1px solid #000;
       position: relative;
       overflow: hidden;
-      transition: 0.8s;
+      transition: 0.5s;
+      transform: rotateY(180deg);
       &:hover {
         .text-box {
           opacity: 1;
@@ -176,14 +219,21 @@ article {
 }
 // // common
 
+.nav-btn.off {
+  opacity: 0;
+}
+
 .nav-btn {
   position: absolute;
   display: block;
   top: 330px;
   left: 20px;
-  z-index: 5;
+  z-index: 50;
   width: 30px;
   height: 26px;
+  opacity: 1;
+  transition: 0.5s;
+  animation: navAni 6s ease-in-out infinite;
   span {
     position: relative;
     display: block;
@@ -215,45 +265,24 @@ article {
 
 //  nav
 nav.on {
-  transform: translateX(0);
+  transform: rotateY(30deg);
+  ul {
+    transform: rotateY(-30deg);
+  }
 }
 nav {
-  position: absolute;
-  width: 500px;
-  height: 100vh;
-  z-index: 10;
-  background-color: #000000da;
-  transform: translateX(-500px);
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  z-index: 60;
+  background-color: #252525;
+  transform: rotateY(250deg);
+  transform-origin: left center;
   transition: 0.5s;
   .nav-box {
     position: relative;
     width: 100%;
     height: 100%;
-    .close-btn {
-      position: absolute;
-      display: block;
-      top: 20px;
-      right: 40px;
-      z-index: 12;
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 2px;
-        height: 40px;
-        background-color: #fff;
-        transform: rotate(45deg);
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 2px;
-        height: 40px;
-        background-color: #fff;
-        transform: rotate(-45deg);
-      }
-    }
     ul {
       display: flex;
       width: 100%;
@@ -263,8 +292,8 @@ nav {
       align-items: center;
       gap: 40px;
       li {
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 20px;
+        font-weight: 500;
         color: #fff;
         transition: 0.35s;
         &:hover {
@@ -327,3 +356,29 @@ nav {
   }
 }
 // //겨울
+
+@keyframes navAni {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  40% {
+    transform: rotate(0);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  75% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

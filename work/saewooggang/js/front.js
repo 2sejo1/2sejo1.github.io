@@ -324,15 +324,13 @@ $(document).ready(function () {
     });
   });
 
-    // 버튼 눌러 < e.target 써서 이벤트 위임으로 처리
+  // 버튼 눌러 < e.target 써서 이벤트 위임으로 처리
   // tab-box에 붙은 class 'on' 지워
   // 누른 버튼의 href 읽어
   // 그 href에 써진 아이디를 가진 tab-box 찾아
   // 그 tab 박스에 class 'on' 붙여
   // 그리고 그 tab box의 높이값 구해
   // 구한 높이값을 tab-wrap에 적용해
-
-  
 
   document.querySelectorAll(".content-list").forEach(function (element) {
     element.addEventListener("click", function (e) {
