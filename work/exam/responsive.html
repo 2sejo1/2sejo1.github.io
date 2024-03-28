@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      a.bar {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+      }
+
+      a.bar span {
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #000;
+        margin: 10px;
+      }
+
+      @media screen and (max-width: 560px) {
+        nav ul {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: pink;
+        }
+      }
+
+      @media screen and (min-width: 561px) {
+      }
+
+      @media screen and (min-width: 1024px) {
+        body {
+          background: wheat;
+        }
+        nav {
+          max-width: 1200px;
+          margin: auto;
+        }
+        nav ul {
+          display: flex;
+        }
+
+        nav ul li {
+          flex: 1;
+          text-align: center;
+          border: 1px solid #000;
+        }
+
+        a.bar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+      </ul>
+      <a href="#" class="bar">
+        <span></span>
+        <span></span>
+        <span></span
+      ></a>
+    </nav>
+  </body>
+</html>

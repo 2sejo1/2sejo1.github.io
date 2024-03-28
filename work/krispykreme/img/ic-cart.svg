@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>cart-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10_my-card-add-funds-sign-in_1200-copy-105" transform="translate(-1136.000000, -12.000000)">
+            <g id="Group-3">
+                <rect id="Rectangle-6" fill="#FFFFFF" x="0" y="0" width="1200" height="64"></rect>
+                <g id="Group-2" transform="translate(1136.000000, 12.000000)">
+                    <rect id="Rectangle-15" x="0" y="0" width="40" height="40"></rect>
+                    <path d="M34.9189723,22.3376301 L34.9189723,29.916474 L5.12351779,29.916474 L5.12351779,22.3376301 L19.0122161,22.3376301 L19.0673831,23.2791359 C19.0940139,23.7336288 19.504355,24.1055346 20.0197075,24.1055346 C20.53506,24.1055346 20.9454012,23.7336288 20.9720319,23.2791359 L21.027199,22.3376301 L34.9189723,22.3376301 Z M20.0197075,26.1055346 C18.8016042,26.1055346 17.7399118,25.3838599 17.2921749,24.3376301 L7.12351779,24.3376301 L7.12351779,27.916474 L32.9189723,27.916474 L32.9189723,24.3376301 L22.7472402,24.3376301 C22.2995032,25.3838599 21.2378109,26.1055346 20.0197075,26.1055346 Z" id="Shape" fill="#0B6937" fill-rule="nonzero"></path>
+                    <path d="M32.603662,22.2236416 L29.9579804,13.0001601 L10.0370406,13.0043924 L7.41845214,22.2236416 L32.603662,22.2236416 Z M8.525908,11.0047134 L31.4648567,10.9998399 L34.873291,22.3435872 L34.873291,24.234375 L5.26424154,24.234375 L5.14819336,22.3435872 L8.525908,11.0047134 Z" id="Shape" fill="#0B6937" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

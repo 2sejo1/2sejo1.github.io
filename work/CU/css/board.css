@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* common */
+.board-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+}
+/* //common */
+
+/* main */
+.btn-list {
+  display: flex;
+  justify-content: end;
+}
+
+.sns-btn-list {
+  display: flex;  
+}
+
+.font-size-btn {
+  display: flex;
+}
+
+.sns-btn-list a,
+.sns-btn-list button,
+.font-size-btn button {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.sns-btn-list li:nth-of-type(1) a {
+  background: url(/img/introduce/ico_facebook.png) no-repeat center center/100%;
+}
+
+.sns-btn-list li:nth-of-type(2) a {
+  background: url(/img/introduce/ico_twitter.png) no-repeat center center/100%;
+}
+
+.sns-btn-list li button {
+  border: none;
+  background: url(/img/introduce/ico_copyurl.png) no-repeat center center/100%;
+}
+
+.font-size-btn li:nth-of-type(1) button {
+  border: none;
+  background: url(/img/introduce/ico_plus.png) no-repeat center center/100%;
+}
+
+.font-size-btn li:nth-of-type(2) button {
+  border: none;
+  background: url(/img/introduce/ico_minus.png) no-repeat center center/100%;
+}
+
+/* //main */

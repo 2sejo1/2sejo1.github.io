@@ -1,0 +1,26 @@
+:root {
+  --mainKor-font: "PretendardVariable";
+
+  --mainColor: #67de72;
+
+  --white: #fff;
+  --black: #000;
+  --black100: #222;
+  --gray: #999;
+
+  /* --justify-cen {
+    justify-content: center;
+  }
+  --justify-betw {
+    justify-content: space-between;
+  }
+  --align-cen {
+    align-items: center;
+  } */
+
+  font-family: var(--mainKor-font);
+
+  body {
+    color: var(--black100);
+  }
+}

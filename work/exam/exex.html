@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="exex.css" />
+  </head>
+  <body>
+    <section class="main-visual-sect">
+      <div class="main-visual-box">
+        <div class="main-visual-wrap">
+          <div class="content-box">
+            <div class="content">1</div>
+            <div class="content">2</div>
+          </div>
+          <div class="content-box">
+            <div class="content blue">3</div>
+            <div class="content blue">4</div>
+          </div>
+          <div class="content">5</div>
+        </div>
+      </div>
+      <div class="btn btn-prev"></div>
+      <div class="btn btn-next"></div>
+    </section>
+    <script>
+      document
+        .querySelector(".btn-next")
+        .addEventListener("click", function () {
+          document.querySelector(".content-wrap").style.marginLeft =
+            idx * -100 + "%";
+        });
+    </script>
+  </body>
+</html>

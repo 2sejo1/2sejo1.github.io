@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP</title>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- gsap scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="gsap2.css" />
+  </head>
+  <body>
+    <main>
+      <section id="section1" class="item">
+        <span class="item-num">01</span>
+        <div class="item-text t1">Creative</div>
+        <div class="item-text t2">Collaborative</div>
+        <div class="item-text t3">Challenging</div>
+        <div class="item-text t4">Learning</div>
+        <div class="item-img"></div>
+      </section>
+      <section id="section2" class="item">
+        <span class="item-num">02</span>
+        <div class="item-text t1">눈부신</div>
+        <div class="item-text t2">생산물을</div>
+        <div class="item-text t3">확인해보시겠습니까?</div>
+        <div class="item-img"></div>
+      </section>
+      <section id="section3" class="item">
+        <span class="item-num">03</span>
+        <div class="item-text t1">
+          <img src="img/cat.png" alt="" />
+        </div>
+        <div class="item-text t2">
+          <img src="img/dog.png" alt="" />
+        </div>
+        <div class="item-text t3">
+          <img src="img/cat.png" alt="" />
+        </div>
+      </section>
+      <section id="section4" class="item">
+        <span class="item-num">04</span>
+        <div class="item-text t1"></div>
+        <div class="item-text t2"></div>
+        <div class="item-text t3"></div>
+        <div class="item-text t4"></div>
+        <div class="item-text t5"></div>
+        <div class="item-text t6"></div>
+        <div class="item-text t7"></div>
+        <div class="item-text t8"></div>
+        <div class="item-text t9"></div>
+        <div class="item-text t10"></div>
+      </section>
+      <section id="section5" class="item">
+        <span class="item-num">05</span>
+        <div class="item-text t1">룰룰루랄랄라라라</div>
+      </section>
+      <section id="section6" class="item">
+        <span class="item-num">06</span>
+        <div class="item-img">
+          <img src="img/p1.svg" alt="" />
+        </div>
+        <div class="item-img">
+          <img src="img/p2.svg" alt="" />
+        </div>
+        <div class="item-img">
+          <img src="img/p3.svg" alt="" />
+        </div>
+        <div class="item-img">
+          <img src="img/p4.svg" alt="" />
+        </div>
+      </section>
+      <section id="section7" class="item">
+        <span class="item-num">07</span>
+        <div class="item-text t1">고객의 목적에 맞게</div>
+        <div class="item-text t2">디자인 콘셉트를 잡고</div>
+        <div class="item-text t3">이용자가 편리하고</div>
+        <div class="item-text t4">효과적으로 전달 가능한</div>
+        <div class="item-text t5">디자인 감각을 지니고 있습니다</div>
+      </section>
+      <section id="section8" class="item">
+        <span class="item-num">08</span>
+        <div class="item-img">
+          <img src="img/cat.png" alt="" />
+        </div>
+      </section>
+    </main>
+    <script>
+      // section1
+      const ani1 = gsap.timeline();
+
+      ani1
+        .from("#section1 .t1", { xPercent: 400 }, "text")
+        .from("#section1 .t2", { xPercent: -400 }, "text")
+        .from("#section1 .t3", { xPercent: 400 }, "text")
+        .from("#section1 .t4", { xPercent: -400 }, "text")
+        .to("#section1 .item-img", {
+          rotation: 720,
+          scale: 0,
+          borderRadius: 500,
+        })
+        .to("#section1 .item-img", {
+          rotation: 0,
+          scale: 1,
+          borderRadius: 0,
+        });
+
+      ScrollTrigger.create({
+        animation: ani1,
+        trigger: "#section1",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        markers: true,
+      });
+
+      // //section1
+      // section2
+      const ani2 = gsap.timeline();
+
+      ani2
+        .from("#section2 .t1", { x: innerWidth * 1 })
+        .from("#section2 .t2", { x: innerWidth * -1 })
+        .from("#section2 .t3", { x: innerWidth * 1 });
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: "#section2",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section2
+
+      // section3
+      const ani3 = gsap.timeline();
+
+      ani3
+        .from("#section3 .t1", { y: innerHeight * 1, autoAlpha: 0 })
+        .from("#section3 .t2", { y: innerHeight * -1, autoAlpha: 0 })
+        .from("#section3 .t3", { y: innerHeight * 1, autoAlpha: 0 });
+      ScrollTrigger.create({
+        animation: ani3,
+        trigger: "#section3",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section3
+      // section4
+      const ani4 = gsap.timeline();
+
+      ani4.from("#section4 .item-text", {
+        y: gsap.utils.wrap([
+          innerHeight * 1,
+          innerHeight * -1,
+          innerHeight * 1,
+          innerHeight * -1,
+        ]),
+        autoAlpa: 0,
+        ease: "back.out(4)", // 반복할 수 있도록 사용한
+        stagger: {
+          each: 0.02,
+          from: "random", //end, centet, edges
+        },
+      });
+      ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#section4",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section4
+
+      //  section5
+      const ani5 = gsap.timeline();
+
+      ani5
+        .to("#section5 .item-text", {
+          scale: 30,
+        })
+        .to("#section5 .item-text", {
+          autoAlpha: 0,
+        });
+      ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section5",
+        start: "top top",
+        end: "+=3000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // // section5
+
+      // section6
+      const ani6 = gsap.timeline();
+
+      ani6.from("#section6 .item-img", {
+        scale: 2,
+        autoAlpha: 0,
+      });
+      ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section6",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section6
+
+      // section7
+      const ani7 = gsap.timeline();
+
+      ani7
+        .from("#section7 .t1", { duration: 1, y: 50, autoAlpha: 0 }, "+=1")
+        .from("#section7 .t2", { duration: 1, y: 50, autoAlpha: 0 }, "+=1")
+        .from("#section7 .t3", { duration: 1, y: 50, autoAlpha: 0 }, "+=1")
+        .from("#section7 .t4", { duration: 1, y: 50, autoAlpha: 0 }, "+=1")
+        .from("#section7 .t5", { duration: 1, y: 50, autoAlpha: 0 }, "+=1");
+      ScrollTrigger.create({
+        animation: ani7,
+        trigger: "#section7",
+        start: "top top",
+        end: "+=6000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section7
+
+      // section8
+      const ani8 = gsap.timeline();
+
+      ani8.from("#section8 .item-img", {
+        rotate: 1030,
+      });
+      ScrollTrigger.create({
+        animation: ani8,
+        trigger: "#section8",
+        start: "top top",
+        end: "+=6000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      // //section8
+    </script>
+  </body>
+</html>

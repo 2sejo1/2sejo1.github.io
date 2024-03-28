@@ -1,0 +1,31 @@
+:root {
+  --mainKor-font: "NotoSerifKR-Medium";
+  --mainLight-font: "NotoSerifKR-Regular";
+  --mainBold-font: "NotoSerifKR-SemiBold";
+  --pre-font: "PretendardVariable";
+  --icon-font-xe: "xeicon";
+  --icon-font-fa: "fa-solid-900";
+
+  --mainColor: #bf2a4c;
+  --subColor: #19a0b5;
+
+  --white: #fff;
+  --black: #000;
+  --black100: #222;
+
+  /* --justify-cen {
+    justify-content: center;
+  }
+  --justify-betw {
+    justify-content: space-between;
+  }
+  --align-cen {
+    align-items: center;
+  } */
+
+  font-family: var(--mainKor-font);
+
+  body {
+    color: var(--black100);
+  }
+}

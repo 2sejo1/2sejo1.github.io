@@ -1,0 +1,33 @@
+@import url(reset.css);
+.save-data {
+  width: 350px;
+  margin: 50px auto;
+}
+.save-data h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.save-data form div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+.save-data form div label {
+  width: 30px;
+  text-align: right;
+}
+.save-data .btn-box {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+.save-data .btn-box button {
+  padding: 5px 20px;
+}
+.save-data .guide-box p {
+  display: none;
+  color: #009a7b;
+  font-weight: 500;
+}

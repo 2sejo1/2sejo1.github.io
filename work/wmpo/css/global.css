@@ -1,0 +1,35 @@
+:root {
+  --mainKor-font: "SpoqaHanSansNeo-Regular";
+  --Bold-font: "SpoqaHanSansNeo-Bold";
+
+  --white: #fff;
+  --black: #000;
+  --black100: #333;
+
+  --gray: #f1f1f1;
+  --yellow: #ffe054;
+  --red: #ff4242;
+
+  --bullet-border-active: 4px solid #333;
+  --bullet-border: 6px solid rgba(0, 0, 0, 0);
+
+  --bullet-bg: rgba(51, 51, 51, 0.2);
+
+  --nav-gap: 40px;
+  --gnb-gap: 12px;
+  /* --justify-cen {
+    justify-content: center;
+  }
+  --justify-betw {
+    justify-content: space-between;
+  }
+  --align-cen {
+    align-items: center;
+  } */
+
+  font-family: var(--mainKor-font);
+
+  body {
+    color: var(--black100);
+  }
+}

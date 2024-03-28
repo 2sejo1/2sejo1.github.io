@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- jquery 연결 -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- style -->
+    <style>
+      li {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        background-color: #ccc;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>box1</li>
+      <li>box2</li>
+      <li>box3</li>
+      <li>box4</li>
+      <li>box5</li>
+      <li>box6</li>
+      <li>box7</li>
+      <li>box8</li>
+      <li>box9</li>
+      <li>box10</li>
+    </ul>
+
+    <h1><a href="#;"><img src="" alt=""></a></h1>
+    <script>
+      $("li").each(function (i) {
+        console.log(i);
+        $(this)
+          .delay(i * 500)
+          .animate({ left: "90%" });
+      });
+    </script>
+  </body>
+</html>
