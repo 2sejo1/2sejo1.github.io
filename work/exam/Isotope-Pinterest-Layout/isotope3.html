@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #e3e3e3;
+        padding: 20px;
+        font-family: "Roboto Slab", serif;
+      }
+
+      .grid {
+        margin: 0 auto;
+        padding: 10px;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+      }
+
+      .grid-item {
+        width: 180px;
+        height: 100px;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+      }
+      /* 
+      .grid-item:nth-child(4n-5) {
+        height: 50px;
+      }
+
+      .grid-item:nth-child(2n) {
+        height: 300px;
+      }
+
+      .grid-item:nth-child(3n) {
+        height: 120px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="img/dribbble-1.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-2.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-3.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-4.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-5.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-6.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-7.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-8.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-9.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-10.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-11.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-12.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-13.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-14.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-15.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-16.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-17.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-18.png" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="img/dribbble-19.png" alt="" />
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+    <script>
+      // init Isotope
+      var $grid = $(".grid").isotope({
+        // options...
+      });
+      // layout Isotope after each image loads
+      $grid.imagesLoaded().progress(function () {
+        $grid.isotope("layout");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+@import url(reset.css);
+@import url(font.css);
+@import url(global.css);
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.indent9999 {
+  display: block;
+  font-size: 1px;
+  text-indent: -9999px;
+}
+
+header .header-box .util-box {
+  width: 100%;
+  height: 40px;
+  background-color: var(--grayBG);
+  font-size: 12px;
+  font-weight: 400;
+}
+header .header-box .util-box .util-mn-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  line-height: 40px;
+}
+header .header-box .util-box .util-mn-list ul {
+  display: flex;
+  gap: 5px;
+}
+header .header-box .main-header-box {
+  width: 100%;
+  height: 86px;
+}
+header .header-box .main-header-box .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 86px;
+}
+header .header-box .main-header-box .wrapper .special-mn-box {
+  display: flex;
+}
+header .header-box .main-header-box .wrapper .special-mn-box .special-mn-list {
+  display: flex;
+  gap: 20px;
+}
+header .header-box nav {
+  width: 100%;
+  height: 45px;
+}
+header .header-box nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  font-size: 14px;
+}
+header .header-box nav .nav-list ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-visual-box .swiper-slide a {
+  position: relative;
+  display: block;
+  height: 600px;
+}
+.main-visual-box .swiper-slide a > img {
+  height: 100%;
+}
+.main-visual-box .swiper-slide a .text-box {
+  position: absolute;
+  top: 210px;
+  left: 360px;
+}
+.main-visual-box .swiper-slide a .text-box .title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+.main-visual-box .swiper-slide a .text-box .title .dis {
+  position: absolute;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  width: 52px;
+  height: 24px;
+  bottom: 15px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 24px;
+  background-color: var(--redColor);
+  color: #fff;
+}
+.main-visual-box .swiper-slide a .text-box .title .dis::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  left: 3px;
+  bottom: -6px;
+  border-color: var(--redColor) transparent transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 0 0;
+}
+.main-visual-box .swiper-slide a .text-box .desc {
+  font-size: 15px;
+  font-weight: 400;
+}
+.main-visual-box .swiper-slide a .emblem-box {
+  position: absolute;
+  top: 35px;
+  right: 370px;
+  width: 75px;
+}
+
+.look-book-sect .look-book-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.look-book-sect .look-book-box .look-book-wrap {
+  position: relative;
+  display: flex;
+}
+.look-book-sect .look-book-box .look-book-wrap li {
+  flex-shrink: 0;
+}
+.look-book-sect .look-book-box span {
+  cursor: pointer;
+}

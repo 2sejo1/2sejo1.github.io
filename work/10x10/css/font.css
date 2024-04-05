@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: CoreSansC;
+  src: url(../font/Fontspring-DEMO-coresansc35.otf);
+}
+
+@font-face {
+  font-family: CoreSansC-Bold;
+  src: url(../font/Fontspring-DEMO-coresansc85.otf);
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(../font/NotoSansKR-VariableFont_wght.ttf);
+}

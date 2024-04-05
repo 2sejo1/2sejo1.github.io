@@ -1,0 +1,40 @@
+:root {
+  --mainEng-font: "CoreSansC";
+  --boldEng-font: "CoreSansC-Bold";
+  --mainKor-font: "NotoSansKR";
+
+  --mainColor: #ff603e;
+
+  --blueColor: #3f75ff;
+  --redColor: #ff3131;
+  --pinkColor: #ffa9a9;
+  --greenColor: #8ae9bd;
+  --grayColor: #999;
+  --deepGrayColor: #666;
+
+  --white: #fff;
+  --black: #000;
+  --black100: #333;
+
+  --grayBG: #f5f6f7;
+  --deepGrayBG: #ddd;
+
+  /* --nav-gap: 40px;
+  --gnb-gap: 12px;
+
+  --justify-cen {
+    justify-content: center;
+  }
+  --justify-betw {
+    justify-content: space-between;
+  }
+  --align-cen {
+    align-items: center;
+  } */
+
+  font-family: var(--mainKor-font);
+
+  body {
+    color: var(--black100);
+  }
+}

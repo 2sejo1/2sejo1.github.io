@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>롯데호텔</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <section id="sect1">
+      <div class="inner">
+        <h2>LOTTE HOTELS & RESORTS Brands</h2>
+        <div class="articleBox">
+          <article>
+            <h3 data-bg="./img/signiel.jpg">
+              <img src="./img/signiel-icon.png" alt="" />
+            </h3>
+            <div class="article-desc">
+              <h4>Life beyond Expectations</h4>
+              <p>
+                시그니엘은 당신이 기대하는 모든 것, 그 이상의 가치를
+                제공합니다.<br />
+                어느 곳에서도 경험하지 못할 최상의 퍼스널 서비스와 함께 럭셔리
+                스타일을 선보입니다.<br />
+                삶이 선사하는 최고의 특권을 누리는 곳, 시그니엘에 머무는 것은
+                잊지 못할 경험이 될 것입니다.
+              </p>
+              <button class="detailbtn">
+                <a href="./signiel.html">자세히 보기</a>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h3 data-bg="./img/lotte.jpg">
+              <img src="./img/lotte-icon.png" alt="" />
+            </h3>
+            <div class="article-desc">
+              <h4>Enriching moments at global destination</h4>
+              <p>
+                롯데호텔은 섬세하고 품격 있는 시설과 서비스로 비교할 수 없는
+                명성과 대표성을 가지고 있습니다.<br />
+                전 세계 어디에서나 보증된 서비스와 시설을 제공하고 있으며
+                고객에게 변함없는 만족감을 선사하고 있습니다.<br />
+                품격 높은 삶을 즐기는 당신의 여유와 자긍심에 걸맞는 세심한
+                서비스로 배려와 감동을 약속합니다.
+              </p>
+              <button class="detailbtn">
+                <a href="./lotte.html">자세히 보기</a>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h3 data-bg="./img/l7.jpg">
+              <img src="./img/l7-icon.png" alt="" />
+            </h3>
+            <div class="article-desc">
+              <h4>A journey for inspiration</h4>
+              <p>
+                L7호텔은 문화창조자들과 밀레니얼 세대에게<br />
+                새로운 경험과 영감을 전달하기 위해 만들어진 라이프스타일
+                호텔입니다
+              </p>
+              <button class="detailbtn">
+                <a href="./l7.html">자세히 보기</a>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h3 data-bg="./img/lotte.jpg">
+              <img src="./img/lotte-icon.png" alt="" />
+            </h3>
+            <div class="article-desc">
+              <h4>Modern convenience and design for balanced travel</h4>
+              <p>
+                모든 것이 비즈니스맨들을 위하여 이상적으로 설계되었습니다.<br />
+                롯데시티호텔의 편리한 서비스, 모던한 객실과 함께 균형 있는
+                비즈니스 여행을 계획할 수 있습니다.<br />
+                롯데시티호텔은 당신이 호텔의 모든 부분을 어려움 없이 즐길 수
+                있도록 늘 가까이에 있습니다
+              </p>
+              <button class="detailbtn">
+                <a href="./city.html">자세히 보기</a>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h3 data-bg="./img/VL.jpg">
+              <img src="./img/VL-icon.png" alt="" />
+            </h3>
+            <div class="article-desc">
+              <h4>Vitality & Liberty</h4>
+              <p>
+                VL은 롯데호텔의 프리미엄 시니어 레지던스 브랜드입니다.<br />
+                당신을 완전히 자유롭게 할 VL에서 전혀 새로운 라이프 스타일과
+                삶의 균형을 완성하십시오.
+              </p>
+              <button class="detailbtn">
+                <a href="./VL.html" class="detailbtn">자세히 보기</a>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- detail html - frame -->
+    <div class="frame">
+      <a href="#" class="close"><img src="./img/close.png" alt="" /></a>
+      <div class="scene"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // $("article").mouseenter(function () {
+      //   $(this).addClass("on");
+
+      //   let fullbg = $(this).find("h3").attr("data-bg");
+      //   $("section").css({ backgroundImage: `url(${fullbg})` });
+      // });
+      // $("article").mouseleave(function () {
+      //   $("article").removeClass("on");
+      // });
+
+      // 동일 코드 반복문으로 변경
+      $("article").each(function () {
+        $(this).mouseenter(function () {
+          $(this).addClass("on");
+          let fullbg = $(this).find("h3").attr("data-bg");
+          $("section").css({ backgroundImage: `url(${fullbg})` });
+
+          $(this).mouseleave(function () {
+            $(this).removeClass("on");
+          });
+        });
+      });
+
+      // 디테일 버튼
+      $(".detailbtn a").click(function (e) {
+        e.preventDefault();
+        let href = $(this).attr("href");
+
+        $(".frame").animate({ top: "0" });
+        fetchContent(href);
+        $("body").css({ "overflow-y": "auto" });
+      });
+
+      // 해당 html 파일 불러오기
+      async function fetchContent(url) {
+        try {
+          const res = await fetch(url);
+          const data = await res.text();
+          $(".scene").html(data);
+        } catch (error) {
+          console.error("콘텐츠 로딩 중...오류발생", error);
+        }
+      }
+
+      //  페이지 닫기
+      $("a.close").click(function (e) {
+        e.preventDefault();
+        $(".frame").animate({ top: "100%" });
+        $("body").css({ "overflow-y": "hidden" });
+      });
+      //
+    </script>
+  </body>
+</html>

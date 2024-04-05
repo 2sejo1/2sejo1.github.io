@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* force scrollbar, prevents initial gap */
+      html {
+        overflow-y: scroll;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* ---- grid ---- */
+
+      .grid {
+        background: #ddd;
+      }
+
+      /* clear fix */
+      .grid:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      /* ---- .element-item ---- */
+
+      /* 5 columns, percentage width */
+      .grid-item,
+      .grid-sizer {
+        width: 20%;
+      }
+
+      .grid-item {
+        float: left;
+        height: 100px;
+        background: #0d8;
+        border: 2px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.7);
+      }
+
+      .grid-item--width2 {
+        width: 40%;
+      }
+      .grid-item--height2 {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Isotope - masonry fluid sizing</h1>
+
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script>
+      // external js: isotope.pkgd.js
+
+      $(".grid").isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".grid-sizer",
+        },
+      });
+    </script>
+  </body>
+</html>
