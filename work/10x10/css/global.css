@@ -19,6 +19,28 @@
   --grayBG: #f5f6f7;
   --deepGrayBG: #ddd;
 
+  --slimWeight: 300;
+  --basicWeight: 400;
+  --midiumWeight: 500;
+  --littleBoldWeight: 600;
+  --boldWeight: 700;
+
+  --titleSize: 32px;
+  --mainVisualSize: 40px;
+
+  --microSize: 10px;
+  --reallySmallSize: 11px;
+  --soSmallSize: 12px;
+  --smallSize: 13px;
+  --basicSize: 14px;
+  --midiumSize: 15px;
+  --bigSize: 16px;
+  --soBigSize: 17px;
+  --reallyBigSize: 18px;
+
+  --overLine: url(../img/bg_pattern_line.png) 0 0 repeat-x;
+  --underLine: url(../img/bg_pattern_line.png) 0 100% repeat-x;
+
   /* --nav-gap: 40px;
   --gnb-gap: 12px;
 
