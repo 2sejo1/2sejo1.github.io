@@ -29,15 +29,30 @@
           <div class="util-box">
             <ul class="util-mn-list wrapper">
               <li>
-                <ul>
+                <ul class="login-mn">
                   <li><a href="#;">로그인</a></li>
+                  <li>/</li>
                   <li><a href="#;">회원가입</a></li>
                 </ul>
               </li>
               <li><a href="#;">알림</a></li>
               <li><a href="#;">주문/배송</a></li>
               <li><a href="#;">고객센터</a></li>
-              <li><a href="#;">장바구니 0</a></li>
+              <li class="cart-li">
+                <a href="#;" class="cart-btn"
+                  ><span class="sp-icon"></span>장바구니
+                  <em class="cart-count"></em
+                ></a>
+                <!-- hover box -->
+                <div class="cart-list-box">
+                  <div class="inner-box">
+                    <p class="tip">* 최근 담은 순으로 5개까지 보여집니다.</p>
+                    <p class="null">장바구니에 담긴 상품이 없습니다.</p>
+                    <ul></ul>
+                  </div>
+                </div>
+                <!-- hover box -->
+              </li>
             </ul>
           </div>
           <div class="main-header-box">
@@ -47,7 +62,7 @@
               </h1>
               <div class="special-mn-box">
                 <ul class="special-mn-list">
-                  <li><a href="#;">2024 텐텐다꾸</a></li>
+                  <li><a href="#;" class="red point">2024 텐텐다꾸</a></li>
                   <li><a href="#;">프리오더</a></li>
                   <li><a href="#;">신상품</a></li>
                   <li><a href="#;">베스트</a></li>
@@ -60,7 +75,10 @@
                     type="text"
                     placeholder="띠부씰 포토후기 이벤트! 잊지 말아요!"
                   />
-                  <a href="#;">검색</a>
+                  <a href="#;"
+                    ><span class="sp-icon"> </span>
+                    <p class="indent9999">검색</p></a
+                  >
                 </div>
               </div>
             </div>
@@ -68,34 +86,1949 @@
           <nav>
             <ul class="nav-list wrapper">
               <li>
-                <ul>
-                  <li><a href="#;">디자인문구</a></li>
-                  <li><a href="#;">디지털/핸드폰</a></li>
-                  <li><a href="#;">디자인가전</a></li>
+                <ul class="left">
+                  <li>
+                    <a href="#;">디자인문구</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">다이어리/플래너</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >다이어리<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">오거나이저</a></li>
+                              <li><a href="#;">스케줄러/플래너</a></li>
+                              <li><a href="#;">달력</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">노트/메모지</a>
+                              </li>
+                              <li><a href="#;">베이직 노트</a></li>
+                              <li><a href="#;">양장 노트</a></li>
+                              <li><a href="#;">스프링 노트</a></li>
+                              <li><a href="#;">미니노트</a></li>
+                              <li>
+                                <a href="#;"
+                                  >단어장<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">수첩</a></li>
+                              <li>
+                                <a href="#;"
+                                  >메모지<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">기타 노트</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >데코레이션<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">스탬프</a></li>
+                              <li>
+                                <a href="#;"
+                                  >스티커<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">테이프/다이모</a></li>
+                              <li><a href="#;">펀치</a></li>
+                              <li><a href="#;">선물 포장</a></li>
+                              <li><a href="#;">장식오너먼트</a></li>
+                              <li><a href="#;">포스터</a></li>
+                              <li><a href="#;">뱃지/와펜</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">포토앨범/레코드북</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >앨범<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">폴라로이드 앨범</a></li>
+                              <li><a href="#;">포토박스</a></li>
+                              <li><a href="#;">티켓북</a></li>
+                              <li><a href="#;">출산/임신앨범</a></li>
+                              <li><a href="#;">스크랩북</a></li>
+                              <li><a href="#;">레시피노트</a></li>
+                              <li><a href="#;">인화 포토북/동영상</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>필기류/필통</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>카드/편지/봉투</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>파일/바인더</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>사무용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>데스크 정리/보관</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>디지털 문구</span
+                                  ><span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>해외디자인문구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>캐릭터 문구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>아티스트 굿즈</span
+                                  ><span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>미술도구</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">디지털/핸드폰</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">핸드폰</a></li>
+                              <li>
+                                <a href="#;"
+                                  >갤럭시<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >아이폰<span class="sp-icon hot"></span
+                                  ><span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >핸드폰 주변기기<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >갤럭시 케이스<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >애플 케이스<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">기타 핸드폰 케이스</a></li>
+                              <li><a href="#;">애플 보호필름</a></li>
+                              <li><a href="#;">갤럭시 보호필름</a></li>
+                              <li><a href="#;">기타 핸드폰 보호필름</a></li>
+                              <li><a href="#;">충전기</a></li>
+                              <li><a href="#;">케이블</a></li>
+                              <li><a href="#;">거치대/홀더</a></li>
+                              <li><a href="#;">기타 주변기기</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">태블릿 PC</a></li>
+                              <li><a href="#;">갤럭시탭</a></li>
+                              <li><a href="#;">갤럭시탭 액세서리</a></li>
+                              <li><a href="#;">아이패드</a></li>
+                              <li>
+                                <a href="#;"
+                                  >아이패드 액세서리<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">태블릿PC 거치대</a></li>
+                              <li><a href="#;">기타 태블릿PC 액세서리</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">PC/노트북</a></li>
+                              <li><a href="#;">노트북</a></li>
+                              <li>
+                                <a href="#;"
+                                  >PC<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>PC/노트북 주변기기</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>마우스/키보드</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>game shop</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>스마트워치</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>IoT/생활</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>카메라</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>영상기기</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>음향기기</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">디자인가전</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">브랜드관</a></li>
+                              <li><a href="#;">발뮤다</a></li>
+                              <li><a href="#;">다이슨</a></li>
+                              <li><a href="#;">플러스마이너스제로</a></li>
+                              <li><a href="#;">스메그</a></li>
+                              <li><a href="#;">레꼴뜨</a></li>
+                              <li><a href="#;">라쿠진</a></li>
+                              <li><a href="#;">쿠쿠</a></li>
+                              <li><a href="#;">제니퍼룸</a></li>
+                              <li>
+                                <a href="#;"
+                                  >쿠진아트<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >네스프레소<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">시즌가전</a></li>
+                              <li>
+                                <a href="#;"
+                                  >여름가전<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">겨울가전</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">주방가전</a></li>
+                              <li><a href="#;">믹서기/블렌더</a></li>
+                              <li><a href="#;">오븐/토스터</a></li>
+                              <li><a href="#;">전기주전자</a></li>
+                              <li><a href="#;">밥솥/쿠커/메이커</a></li>
+                              <li><a href="#;">빙수기/냉장고</a></li>
+                              <li><a href="#;">그릴/전기렌지</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">생활가전</a></li>
+                              <li><a href="#;">공기청정기</a></li>
+                              <li><a href="#;">청소기</a></li>
+                              <li><a href="#;">제습기</a></li>
+                              <li><a href="#;">가습기</a></li>
+                              <li><a href="#;">생활가전</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li>
-                <ul>
-                  <li><a href="#;">가구/수납</a></li>
-                  <li><a href="#;">패브릭/생활</a></li>
-                  <li><a href="#;">데코/조명</a></li>
-                  <li><a href="#;">키친</a></li>
-                  <li><a href="#;">푸드</a></li>
+                <ul class="left">
+                  <li>
+                    <a href="#;">가구/수납</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >수납/정리<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">옷 정리용품</a></li>
+                              <li><a href="#;">리빙박스/바구니</a></li>
+                              <li>
+                                <a href="#;"
+                                  >선반/수납장<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">옷장</a></li>
+                              <li><a href="#;">아이템정리</a></li>
+                              <li><a href="#;">데스크수납/정리</a></li>
+                              <li><a href="#;">주방/욕실수납</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">의자</a></li>
+                              <li>
+                                <a href="#;"
+                                  >일반의자<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >자세교정의자<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">사무용의자</a></li>
+                              <li><a href="#;">게이밍의자</a></li>
+                              <li><a href="#;">좌식의자</a></li>
+                              <li><a href="#;">흔들의자/안락의자</a></li>
+                              <li><a href="#;">스툴</a></li>
+                              <li><a href="#;">벤치</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">홈오피스가구</a>
+                              </li>
+                              <li><a href="#;">책상세트</a></li>
+                              <li>
+                                <a href="#;"
+                                  >책상<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">사무용의자</a></li>
+                              <li><a href="#;">책장/북선반</a></li>
+                              <li><a href="#;">서랍장/캐비넷</a></li>
+                              <li><a href="#;">파티션/악세서리</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>침실가구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>거실가구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>테이블</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>주방가구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아가구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>아웃도어가구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>DIY 가구/도구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>조립식창고</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">패브릭/생활</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >마스크/손세정제<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >마스크<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">손소독제</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >침구<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >침구세트<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">침구단품</a></li>
+                              <li><a href="#;">베개/베개커버</a></li>
+                              <li><a href="#;">아동 침구</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">홈케어</a></li>
+                              <li><a href="#;">청소용품</a></li>
+                              <li><a href="#;">세탁용품</a></li>
+                              <li><a href="#;">시즌생활용품</a></li>
+                              <li>
+                                <a href="#;"
+                                  >다용도세제/제습제<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">케어서비스</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">욕실용품</a></li>
+                              <li>
+                                <a href="#;"
+                                  >목욕용품<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">욕조/반신욕조</a></li>
+                              <li><a href="#;">타월/가운</a></li>
+                              <li><a href="#;">악세서리</a></li>
+                              <li><a href="#;">보관용기</a></li>
+                              <li><a href="#;">선반/홀더</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>난방텐트</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>커튼</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>카페트/러그</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>패브릭소품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>방석/쇼파패드</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>쿠션</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >생활용품<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 생활용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>DIY세트</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>원단/부자재</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">데코/조명</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >조명/스탠드<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">공간별조명</a></li>
+                              <li><a href="#;">LED평판등</a></li>
+                              <li><a href="#;">펜던트/포인트조명</a></li>
+                              <li><a href="#;">레일 조명</a></li>
+                              <li><a href="#;">정원/원예관리/야외등</a></li>
+                              <li><a href="#;">전구/형광등</a></li>
+                              <li><a href="#;">장/단스탠드</a></li>
+                              <li>
+                                <a href="#;"
+                                  >무드등/수유등<span class="sp-icon hot"></span
+                                  ><span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">랜턴/줄조명</a></li>
+                              <li><a href="#;">부속품/전등갓</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >캔들/디퓨저/인센스/방향제</a
+                                >
+                              </li>
+                              <li><a href="#;">캔들</a></li>
+                              <li>
+                                <a href="#;"
+                                  >디퓨저<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">향/인센스</a></li>
+                              <li><a href="#;">홈퍼퓸/샤쉐</a></li>
+                              <li><a href="#;">석고방향제/타블렛</a></li>
+                              <li>
+                                <a href="#;"
+                                  >캔들 홀더/워머<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >차량용방향제<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">부속품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">홈갤러리</a></li>
+                              <li>
+                                <a href="#;"
+                                  >패브릭포스터<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >그림/사진<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">액자</a></li>
+                              <li><a href="#;">주문제작/DIY</a></li>
+                              <li><a href="#;">부속품</a></li>
+                              <li><a href="#;">정기구독</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">시계</a></li>
+                              <li><a href="#;">타이머/스톱워치</a></li>
+                              <li><a href="#;">벽시계</a></li>
+                              <li>
+                                <a href="#;"
+                                  >탁상시계<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">알람시계</a></li>
+                              <li><a href="#;">양면시계</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>원예/가드닝/식물</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>데스크스탠드</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>꽃선물/기념일</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >DIY/인테리어소품<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >홈파티/데코스티커<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>셀프/시공</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>크리스마스</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">키친</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">컵/머그/보틀</a>
+                              </li>
+                              <li><a href="#;">일러스트유리컵</a></li>
+                              <li><a href="#;">카페유리컵</a></li>
+                              <li><a href="#;">손잡이유리컵</a></li>
+                              <li>
+                                <a href="#;"
+                                  >머그<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">커피잔</a></li>
+                              <li><a href="#;">찻잔</a></li>
+                              <li><a href="#;">플라스틱/스테인리스 컵</a></li>
+                              <li><a href="#;">술잔/주병</a></li>
+                              <li><a href="#;">보틀</a></li>
+                              <li><a href="#;">보틀/텀블러 악세서리</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">주방식기</a></li>
+                              <li><a href="#;">공기</a></li>
+                              <li><a href="#;">대접</a></li>
+                              <li><a href="#;">면기</a></li>
+                              <li><a href="#;">파스타/보울</a></li>
+                              <li><a href="#;">찬기</a></li>
+                              <li>
+                                <a href="#;"
+                                  >접시<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">그릇세트</a></li>
+                              <li><a href="#;">샐러드볼/아이스크림볼</a></li>
+                              <li><a href="#;">소스볼/종지</a></li>
+                              <li><a href="#;">유아식기</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">수저/커트러리</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >젓가락/숟가락<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">포크/나이프</a></li>
+                              <li><a href="#;">커트러리세트</a></li>
+                              <li><a href="#;">티스푼/티포크</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>주방잡화</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >조리도구/기구<span
+                                      class="sp-icon hot"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>주방수납</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>보관/용기/도시락</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>커피/티용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>와인용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >선물샵<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;" class="point">푸드</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">차/커피/음료</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >커피<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">차</a></li>
+                              <li><a href="#;">음료/주스</a></li>
+                              <li><a href="#;">생수/탄산수</a></li>
+                              <li><a href="#;">담금주</a></li>
+                              <li><a href="#;">과일청</a></li>
+                              <li><a href="#;">시럽</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">건강식품</a></li>
+                              <li><a href="#;">기타 건강식품</a></li>
+                              <li><a href="#;">건강분말/환</a></li>
+                              <li>
+                                <a href="#;"
+                                  >건강즙<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">꿀</a></li>
+                              <li><a href="#;">헬스보충제</a></li>
+                              <li><a href="#;">다이어트 간식/이너뷰티</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">가공식품 H</a></li>
+                              <li><a href="#;">카라멜/젤리</a></li>
+                              <li><a href="#;">사탕</a></li>
+                              <li><a href="#;">초콜릿</a></li>
+                              <li><a href="#;">케이크</a></li>
+                              <li><a href="#;">빵</a></li>
+                              <li><a href="#;">쨈</a></li>
+                              <li><a href="#;">떡</a></li>
+                              <li><a href="#;">소금/설탕/고추장</a></li>
+                              <li><a href="#;">수입조미료/소스</a></li>
+                              <li>
+                                <a href="#;"
+                                  >올리브오일/식초<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>간편식</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>베이킹</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유제품/아이스크림</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>신선식품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물세트</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아식품</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li>
-                <ul>
-                  <li><a href="#;">패션의류</a></li>
-                  <li><a href="#;">패션잡화</a></li>
-                  <li><a href="#;">뷰티</a></li>
-                  <li><a href="#;">주얼리/시계</a></li>
+                <ul class="right">
+                  <li>
+                    <a href="#;" class="point">패션의류</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">여성 아우터</a>
+                              </li>
+                              <li><a href="#;">코트</a></li>
+                              <li><a href="#;">점퍼</a></li>
+                              <li><a href="#;">야상</a></li>
+                              <li>
+                                <a href="#;"
+                                  >자켓<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">패딩</a></li>
+                              <li>
+                                <a href="#;"
+                                  >레인코트<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">여성 드레스</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >롱/미디 원피스<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">미니 원피스</a></li>
+                              <li><a href="#;">레이어드 원피스</a></li>
+                              <li><a href="#;">민소매 원피스</a></li>
+                              <li><a href="#;">정장 원피스</a></li>
+                              <li>
+                                <a href="#;"
+                                  >생활한복<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">니트 원피스</a></li>
+                              <li>
+                                <a href="#;"
+                                  >셀프웨딩 드레스<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >여성 상의<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >스웨트셔츠<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >후드<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">후드집업</a></li>
+                              <li><a href="#;">티셔츠</a></li>
+                              <li>
+                                <a href="#;"
+                                  >니트/조끼<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >가디건<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">셔츠/블라우스</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">여성 하의</a></li>
+                              <li><a href="#;">스커트</a></li>
+                              <li><a href="#;">팬츠</a></li>
+                              <li>
+                                <a href="#;"
+                                  >레깅스<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>남성 아우터</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>남성 상의</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>남성 하의</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 의류</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>라운지웨어</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >비치웨어<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">패션잡화</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">우먼 슈즈</a></li>
+                              <li>
+                                <a href="#;"
+                                  >블로퍼<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >로퍼<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">플랫슈즈</a></li>
+                              <li>
+                                <a href="#;"
+                                  >스니커즈/운동화<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">펌프스</a></li>
+                              <li><a href="#;">부츠</a></li>
+                              <li><a href="#;">레인/아쿠아슈즈</a></li>
+                              <li><a href="#;">슬리퍼/샌들</a></li>
+                              <li>
+                                <a href="#;"
+                                  >슈즈 액세서리<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">슈케어</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">맨 슈즈</a></li>
+                              <li>
+                                <a href="#;"
+                                  >스니커즈/운동화<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">슬립온</a></li>
+                              <li><a href="#;">로퍼</a></li>
+                              <li><a href="#;">구두</a></li>
+                              <li><a href="#;">워커/부츠</a></li>
+                              <li><a href="#;">샌들/플리플랍</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >가방<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">에코백</a></li>
+                              <li><a href="#;">토트백</a></li>
+                              <li>
+                                <a href="#;"
+                                  >숄더백<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">크로스백</a></li>
+                              <li><a href="#;">메신저백</a></li>
+                              <li><a href="#;">백팩/힙색</a></li>
+                              <li><a href="#;">클러치백</a></li>
+                              <li><a href="#;">서류가방</a></li>
+                              <li><a href="#;">보스턴백/여행가방</a></li>
+                              <li>
+                                <a href="#;"
+                                  >왕골 / 라탄백<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">지갑/파우치</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >파우치<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">지갑</a></li>
+                              <li><a href="#;">DIY</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>우산/양산</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>아이웨어</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>모자/장갑/목도리</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>양말</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>우먼 패션소품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>맨 패션소품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 잡화</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>캐리어/여행백</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>여행수납</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>여행소품</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">뷰티</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">스킨케어</a></li>
+                              <li>
+                                <a href="#;"
+                                  >스킨/토너<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">에센스/세럼</a></li>
+                              <li><a href="#;">로션</a></li>
+                              <li>
+                                <a href="#;"
+                                  >크림/오일<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">아이케어/링클</a></li>
+                              <li><a href="#;">스킨케어 세트</a></li>
+                              <li>
+                                <a href="#;"
+                                  >미스트<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">임산부케어</a></li>
+                              <li>
+                                <a href="#;"
+                                  >마스크<span class="sp-icon new-blue"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">선케어</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">메이크업</a></li>
+                              <li>
+                                <a href="#;"
+                                  >베이스 메이크업<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">립 메이크업</a></li>
+                              <li><a href="#;">아이 메이크업</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">클렌징</a></li>
+                              <li><a href="#;">일반</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">클렌징</a></li>
+                              <li><a href="#;">비누</a></li>
+                              <li><a href="#;">클렌징 폼</a></li>
+                              <li>
+                                <a href="#;"
+                                  >클렌징 워터/오일<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">클렌징 티슈</a></li>
+                              <li><a href="#;">립&아이 리무버</a></li>
+                              <li><a href="#;">필링/스크럽</a></li>
+                              <li><a href="#;">핸드워시</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >헤어/바디<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >헤어<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">바디워시</a></li>
+                              <li><a href="#;">바디스크럽</a></li>
+                              <li><a href="#;">입욕제</a></li>
+                              <li><a href="#;">바디로션/오일</a></li>
+                              <li><a href="#;">바디미스트</a></li>
+                              <li><a href="#;">바디케어 세트</a></li>
+                              <li><a href="#;">샤워용품</a></li>
+                              <li><a href="#;">핸드/풋</a></li>
+                              <li><a href="#;">제모</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>남성 화장품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>향수</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>네일</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>타투스티커</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>뷰티기기</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>뷰티소품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>여성용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>헬스용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 화장품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >선물샵<span
+                                      class="sp-icon new-blue"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">주얼리/시계</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title"
+                                  >반지<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >패션 반지<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">이니셜/레터링 반지</a></li>
+                              <li><a href="#;">진주/원석반지</a></li>
+                              <li><a href="#;">반지 세트</a></li>
+                              <li><a href="#;">커플링</a></li>
+                              <li><a href="#;">10K/14K/18K</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">귀걸이</a></li>
+                              <li><a href="#;">볼 귀걸이</a></li>
+                              <li><a href="#;">패션 귀걸이 H</a></li>
+                              <li><a href="#;">드롭 귀걸이</a></li>
+                              <li><a href="#;">링 귀걸이</a></li>
+                              <li><a href="#;">진주/원석 귀걸이</a></li>
+                              <li><a href="#;">귀걸이 세트</a></li>
+                              <li><a href="#;">피어싱</a></li>
+                              <li><a href="#;">이어커프/귀찌</a></li>
+                              <li><a href="#;">10K/14K/18K</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">목걸이</a></li>
+                              <li><a href="#;">패션 목걸이</a></li>
+                              <li>
+                                <a href="#;"
+                                  >925 실버 목걸이<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">이니셜/레터링 목걸이</a></li>
+                              <li><a href="#;">진주/원석 목걸이</a></li>
+                              <li><a href="#;">초커 목걸이</a></li>
+                              <li><a href="#;">10K/14K/18K</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">팔찌/발찌</a></li>
+                              <li>
+                                <a href="#;"
+                                  >패션 팔찌<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">커플 팔찌</a></li>
+                              <li><a href="#;">진주/원석 팔찌</a></li>
+                              <li><a href="#;">실팔찌/매듭팔찌</a></li>
+                              <li><a href="#;">체인 팔찌</a></li>
+                              <li><a href="#;">뱅글 팔찌</a></li>
+                              <li><a href="#;">팔찌 세트</a></li>
+                              <li><a href="#;">10K/14K/18K</a></li>
+                              <li><a href="#;">게르마늄 팔찌</a></li>
+                              <li><a href="#;">발찌</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>각인 주얼리 N</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>손목시계</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>주얼리 소품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>주얼리 세트</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>헤어 액세서리 N</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>골드바/순금</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵 N</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 악세서리</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li>
-                <ul>
-                  <li><a href="#;">Cat&Dog</a></li>
-                  <li><a href="#;">토이/취미</a></li>
-                  <li><a href="#;">캠핑</a></li>
+                <ul class="right">
+                  <li>
+                    <a href="#;">Cat&Dog</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">디자이너 브랜드</a>
+                              </li>
+                              <li><a href="#;">베스트 디자이너 H</a></li>
+                              <li><a href="#;">뉴이스트 디자이너</a></li>
+                              <li><a href="#;">수입 브랜드</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">패션</a></li>
+                              <li>
+                                <a href="#;"
+                                  >티셔츠<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">민소매</a></li>
+                              <li><a href="#;">셔츠</a></li>
+                              <li><a href="#;">올인원/팬츠</a></li>
+                              <li><a href="#;">원피스/드레스</a></li>
+                              <li><a href="#;">아우터</a></li>
+                              <li><a href="#;">쥬얼리/악세서리</a></li>
+                              <li><a href="#;">코스프레</a></li>
+                              <li><a href="#;">한복</a></li>
+                              <li><a href="#;">머플러</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">외출</a></li>
+                              <li>
+                                <a href="#;"
+                                  >래쉬&목줄<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">이동가방</a></li>
+                              <li><a href="#;">산책가방</a></li>
+                              <li><a href="#;">강아지가방</a></li>
+                              <li><a href="#;">강아지신발</a></li>
+                              <li><a href="#;">배변용품</a></li>
+                              <li><a href="#;">물병/보울/포켓</a></li>
+                              <li><a href="#;">입마개/훈련</a></li>
+                              <li><a href="#;">물놀이용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">하우스/펫가전</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >하우스<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">쿠션/매트</a></li>
+                              <li><a href="#;">스텝</a></li>
+                              <li><a href="#;">해먹</a></li>
+                              <li>
+                                <a href="#;">케이지/안전문/펫가전/CCTV</a>
+                              </li>
+                              <li><a href="#;">쿨매트</a></li>
+                              <li><a href="#;">블랭킷</a></li>
+                              <li><a href="#;">펫가구</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>키친</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>푸드</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >ONLY CAT<span
+                                      class="sp-icon hot"
+                                    ></span></span
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>그루밍/위생</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>장난감</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>관상어/소동물</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>PET LOVE</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>선물샵</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">토이/취미</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">피규어</a></li>
+                              <li>
+                                <a href="#;"
+                                  >랜덤피규어<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">캐릭터피규어</a></li>
+                              <li><a href="#;">디자이너피규어</a></li>
+                              <li>
+                                <a href="#;"
+                                  >프리미엄피규어<span
+                                    class="sp-icon new-blue"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">케이스/진열장</a></li>
+                              <li><a href="#;">소니엔젤</a></li>
+                              <li><a href="#;">팝마트</a></li>
+                              <li><a href="#;">플레이모빌</a></li>
+                              <li><a href="#;">데꼴</a></li>
+                              <li><a href="#;">리멘트/식완</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">인형</a></li>
+                              <li>
+                                <a href="#;"
+                                  >캐릭터인형<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">애니멀인형</a></li>
+                              <li><a href="#;">컬렉션인형</a></li>
+                              <li><a href="#;">걱정인형</a></li>
+                              <li><a href="#;">빅사이즈인형</a></li>
+                              <li><a href="#;">핸드메이드인형</a></li>
+                              <li><a href="#;">손뜨개/실인형</a></li>
+                              <li><a href="#;">양말/재활용인형</a></li>
+                              <li><a href="#;">한사토이</a></li>
+                              <li><a href="#;">테디베어</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">DIY키트</a></li>
+                              <li><a href="#;">뜨개질</a></li>
+                              <li><a href="#;">드로잉/미술</a></li>
+                              <li><a href="#;">자수/위빙</a></li>
+                              <li><a href="#;">소품 만들기</a></li>
+                              <li><a href="#;">비즈공예/보석십자수</a></li>
+                              <li>
+                                <a href="#;"
+                                  >아이와 만들기<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">교육용 만들기</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">레저/스포츠 H</a>
+                              </li>
+                              <li><a href="#;">운동용품/응원</a></li>
+                              <li><a href="#;">야구/축구</a></li>
+                              <li>
+                                <a href="#;"
+                                  >골프/배드민턴/테니스<span
+                                    class="sp-icon hot"
+                                  ></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">전동 스쿠터/킥보드</a></li>
+                              <li><a href="#;">고글/보호대/헬멧</a></li>
+                              <li><a href="#;">수영/다이빙</a></li>
+                              <li><a href="#;">서핑용품</a></li>
+                              <li><a href="#;">낚시</a></li>
+                              <li><a href="#;">스케이트 보드/인라인</a></li>
+                              <li><a href="#;">마스크/반다나/워머</a></li>
+                              <li><a href="#;" class="“more”">more</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>자동차/자전거</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>캐릭터/웹툰</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>조립/퍼즐</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>장난감</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>유아동 완구/교구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>물놀이용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>보드게임</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>파티용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>모형/RC</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>악기/음반</span></a
+                                >
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#;">캠핑</a>
+                    <div class="sub-mn-box">
+                      <div class="inner-box">
+                        <ul>
+                          <li>
+                            <ul>
+                              <li><a href="#;" class="title">텐트/타프</a></li>
+                              <li>
+                                <a href="#;"
+                                  >텐트<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">파라솔</a></li>
+                              <li><a href="#;">폴대/로프/팩</a></li>
+                              <li><a href="#;">타프</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="title">테이블/의자</a>
+                              </li>
+                              <li>
+                                <a href="#;"
+                                  >캠핑테이블<span class="sp-icon hot"></span
+                                ></a>
+                              </li>
+                              <li><a href="#;">캠핑체어</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>침낭/매트</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>취사도구</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>푸드/밀키트/축산</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>랜턴/손전등</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>비너/악세사리</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>아이젠/안전용품</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span>멀티툴</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#;" class="small-title"
+                                  ><span
+                                    >기타<span class="sp-icon hot"></span></span
+                                ></a>
+                              </li>
+                              <li><a href="#;" class="sale">SALE</a></li>
+                              <li><a href="#;" class="event">EVENT</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -841,7 +2774,9 @@
                             <p class="item-name">
                               모슈 라떼 스트로우 무광 텀블러 480ml/700ml
                             </p>
-                            <p class="price"><span>15%</span>33,800원</p>
+                            <p class="price">
+                              <span class="green">15%</span>33,800원
+                            </p>
                           </div>
                         </div>
                       </a>
@@ -955,7 +2890,9 @@
                             <p class="item-name">
                               블러 키스컷 마스킹테이프 8종
                             </p>
-                            <p class="price"><span>37%</span>3,654원</p>
+                            <p class="price">
+                              <span class="green">37%</span>3,654원
+                            </p>
                           </div>
                         </div>
                       </a>
@@ -1028,7 +2965,9 @@
                           </div>
                           <div class="text-box">
                             <p class="item-name">새틴 노트 토모에리버 B6</p>
-                            <p class="price"><span>10%</span>11,732원</p>
+                            <p class="price">
+                              <span class="green">10%</span>11,732원
+                            </p>
                           </div>
                         </div>
                       </a>
@@ -1160,13 +3099,15 @@
                     <li>
                       <a href="#;">
                         <div class="this-item">
-                          <div class="dis-mark">56%</div>
+                          <div class="dis-mark green">56%</div>
                           <div class="item-img">
                             <img src="img/bunny4.jpg" alt="" />
                           </div>
                           <div class="text-box">
                             <p class="item-name">[버니콘비니] 메모패드 (3종)</p>
-                            <p class="price"><span>56%</span>1,100원</p>
+                            <p class="price">
+                              <span class="green">56%</span>1,100원
+                            </p>
                           </div>
                         </div>
                       </a>
@@ -1183,7 +3124,7 @@
                     <li>
                       <a href="#;">
                         <div class="this-item">
-                          <div class="dis-mark">26%</div>
+                          <div class="dis-mark green">26%</div>
                           <div class="item-img">
                             <img src="img/hello2.jpg" alt="" />
                           </div>
@@ -1191,7 +3132,9 @@
                             <p class="item-name">
                               [Sanrio] 요거트메이커_헬로키티 TBT-0006
                             </p>
-                            <p class="price"><span>26%</span>34,000원</p>
+                            <p class="price">
+                              <span class="green">26%</span>34,000원
+                            </p>
                           </div>
                         </div>
                       </a>
@@ -1355,11 +3298,13 @@
       <footer>
         <div class="footer-box">
           <div class="footer-main-box">
-            <div class="footer-main-inner">
+            <div class="footer-main-inner wrapper flex">
               <div class="info-box">
                 <div class="notice-box">
                   <div class="title-box">
-                    <h2>공지사항</h2>
+                    <h2 class="flex">
+                      공지사항<span class="sp-icon new"></span>
+                    </h2>
                     <a href="#;" class="more-btn">more</a>
                   </div>
                   <ul>
@@ -1386,14 +3331,14 @@
                     <h2>매장안내</h2>
                     <a href="#;" class="more-btn">more</a>
                   </div>
-                  <ul>
+                  <ul class="flex">
                     <li><a href="#;">대학로점</a></li>
                     <li><a href="#;">텐바이텐 신제주점</a></li>
                   </ul>
                 </div>
               </div>
               <div class="service-box">
-                <ul>
+                <ul class="flex">
                   <li>
                     <ul>
                       <li>
@@ -1428,10 +3373,12 @@
                       </li>
                       <li>
                         <p class="mn-title">JOIN US!</p>
-                        <ul>
+                        <ul class="join-text">
                           <li>지금 텐바이텐 가입하면</li>
                           <li class="red bold">2,000원 쿠폰</li>
-                          <li><a href="#;" class="coupon">회원가입 하기</a></li>
+                          <li>
+                            <a href="#;"><p class="coupon">회원가입 하기</p></a>
+                          </li>
                         </ul>
                       </li>
                     </ul>
@@ -1441,19 +3388,33 @@
                       <li>
                         <p class="mn-title">SNS</p>
                         <ul>
-                          <li><a href="#;" class="instagram">인스타그램</a></li>
-                          <li><a href="#;" class="facebook">페이스북</a></li>
-                          <li><a href="#;" class="youtube">유튜브</a></li>
+                          <li>
+                            <a href="#;" class="instagram"
+                              ><span class="sp-icon"></span>인스타그램</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#;" class="facebook"
+                              ><span class="sp-icon"></span>페이스북</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#;" class="youtube"
+                              ><span class="sp-icon"></span>유튜브</a
+                            >
+                          </li>
                         </ul>
                       </li>
                       <li>
                         <p class="mn-title">모바일</p>
-                        <ul>
+                        <ul class="mobile-list">
                           <li>
                             <ul class="flex">
-                              <li><img src="img/img_qrcode.png" alt="" /></li>
+                              <li class="qr">
+                                <img src="img/img_qrcode.png" alt="" />
+                              </li>
                               <li>
-                                <ul>
+                                <ul class="store-list">
                                   <li>
                                     <a href="#;"
                                       ><img
@@ -1473,8 +3434,10 @@
                             </ul>
                           </li>
                           <li>
-                            <a href="#;" class="coupon"
-                              >앱 다운 받고 쿠폰 받으세요</a
+                            <a href="#;"
+                              ><p class="coupon">
+                                앱 다운 받고 쿠폰 받으세요
+                              </p></a
                             >
                           </li>
                         </ul>
@@ -1486,9 +3449,9 @@
             </div>
           </div>
           <div class="footer-mn-box">
-            <ul>
+            <ul class="wrapper flex">
               <li><a href="#;">회사소개</a></li>
-              <li><a href="#;">채용정보</a></li>
+              <li><a href="#;" class="point">채용정보</a></li>
               <li><a href="#;" class="bold">이용약관</a></li>
               <li><a href="#;" class="bold">개인정보 처리방침</a></li>
               <li><a href="#;" class="bold">청소년 보호정책</a></li>
@@ -1497,15 +3460,15 @@
               <li><a href="#;">매장안내</a></li>
             </ul>
           </div>
-          <div class="footer-sub-box">
+          <div class="footer-sub-box wrapper flex">
             <h1 class="logo">
               <a href="#"><img src="img/logo_bk.png" alt="10X10" /></a>
             </h1>
             <div class="company-box">
               <ul>
-                <li>㈜텐바이텐</li>
+                <li class="company-name">㈜텐바이텐</li>
                 <li>
-                  <ul>
+                  <ul class="company-desc">
                     <li>
                       대표이사 : 최은희 / 서울시 종로구 대학로 57 홍익대학교
                       대학로캠퍼스 교육동 14층
@@ -1529,27 +3492,39 @@
                   </ul>
                 </li>
                 <li>
-                  <ul>
-                    <li>호스팅서비스:㈜텐바이텐</li>
-                    <li>
+                  <ul class="service-list">
+                    <li class="hosting">호스팅서비스: ㈜텐바이텐</li>
+                    <li class="desc">
                       사이트 내 판매 상품 중 일부는 ㈜텐바이텐에 입점한
                       개별판매자가 판매하는 상품이 포함되어 있습니다. 해당
-                      상품의 경우
-                    </li>
-                    <li>
+                      상품의 경우 <br />
                       ㈜텐바이텐은 통신판매중개자로서 판매 당사자가 아니며,
                       상품정보 및 거래 등에 대한 책임을 지지 않습니다.
                     </li>
-                    <li>COPYRIGHT &copy; TENBYTEN ALL RIGHTS RESERVED.</li>
+                    <li class="copy">
+                      COPYRIGHT &copy; TENBYTEN ALL RIGHTS RESERVED.
+                    </li>
                   </ul>
                 </li>
               </ul>
             </div>
             <div class="cs-box">
               <ul class="sns-list">
-                <li><a href="#;">인스타그램</a></li>
-                <li><a href="#;">페이스북</a></li>
-                <li><a href="#;">유튜브</a></li>
+                <li>
+                  <a href="#;" class="ins"
+                    ><span class="indent9999">인스타그램</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#;" class="face"
+                    ><span class="indent9999">페이스북</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#;" class="you"
+                    ><span class="indent9999">유튜브</span></a
+                  >
+                </li>
               </ul>
               <div class="inner-box">
                 <a href="#;">고객센터 바로가기</a>

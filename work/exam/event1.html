@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: relative;
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+      .modal {
+        position: absolute;
+        display: none;
+        width: 100%;
+        background-color: skyblue;
+      }
+
+      #pop-pop {
+        position: absolute;
+        display: none;
+        width: 100%;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- event 1 -->
+    <div class="wrap">
+      <div class="modal" id="notice1">
+        <h2>공지 리스트</h2>
+        <button
+          onclick="document.getElementById('notice1').style.display = 'none'"
+        >
+          닫기
+        </button>
+      </div>
+      <button
+        onclick="document.getElementById('notice1').style.display = 'block'"
+      >
+        공지글 보기
+      </button>
+    </div>
+
+    <!-- event2 -->
+    <div class="wrap">
+      <div class="modal" id="notice2">
+        <h2>공지 리스트</h2>
+        <button onclick="closeNotic()">닫기</button>
+      </div>
+      <button onclick="noticeBo()">공지글 보기</button>
+    </div>
+
+    <!-- event3 -->
+    <div class="wrap">
+      <!-- notice -->
+      <div class="modal" id="notice3">
+        <h2>공지 리스트</h2>
+        <button onclick="closeNotice()">닫기</button>
+      </div>
+      <!-- news -->
+      <div class="modal" id="news1">
+        <h2>뉴스 리스트</h2>
+        <button onclick="closeNews()">닫기</button>
+      </div>
+      <button onclick="noticeBox()">공지글 보기</button>
+      <button onclick="newsBox()">뉴스 보기</button>
+    </div>
+
+    <!-- event4 -->
+    <div class="wrap">
+      <!-- notice -->
+      <div class="modal" id="notice4">
+        <h2>공지 리스트</h2>
+        <button id="notice-close4">닫기</button>
+      </div>
+      <!-- news -->
+      <div class="modal" id="news2">
+        <h2>뉴스 리스트</h2>
+        <button id="news-close4">닫기</button>
+      </div>
+      <button id="notice-btn4">공지글 보기</button>
+      <button id="news-btn4">뉴스 보기</button>
+    </div>
+  </body>
+
+  <!-- event5 -->
+
+  <div class="wrap">
+    <div class="wrap">
+      <div class="modal-box" id="pop-pop">
+        <h2 id="title">알림창</h2>
+        <button id="close-btnn">닫기</button>
+      </div>
+      <button id="notice-btn">공지글 보기</button>
+      <button id="news-btn">뉴스 보기</button>
+    </div>
+
+  <script>
+    // event 2
+    function noticeBo() {
+      document.getElementById("notice2").style.display = "block";
+    }
+
+    function closeNotic() {
+      document.getElementById("notice2").style.display = "none";
+    }
+
+    // event3
+    function noticeBox() {
+      document.getElementById("notice3").style.display = "block";
+    }
+
+    function closeNotice() {
+      document.getElementById("notice3").style.display = "none";
+    }
+
+    function newsBox() {
+      document.getElementById("news1").style.display = "block";
+    }
+
+    function closeNews() {
+      document.getElementById("news1").style.display = "none";
+    }
+
+    // event4
+    function noticeShow() {
+      document.getElementById("notice4").style.display = "block";
+    }
+
+    function closeNoti() {
+      document.getElementById("notice4").style.display = "none";
+    }
+
+    function newsShow() {
+      document.getElementById("news2").style.display = "block";
+    }
+
+    function closeNew() {
+      document.getElementById("news2").style.display = "none";
+    }
+
+    document
+      .querySelector("#notice-btn4")
+      .addEventListener("click", function () {
+        noticeShow();
+      });
+    document
+      .querySelector("#notice-close4")
+      .addEventListener("click", function () {
+        closeNoti();
+      });
+    document.querySelector("#news-btn4").addEventListener("click", function () {
+      newsShow();
+    });
+    document
+      .querySelector("#news-close4")
+      .addEventListener("click", function () {
+        closeNew();
+      });
+
+
+
+    // event5
+    function modall(title) {
+      document.getElementById("title").innerHTML = title;
+      //fetch
+      document.getElementById("pop-pop").style.display = "block";
+    }
+
+    document
+      .querySelector("#notice-btn")
+      .addEventListener("click", function () {
+        modall("공지글");
+      });
+    document.querySelector("#news-btn").addEventListener("click", function () {
+      modall("뉴스");
+    });
+    document.querySelector("#close-btnn").addEventListener("click", function () {
+      document.getElementById("pop-pop").style.display = none;
+    });
+  </script>
+
+</html>
