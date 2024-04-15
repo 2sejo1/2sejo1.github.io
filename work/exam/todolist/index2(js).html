@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할일목록</title>
+    <style>
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .container {
+        width: 300px;
+        margin: 50px auto;
+      }
+
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      input,
+      #add-text[type="text"] {
+        padding: 5px 0;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>나의 할일</h1>
+      <input type="text" id="add-text" />
+      <button id="add-button">추가</button>
+      <div class="container">
+        <p><b>할일목록</b></p>
+        <ul id="memo-list"></ul>
+      </div>
+    </div>
+    <!-- <script>
+      // CRUD - create, read, update, delete
+      const addButton = document.getElementById("add-button");
+      const addText = document.getElementById("add-text");
+      const memoList = document.getElementById("memo-list");
+      addText.focus();
+
+      addButton.addEventListener("click", function () {
+        const text = addText.value;
+        addText.value = "";
+
+        const li = document.createElement("li");
+        li.classList.add("flex");
+
+        const p = document.createElement("p");
+        p.textContent = text;
+
+        const div = document.createElement("div");
+
+        const editButton = document.createElement("button");
+        editButton.classList.add("edit-button");
+        editButton.textContent = "수정";
+
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delite-button");
+        deleteButton.textContent = "삭제";
+
+        li.appendChild(p);
+        li.appendChild(div);
+        div.appendChild(editButton);
+        div.appendChild(deleteButton);
+        memoList.appendChild(li);
+
+        // delete
+        deleteButton.addEventListener("click", function () {
+          li.parentNode.removeChild(li);
+        });
+        // // delete
+
+        // edit
+        editButton.addEventListener("click", function () {
+          const currentText = p.textContent;
+
+          const editInput = document.createElement("input");
+          editInput.type = "text";
+          editInput.classList.add("edit-input");
+          editInput.value = currentText;
+
+          const saveButton = document.createElement("button");
+          saveButton.classList.add("save-button");
+          saveButton.textContent = "저장";
+
+          p.style.display = "none";
+          editButton.style.display = "none";
+          deleteButton.style.display = "none";
+
+          div.appendChild(editInput);
+          div.appendChild(saveButton);
+
+          saveButton.addEventListener("click", function () {
+            const newText = editInput.value;
+
+            p.textContent = newText;
+            p.style.display = "block";
+
+            editInput.parentNode.removeChild(editInput);
+            saveButton.parentNode.removeChild(saveButton);
+
+            editButton.style.display = "inline-block";
+            deleteButton.style.display = "inline-block";
+          });
+        });
+        // // edit
+      });
+    </script> -->
+    <script>
+      const addButton = document.getElementById("add-button");
+      const addText = document.getElementById("add-text");
+      const memoList = document.getElementById("memo-list");
+      addText.focus();
+
+      // 메모 저장
+      function saveMemo(text) {
+        const memos = JSON.parse(localStorage.getItem("memos") || "[]");
+        memos.push(text);
+        localStorage.setItem("memos", JSON.stringify(memos));
+      }
+
+      // 메모 삭제
+      function removeMemo(text) {
+        const memos = JSON.parse(localStorage.getItem("memos") || "[]");
+        localStorage.setItem(
+          "memos",
+          JSON.stringify(memos.filter((memo) => memo !== text))
+        );
+      }
+
+      // 메모 수정
+      function updateMemo(oldText, newText) {
+        const memos = JSON.parse(localStorage.getItem("memos") || "[]");
+
+        // localStorage.setItem()
+      }
+
+      // localStorage에 있는 데이터 읽어오기
+      function loadMemos() {
+        const memos = JSON.parse(localStorage.getItem("memos") || "[]");
+
+        // memos.forEach(function(memo){
+
+        // })
+        memos.forEach((text) => {
+          addMemoDom(text);
+        });
+      }
+
+      function addMemoDom(text) {
+        const li = document.createElement("li");
+        li.classList.add("flex");
+        const p = document.createElement("p");
+        const div = document.createElement("div");
+        const editBtn = document.createElement("button");
+        const deleteBtn = document.createElement("button");
+
+        p.textContent = text;
+        editBtn.textContent = "수정";
+        deleteBtn.textContent = "삭제";
+
+        li.appendChild(p);
+        div.appendChild(editBtn);
+        div.appendChild(deleteBtn);
+        li.appendChild(div);
+        memoList.appendChild(li);
+
+        deleteBtn.addEventListener("click", function () {
+          removeMemo(p.textContent);
+          li.parentNode.removeChild(li);
+        });
+
+        editBtn.addEventListener("click", function () {
+          const editInput = document.createElement("input");
+          editInput.type = "text";
+          editInput.value = p.textContent;
+
+          const saveBtn = document.createElement("button");
+          saveBtn.textContent = "저장";
+
+          li.replaceChild(editInput, p);
+          div.replaceChild(saveBtn, editBtn);
+
+          saveBtn.addEventListener("click", function () {
+            updateMemo(p.textContent, editInput.value);
+            editInput.replaceWith(p);
+            p.textContent = editInput.value;
+            saveBtn.replaceWith(editBtn);
+          });
+        });
+      }
+
+      addButton.addEventListener("click", function () {
+        const text = addText.value.trim();
+        // trim() = 빈 문자열이 들어오면 잘라서 없애라
+
+        if (text) {
+          addMemoDom(text);
+          saveMemo(text);
+          addText.value = "";
+        }
+      });
+
+      loadMemos();
+    </script>
+  </body>
+</html>

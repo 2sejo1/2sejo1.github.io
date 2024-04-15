@@ -1,3 +1,15 @@
+// nav : sub mn box
+document.querySelectorAll(".nav-list ul > li").forEach(function (element) {
+  element.addEventListener("mouseenter", function () {
+    this.querySelector(".sub-mn-box").classList.add("on");
+  });
+  element.addEventListener("mouseleave", function () {
+    this.querySelector(".sub-mn-box").classList.remove("on");
+  });
+});
+// // nav : sub mn box
+
+// main visual swiper
 const mainVisualSwiper = new Swiper(".main-visual-swiper", {
   // 추가 옵션 설정
   loop: true, // 무한 반복 여부
@@ -5,19 +17,19 @@ const mainVisualSwiper = new Swiper(".main-visual-swiper", {
 
   // 자동 재생 설정
   autoplay: {
-    delay: 5000,
+    delay: 1000,
   },
 
   // If we need pagination 슬라이드 개수 표시 인디케이터
   pagination: {
-    el: ".swiper-pagination",
+    el: ".main-visual-pagination",
     clickable: true,
   },
 
   // Navigation arrows 좌/우 컨트롤 버튼
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-visual-prev",
+    prevEl: ".main-visual-next",
   },
 });
 
@@ -25,14 +37,35 @@ const mainVisualSwiper = new Swiper(".main-visual-swiper", {
 // 바닐라 스크립트로 할 경우 클리어 인터벌 (셋 인터벌 반대) 를 활용하여 처리 가능
 
 $(".main-visual-swiper").mouseenter(function () {
-  swiper.autoplay.stop();
+  mainVisualSwiper.autoplay.stop();
 });
 
 $(".main-visual-swiper").mouseleave(function () {
-  swiper.autoplay.start();
+  mainVisualSwiper.autoplay.start();
 });
 
-// 외 않되?   Uncaught ReferenceError: swiper is not defined
+// // main visual swiper
+
+//  md pick
+$(".md-pick-sect .filter-list a").click(function () {
+  var value = $(this).attr("data-filter");
+
+  if (value == "all") {
+    $(".md-pick-sect .item-box .filter").show("1000");
+  } else {
+    $(".md-pick-sect .item-box .filter")
+      .not("." + value)
+      .hide("1000");
+    $(".md-pick-sect .item-box .filter")
+      .filter("." + value)
+      .show("1000");
+  }
+});
+
+$(".md-pick-sect .filter-list a").removeClass("active");
+$(this).addClass("active");
+
+// // md pick
 
 // rook book
 

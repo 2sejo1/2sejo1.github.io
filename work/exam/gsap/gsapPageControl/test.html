@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        li.on {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>ITEM 1</li>
+        <li>ITEM 2</li>
+        <li>ITEM 3</li>
+        <li>ITEM 4</li>
+        <li>ITEM 5</li>
+        <li>ITEM 6</li>
+    </ul>
+    <!-- <figure><img src="./img/pic_bulboff.gif" alt=""></figure>
+    <button class="on">on</button>
+    <button class="off">off</button> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script>
+                $("li").each(function (idx) {
+                    // console.log(idx+'번째값:'+$(this).text())
+                    $(this).delay(idx*500).animate({'marginLeft':'500px'})
+                });
+    </script> -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        // $('.on').click(function () {
+        //     $('figure img').attr({ 'src': './img/pic_bulbon.gif' })
+        // })
+        // $('.off').click(function () {
+        //     $('figure img').attr({ 'src': './img/pic_bulboff.gif' })
+        // })
+
+
+        // let onBtn=document.querySelector('.on')
+        // console.log(onBtn);
+        // onBtn.addEventListener('click',()=>{
+        //     document.querySelector('figure img').setAttribute('src','./img/pic_bulbon.gif')
+        // })
+        // document.querySelector('.off').addEventListener('click',()=>{
+        //     document.querySelector('figure img').setAttribute('src','./img/pic_bulboff.gif')
+        // })
+
+        // let liElems=$('li')
+        // console.log(liElems)
+        // $('li').click(function () {
+        //     $('li').siblings().removeClass('on')
+        //     $(this).addClass('on')
+        // })
+
+        // let liElems=document.querySelectorAll('li')
+        // console.log(liElems);
+        // console.log(liElems[0]);
+        // console.log(liElems[1]);
+        // console.log(liElems[2]);
+        // console.log(liElems[3]);
+        // console.log(liElems[4]);
+        // console.log(liElems[5]);
+
+        let liElems = document.querySelectorAll('li')
+        liElems.forEach((item) => {
+            item.addEventListener('click', function () {
+                liElems.forEach(function (li) {
+                    li.classList.remove('on')
+                })
+                this.classList.add('on')
+            })
+        })
+    </script>
+</body>
+
+</html>

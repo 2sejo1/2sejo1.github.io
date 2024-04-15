@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="reset.css" />
-    <!-- 최신 버전 jQuery CDN 연결 -->
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <style>
     h1 {
@@ -60,71 +58,113 @@
         <ul id="memo-list"></ul>
       </div>
     </div>
-
+    <!-- 최신 버전 jQuery CDN 연결 -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script>
-      let todo = {
-        할일: "",
-      };
+      $(document).ready(function () {
+        // 항목 저장
+        function saveMemo(text) {
+          // 로컬스토리지에 저장되어 있는 자료 읽어오기
+          const memos = JSON.parse(localStorage.getItem("todo") || "[]");
+          // 읽어온 값에 새로운값 추가
+          memos.push(text);
+          // 추가된 데이터를 로컬스토리지에 저장
+          localStorage.setItem("todo", JSON.stringify(memos));
+        }
 
-      $("#add-btn").click(function () {
-        const text = $("#add-text").val();
+        // 항목 삭제
+        function removeMemo(text) {
+          const memos = JSON.parse(localStorage.getItem("todo") || "[]");
+          localStorage.setItem(
+            "memos",
+            JSON.stringify(memos.filter((memo) => memo !== text))
+          );
+        }
 
-        if (text) {
-          addList(text);
-          $("#add-text").val("").focus();
+        // 항목 수정
+        function updateMemo(oldText, newText) {
+          const memos = JSON.parse(localStorage.getItem("todo") || "[]");
+          // 기존의 값이 몇번째에 존재하는가
+          const memoIndex = memos.indexOf(oldText);
+          //indexOf는 값이 있는 순서번쨰가 출력(없으면 -1)을 반환한다
+          if (memoIndex !== -1) {
+            ㅁ;
+            memos[memoIndex] = newText;
+            localStorage.setItem("memos", JSON.stringify(memos));
+          }
+        }
+
+        // 맨처음 실행 시 localStorage 항목 불러오기
+        function loadMemo() {
+          const memos = JSON.parse(localStorage.getItem("todo") || "[]");
+          memos.forEach((memo) => {
+            addList(memo);
+          });
+        }
+
+        $("#add-btn").click(function () {
+          const text = $("#add-text").val();
+
+          if (text) {
+            addList(text); //리스트 추가
+            saveMemo(text); // localStorage 저장
+            $("#add-text").val("").focus();
+          }
+        });
+
+        function addList(text) {
+          const $li = $("<li>").addClass("flex");
+          const $p = $("<p>").addClass("todo-text").text(text);
+
+          const $div = $("<div>").addClass("flex");
+          const $deleteBtn = $("<button>").text("삭제").addClass("delete-btn");
+          const $editBtn = $("<button>").text("수정").addClass("edit-btn");
+
+          $div.append($editBtn, $deleteBtn);
+          $li.append($p, $div);
+
+          $("#memo-list").append($li);
+
+          // save data
+          const todoText = document.querySelector(".todo-text").value;
+          localStorage.setItem("todo", JSON.stringify(todoText));
+
+          $deleteBtn.click(function () {
+            $li.remove();
+            removeMemo(text);
+          });
+          $editBtn.click(function () {
+            // 변경할 값을 입력할 수 있는 input 생성
+            const $input = $("<input>")
+              .attr("type", "text")
+              .addClass("edit-input")
+              .val($p.text());
+            // 값을 저장할 수 있도록 하는 버튼
+            const $saveBtn = $("<button>").text("저장").addClass("save-btn");
+            // $p 사라져
+            $p.hide();
+            // $deleteBtn 사라져
+            $deleteBtn.hide();
+            // $editBtn 사라져
+            $editBtn.hide();
+            // $div에 새로운 값과 저장 버튼 추가
+            $li.append($input, $saveBtn);
+
+            $saveBtn.click(function () {
+              const newText = $input.val();
+
+              if (newText) {
+                $p.text(newText).show();
+                $deleteBtn.show();
+                $editBtn.show();
+                $input.remove();
+                $saveBtn.remove();
+                updateMemo(text, newText);
+              }
+            });
+          });
         }
       });
-
-      function addList(text) {
-        const $li = $("<li>").addClass("flex");
-        const $p = $("<p>").addClass("todo-text").text(text);
-
-        const $div = $("<div>").addClass("flex");
-        const $deleteBtn = $("<button>").text("삭제").addClass("delete-btn");
-        const $editBtn = $("<button>").text("수정").addClass("edit-btn");
-
-        $div.append($editBtn, $deleteBtn);
-        $li.append($p, $div);
-
-        $("#memo-list").append($li);
-
-        // save data
-        const todoText = document.querySelector(".todo-text").value;
-        localStorage.setItem("할일", JSON.stringify(todoText));
-
-        $deleteBtn.click(function () {
-          $li.remove();
-        });
-        $editBtn.click(function () {
-          // 변경할 값을 입력할 수 있는 input 생성
-          const $input = $("<input>")
-            .attr("type", "text")
-            .addClass("edit-input")
-            .val($p.text());
-          // 값을 저장할 수 있도록 하는 버튼
-          const $saveBtn = $("<button>").text("저장").addClass("save-btn");
-          // $p 사라져
-          $p.hide();
-          // $deleteBtn 사라져
-          $deleteBtn.hide();
-          // $editBtn 사라져
-          $editBtn.hide();
-          // $div에 새로운 값과 저장 버튼 추가
-          $li.append($input, $saveBtn);
-
-          $saveBtn.click(function () {
-            const newText = $input.val();
-
-            if (newText) {
-              $p.text(newText).show();
-              $deleteBtn.show();
-              $editBtn.show();
-              $input.remove();
-              $saveBtn.remove();
-            }
-          });
-        });
-      }
     </script>
   </body>
 </html>

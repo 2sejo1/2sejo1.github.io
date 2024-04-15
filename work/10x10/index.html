@@ -282,7 +282,7 @@
                               <li><a href="#;">케이블</a></li>
                               <li><a href="#;">거치대/홀더</a></li>
                               <li><a href="#;">기타 주변기기</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -396,7 +396,7 @@
                                   ></span
                                 ></a>
                               </li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -873,7 +873,7 @@
                               <li><a href="#;">술잔/주병</a></li>
                               <li><a href="#;">보틀</a></li>
                               <li><a href="#;">보틀/텀블러 악세서리</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -893,7 +893,7 @@
                               <li><a href="#;">샐러드볼/아이스크림볼</a></li>
                               <li><a href="#;">소스볼/종지</a></li>
                               <li><a href="#;">유아식기</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1019,7 +1019,7 @@
                                   ></span
                                 ></a>
                               </li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1474,7 +1474,7 @@
                               <li><a href="#;">샤워용품</a></li>
                               <li><a href="#;">핸드/풋</a></li>
                               <li><a href="#;">제모</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1612,7 +1612,7 @@
                               <li><a href="#;">10K/14K/18K</a></li>
                               <li><a href="#;">게르마늄 팔찌</a></li>
                               <li><a href="#;">발찌</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1701,7 +1701,7 @@
                               <li><a href="#;">코스프레</a></li>
                               <li><a href="#;">한복</a></li>
                               <li><a href="#;">머플러</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1824,7 +1824,7 @@
                               <li><a href="#;">플레이모빌</a></li>
                               <li><a href="#;">데꼴</a></li>
                               <li><a href="#;">리멘트/식완</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1844,7 +1844,7 @@
                               <li><a href="#;">양말/재활용인형</a></li>
                               <li><a href="#;">한사토이</a></li>
                               <li><a href="#;">테디베어</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -1884,7 +1884,7 @@
                               <li><a href="#;">낚시</a></li>
                               <li><a href="#;">스케이트 보드/인라인</a></li>
                               <li><a href="#;">마스크/반다나/워머</a></li>
-                              <li><a href="#;" class="“more”">more</a></li>
+                              <li><a href="#;" class="more">more</a></li>
                             </ul>
                           </li>
                           <li>
@@ -2160,11 +2160,11 @@
               </div>
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="main-visual-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="main-visual-prev slide-btn sp-icon"></div>
+            <div class="main-visual-next slide-btn sp-icon"></div>
           </div>
         </div>
         <!-- // main visual -->
@@ -2287,15 +2287,15 @@
               <h2><b class="bold">MD's</b>Pick</h2>
               <p>텐바이텐 엠디가<br />자신있게 추천합니다</p>
               <ul class="filter-list">
-                <li><a href="#;">#ALL</a></li>
-                <li><a href="#;">#BEST 100</a></li>
-                <li><a href="#;">#BEST WISH</a></li>
-                <li><a href="#;">#NEW BEST</a></li>
+                <li><a href="#;" data-filter="all" class="active">#ALL</a></li>
+                <li><a href="#;" data-filter="best100">#BEST 100</a></li>
+                <li><a href="#;" data-filter="bestwish">#BEST WISH</a></li>
+                <li><a href="#;" data-filter="newbest">#NEW BEST</a></li>
               </ul>
             </div>
             <div class="item-box">
-              <ul class="flex">
-                <li>
+              <div class="flex">
+                <div class="filter bestwish best100">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2307,8 +2307,8 @@
                       <li class="price"><span>32%</span>16,900원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest bestwish">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2318,8 +2318,8 @@
                       <li class="price"><span>15%</span>16,150원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter bestwish">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2331,8 +2331,8 @@
                       <li class="price"><span>10%</span>11,733원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2346,8 +2346,8 @@
                       <li class="price"><span>15%</span>33,800원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter best100 newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2359,8 +2359,8 @@
                       <li class="price"><span>37%</span>18,400원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2374,8 +2374,8 @@
                       <li class="price"><span>10%</span>25,200원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2387,8 +2387,8 @@
                       <li class="price">45,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2402,8 +2402,8 @@
                       <li class="price">22,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2415,8 +2415,8 @@
                       <li class="price">46,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter best100">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2428,8 +2428,8 @@
                       <li class="price"><span>39%</span>23,800원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2441,8 +2441,8 @@
                       <li class="price">21,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter bestwish">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2455,8 +2455,8 @@
                       <li class="price"><span>5%</span>159,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter bestwish">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2470,8 +2470,8 @@
                       <li class="price"><span>10%</span>30,600원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter newbest">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2483,8 +2483,8 @@
                       <li class="price"><span>46%</span>95,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter best100">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2496,8 +2496,8 @@
                       <li class="price"><span>5%</span>42,670원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter best100">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2507,8 +2507,8 @@
                       <li class="price"><span>25%</span>24,000원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter best100">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2520,8 +2520,8 @@
                       <li class="price">36,900원</li>
                     </ul>
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="filter bestwish">
                   <a href="#;">
                     <ul>
                       <li class="item-img">
@@ -2533,8 +2533,8 @@
                       <li class="price"><span>20%</span>30,320원</li>
                     </ul>
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
