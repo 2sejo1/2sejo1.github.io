@@ -368,6 +368,23 @@ a {
   }
 }
 
+// tab wrap
+
+.tab-wrap {
+  position: relative;
+
+  .tab-box {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
+  .tab-box.on {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
 // coupon
 .coupon {
   position: relative;
@@ -974,7 +991,23 @@ header {
       }
     }
     span {
+      position: absolute;
+      top: 50%;
+      z-index: 15;
+      transform: translateY(-50%);
       cursor: pointer;
+    }
+    .prev-btn {
+      left: 50px;
+      width: 40px;
+      height: 72px;
+      background-position: 0 -110px;
+    }
+    .next-btn {
+      right: 50px;
+      width: 40px;
+      height: 72px;
+      background-position: -50px -110px;
     }
   }
 }
@@ -988,8 +1021,8 @@ header {
     position: relative;
     padding: 100px 0;
     .tab-wrap {
-      position: relative;
-      > div {
+      height: 395px;
+      .tab-box {
         display: flex;
         justify-content: space-between;
         .title-box {
@@ -1030,7 +1063,7 @@ header {
     position: relative;
     justify-content: space-between;
     background: var(--overLine);
-    padding: 100px 0;
+    padding: 60px 0;
 
     &::after {
       content: "";
@@ -1066,12 +1099,13 @@ header {
             font-weight: var(--boldWeight);
           }
         }
-        .hover-mn-list {
-          top: 10px;
-        }
+      }
+      .hover-mn-list {
+        top: 10px;
       }
       .tab-wrap {
-        > div {
+        height: 490px;
+        .tab-box {
           .main-img-box {
             width: 100%;
             margin-bottom: 15px;
