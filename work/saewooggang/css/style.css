@@ -203,6 +203,12 @@ section .wrapper .title-box p {
 }
 .content-list .content .inner-box .tab-wrap .tab-box {
   position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+.content-list .content .inner-box .tab-wrap .tab-box.on {
+  opacity: 1;
+  z-index: 5;
 }
 .content-list .content .inner-box .tab-wrap h4.tab-title {
   color: #fff;
@@ -684,6 +690,9 @@ main {
 .hand-sect .content-list #cmsong .inner-box .tab-wrap .tab-box .img-box {
   width: 237px;
 }
+.hand-sect .content-list #cmsong .inner-box .tab-wrap #singer {
+  align-items: flex-start;
+}
 
 .again-sect .again-box {
   display: flex;
@@ -692,6 +701,9 @@ main {
 }
 .again-sect .content-list #process .img-box {
   text-align: center;
+}
+.again-sect .content-list #process .tab-wrap {
+  height: 950px;
 }
 
 .anytime-sect .anytime-box {

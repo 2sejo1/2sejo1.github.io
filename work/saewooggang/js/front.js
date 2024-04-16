@@ -112,7 +112,7 @@ $(document).ready(function () {
         let contentElement = document.getElementById(contentID.slice(1));
         let contentH = contentElement.clientHeight;
 
-        contentElement.parentElement.style.maxHeight = contentH + 60 + "px";
+        contentElement.parentElement.style.maxHeight = contentH + 200 + "px";
       });
     });
 
@@ -316,7 +316,19 @@ $(document).ready(function () {
       // console.log(e.target);
       if (e.target.classList.contains("tab")) {
         let closestLi = e.target.closest("li");
-        document.querySelector("li.on").classList.remove("on");
+        let closestLiA = closestLi.querySelector("a");
+        let hrefLiA = closestLiA.getAttribute("href");
+        let thisTab = document.getElementById(hrefLiA.slice(1));
+
+        element.querySelector(".tab-box.on").classList.remove("on");
+        element.querySelector("li.on").classList.remove("on");
+
+        thisTab.classList.add("on");
+        let tabHeight = document.getElementById(hrefLiA.slice(1)).clientHeight;
+        element.querySelector(".tab-wrap").style.height = tabHeight + "px";
+        // console.log(tabHeight);
+        thisTab.classList.add("on");
+
         if (closestLi) {
           closestLi.classList.add("on");
         }

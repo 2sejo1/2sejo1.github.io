@@ -216,7 +216,12 @@ section {
         height: 800px;
         .tab-box {
           position: absolute;
-          // top: 0;
+          opacity: 0;
+          z-index: 0;
+        }
+        .tab-box.on {
+          opacity: 1;
+          z-index: 5;
         }
         h4.tab-title {
           color: #fff;
@@ -764,6 +769,9 @@ main {
               width: 237px;
             }
           }
+          #singer {
+            align-items: flex-start;
+          }
         }
       }
     }
@@ -783,6 +791,9 @@ main {
     #process {
       .img-box {
         text-align: center;
+      }
+      .tab-wrap {
+        height: 950px;
       }
     }
   }
