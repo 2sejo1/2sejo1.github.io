@@ -4,7 +4,7 @@ $(document).ready(function () {
     // 추가 옵션 설정
     slidesPerView: "auto", // 한 화면에 나올 슬라이드 개수
     loop: false, // 무한 반복 여부
-    centeredSlides: true, //활성 슬라이드를 항상 가운데에 배치
+    centeredSlides: false, //활성 슬라이드를 항상 가운데에 배치
 
     // Responsive breakpoints 반응형 분기
     // breakpoints: {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2차배열 / 구구단</title>
+    <style>
+      .exam {
+        padding: 20px 0;
+      }
+
+      .exam3 {
+        display: flex;
+        width: 900px;
+      }
+      .exam3 span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        line-height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>2차 배열</h1>
+      <div class="exam exam1"></div>
+      <div class="exam exam2"></div>
+      <div class="exam exam3"></div>
+    </div>
+    <script>
+      var arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      const exam1 = document.createElement("div");
+      exam1.innerHTML = arr;
+      document.querySelector(".exam1").append(exam1);
+
+      const exam2 = document.createElement("div");
+      for (var i = 0; i <= 2; i++) {
+        for (var j = 0; j <= 2; j++) {
+          let span = document.createElement("span");
+          span.textContent = arr[i][j];
+          exam2.appendChild(span);
+        }
+        let br = document.createElement("br");
+        exam2.appendChild(br);
+      }
+      document.querySelector(".exam2").appendChild(exam2);
+
+      let gugudan = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      ];
+
+      let exam3 = document.createElement("div");
+
+      for (let i = 0; i < gugudan.length; i++) {
+        for (let j = 0; j < gugudan.length; j++) {
+          let span = document.createElement("span");
+          span.textContent = `${gugudan[i][j]} * ${gugudan[i][i]} = ${
+            gugudan[i][j] * gugudan[i][i]
+          }`;
+          exam3.appendChild(span);
+        }
+        let br = document.createElement("br");
+        exam3.appendChild(br);
+      }
+      document.querySelector(".exam3").appendChild(exam3);
+    </script>
+  </body>
+</html>

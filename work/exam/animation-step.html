@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .avatar {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .avatar .img {
+        width: 150px;
+        height: 270px;
+        background-image: url(./frameimg.png);
+        animation: avatarAni 2s steps(15) infinite;
+      }
+      @keyframes avatarAni {
+        100% {
+          background-position-x: -2250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="avatar">
+      <div class="img"></div>
+    </div>
+  </body>
+</html>

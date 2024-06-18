@@ -2,7 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
     <title>10X10</title>
     <!-- 최신 버전 jQuery CDN 연결 -->
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
@@ -19,7 +22,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!-- css 연결 -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link id="cssLink" rel="stylesheet" href="./css/style-pc.css" />
   </head>
   <body>
     <div class="wrap">
@@ -55,7 +58,7 @@
               </li>
             </ul>
           </div>
-          <div class="main-header-box">
+          <div class="main-header-box pc-main-header">
             <div class="inner-box wrapper">
               <h1 class="logo">
                 <a href="#"><img src="img/logo_bk.png" alt="10X10" /></a>
@@ -83,7 +86,34 @@
               </div>
             </div>
           </div>
-          <nav>
+          <div class="mobile-main-header">
+            <div class="aside-mn-box">
+              <button class="aside-mn-btn">
+                <span class="indent9999">사이드 메뉴 열기</span>
+              </button>
+              <h1 class="logo">
+                <a href="#"><img src="img/logo_wh.png" alt="10X10" /></a>
+              </h1>
+            </div>
+            <div class="util-mn-box">
+              <ul>
+                <li>
+                  <a href="#;" class="app"><span>앱으로 보기</span></a>
+                </li>
+                <li>
+                  <a href="#;" class="search"
+                    ><span class="indent9999">검색</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#;" class="cart"
+                    ><span class="indent9999">장바구니</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav id="pc-gnb">
             <ul class="nav-list wrapper">
               <li>
                 <ul class="left">
@@ -2033,6 +2063,40 @@
               </li>
             </ul>
           </nav>
+          <div class="mobile-aside-mn-box">
+            <div class="inner-box">
+              <button class="close-btn">
+                <span><p class="indent9999">닫기</p></span>
+              </button>
+              <ul class="mobile-aside-mn">
+                <li><a href="#;">카테고리</a></li>
+                <li><a href="#;">마이텐바이텐</a></li>
+                <li><a href="#;">주문조회</a></li>
+                <li><a href="#;">히스토리</a></li>
+                <li><a href="#;">고객행복센터</a></li>
+              </ul>
+              <div class="aside-util-box">
+                <div class="notice-box">
+                  <span class="notice-icon"></span>
+                  <a href="#;" class="text-box">
+                    <p class="flow-text">
+                      무너 프리오더 이모티콘 이벤트 당첨자 발표
+                    </p>
+                  </a>
+                </div>
+                <ul class="mn-list">
+                  <li><a href="#;">로그인</a></li>
+                  <li><a href="#;">회원가입</a></li>
+                </ul>
+              </div>
+              <a href="#;" class="aside-app-box">
+                <div class="icon-box">
+                  <img src="./img/ico_app.png" alt="" />
+                </div>
+                <p>APP 다운로드</p>
+              </a>
+            </div>
+          </div>
         </div>
       </header>
       <!-- // header -->
@@ -2045,7 +2109,12 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url(./img/mainRolling_92543_20240329171349.jpg);
+                "
+              >
                 <a href="#;">
                   <div class="text-box">
                     <p class="title">
@@ -2059,10 +2128,14 @@
                   <div class="emblem-box">
                     <img src="img/icon-emblem.png" alt="텐텐 세일" />
                   </div>
-                  <img src="img/mainRolling_92543_20240329171349.jpg" alt="" />
                 </a>
               </div>
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url(./img/mainRolling_92552_20240329172633.jpg);
+                "
+              >
                 <a href="#;">
                   <div class="text-box">
                     <p class="title">
@@ -2070,16 +2143,20 @@
                       마스마룰즈의 그림 &nbsp;<span class="dis">~51%</span>
                     </p>
                     <p class="desc">
-                      4월의 싱그러운 초록 봄기운을 가득 담아 찾아 온 월간마스
+                      싱그러운 초록 봄기운을 가득 담아 찾아 온 월간마스
                     </p>
                   </div>
                   <div class="emblem-box">
                     <img src="img/icon-emblem.png" alt="텐텐 세일" />
                   </div>
-                  <img src="img/mainRolling_92552_20240329172633.jpg" alt="" />
                 </a>
               </div>
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url(./img/mainRolling_92550_20240329172618.jpg);
+                "
+              >
                 <a href="#;">
                   <div class="text-box">
                     <p class="title">
@@ -2093,27 +2170,14 @@
                   <div class="emblem-box">
                     <img src="img/icon-emblem.png" alt="텐텐 세일" />
                   </div>
-                  <img src="img/mainRolling_92550_20240329172618.jpg" alt="" />
                 </a>
               </div>
-              <div class="swiper-slide">
-                <a href="#;">
-                  <div class="text-box">
-                    <p class="title">
-                      문구MD가 추천하는<br />
-                      장바구니 리스트 !! &nbsp;<span class="dis">~63%</span>
-                    </p>
-                    <p class="desc">
-                      4월 텐텐세일, 뭐-사지? 고인물 문구 MD가 추천합니다!
-                    </p>
-                  </div>
-                  <div class="emblem-box">
-                    <img src="img/icon-emblem.png" alt="텐텐 세일" />
-                  </div>
-                  <img src="img/mainRolling_92545_20240401092529.jpg" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url(./img/mainRolling_92534_20240329172753.jpg);
+                "
+              >
                 <a href="#;">
                   <div class="text-box">
                     <p class="title">
@@ -2127,21 +2191,14 @@
                   <div class="emblem-box">
                     <img src="img/icon-emblem.png" alt="텐텐 세일" />
                   </div>
-                  <img src="img/mainRolling_92534_20240329172753.jpg" alt="" />
                 </a>
               </div>
-              <div class="swiper-slide">
-                <a href="#;">
-                  <div class="emblem-box">
-                    <img src="img/icon-emblem.png" alt="텐텐 세일" />
-                  </div>
-                  <img
-                    src="img/mainRolling_92528_20240329173558.jpg"
-                    alt="[ 4월 텐텐 세일 ] 4월 1일 오전 10시 Coming Soon!"
-                  />
-                </a>
-              </div>
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url(./img/mainRolling_92277_20240308165558.jpg);
+                "
+              >
                 <a href="#;">
                   <div class="text-box color-white">
                     <p class="title">
@@ -2155,7 +2212,6 @@
                   <div class="emblem-box">
                     <img src="img/icon-emblem.png" alt="텐텐 세일" />
                   </div>
-                  <img src="img/mainRolling_92277_20240308165558.jpg" alt="" />
                 </a>
               </div>
             </div>
@@ -2515,7 +2571,7 @@
                         <img src="img/mdPick17.jpg" alt="" />
                       </li>
                       <li class="item-name">
-                        마켓비 KONTINO 스마일 접이식카트 L 옐로우 6218.1926
+                        마켓비 KONTINO 스마일 접이식카트 L 옐로우
                       </li>
                       <li class="price">36,900원</li>
                     </ul>
@@ -2617,13 +2673,8 @@
               </li>
               <li>
                 <a
-                  href="https://www.10x10.co.kr/"
-                  data-fancybox
-                  data-type="iframe"
-                  data-preload="false"
-                  data-width="100%"
-                  data-height=""
-                  100%
+                  href="./img/itemimage20240315173654.jpeg"
+                  data-fancybox="gallery"
                   ><img src="./img/itemimage20240315173654.jpeg" alt=""
                 /></a>
               </li>
@@ -3273,24 +3324,24 @@
               <h2 class="title">HITCHHIKER</h2>
               <p class="desc">당신의 일상에 소소한 즐거움</p>
             </div>
-            <div class="img-box">
+            <a href="#;" class="img-box">
               <img
                 src="img/hitchbanner_80904_20210114155139.jpg"
                 alt="[vol.85 안녕] 당신의 오늘은 안녕한가요?"
               />
-            </div>
+            </a>
           </div>
           <div class="giftcard-box">
             <div class="title-box">
               <h2 class="title">GIFT CARD</h2>
               <p class="desc">센스있는 선물을 하고싶다면</p>
             </div>
-            <div class="img-box">
+            <a href="#;" class="img-box">
               <img
                 src="img/giftbanner_70945_20180326130940.jpg"
                 alt="무슨 선물할까 고민하지 말고 기프트카드로 마음을 전하세요"
               />
-            </div>
+            </a>
           </div>
         </div>
         <!-- // card banner -->

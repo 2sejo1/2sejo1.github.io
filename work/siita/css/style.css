@@ -92,25 +92,26 @@ header {
   position: fixed;
   z-index: 10;
   width: 100%;
-  padding: 15px 30px;
+  padding: 25px 30px;
 }
 header .header-box {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .header-box .mn-btn {
+  position: relative;
   display: block;
   text-indent: -9999px;
   padding: 10px;
+  z-index: 12;
 }
 header .header-box .mn-btn span {
   display: block;
   width: 25px;
   height: 2px;
   margin-bottom: 7px;
-  background-color: rgb(218, 218, 218);
+  background-color: #bfbfbf;
   transition: 0.35s;
 }
 header .header-box .mn-btn span:nth-child(2n-1) {
@@ -134,49 +135,6 @@ header .header-box .mn-box .search-box.on input {
   width: 300px;
   opacity: 1;
 }
-header .header-box .mn-box .search-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-header .header-box .mn-box .search-box input {
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.6117647059);
-  border-radius: 20px;
-  right: 0;
-  width: 0px;
-  height: 40px;
-  text-indent: 15px;
-  color: #ffffff;
-  font-size: 16px;
-  opacity: 0;
-  transition: 0.35s;
-}
-header .header-box .mn-box .search-box input:focus {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.1294117647);
-}
-header .header-box .mn-box .search-box a {
-  position: relative;
-  display: block;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  margin-top: -5px;
-}
-header .header-box .mn-box .search-box a::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 3px;
-  bottom: -4px;
-  right: -8px;
-  background-color: #fff;
-  transform: rotate(45deg);
-}
 header .header-box .mn-box .util-mn {
   display: flex;
   align-items: center;
@@ -198,11 +156,117 @@ header .header-box .mn-box .util-mn a:last-child {
 }
 header .header-box nav {
   position: absolute;
-  display: none;
-  top: 50px;
+  top: 0;
   left: 0;
   z-index: 10;
-  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #ffffff;
+}
+header .header-box nav .inner-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 100vh;
+  padding: 25px 0;
+}
+header .header-box nav .inner-box .nav-list {
+  display: block;
+  width: 100%;
+}
+header .header-box nav .inner-box .nav-list .dep1 {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}
+header .header-box nav .inner-box .nav-list .dep1 > a span {
+  position: relative;
+}
+header .header-box nav .inner-box .nav-list .dep1 > a:hover span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9b9b9b;
+}
+header .header-box nav .inner-box .nav-list .dep1 li:hover {
+  color: #fff;
+  background: #9b9b9b;
+}
+header .header-box nav .inner-box .nav-list .dep1:hover .dep2 {
+  display: block;
+}
+header .header-box nav .inner-box .nav-list .dep1:last-child a {
+  margin-bottom: 0;
+}
+header .header-box nav .inner-box .nav-list .dep1 a {
+  display: block;
+  width: 100%;
+  padding: 15px 40px;
+  margin-bottom: 30px;
+}
+header .header-box nav .inner-box .nav-list .dep1 .dep2 {
+  position: absolute;
+  display: none;
+  top: -50px;
+  right: -250px;
+  width: 250px;
+  padding: 10px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #ffffff;
+}
+header .header-box nav .inner-box .nav-list .dep1 .dep2 a {
+  font-size: 20px;
+  padding: 15px 20px;
+  margin-bottom: 0;
+}
+header .header-box nav .inner-box .search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header-box nav .inner-box .search-box input {
+  background-color: transparent;
+  border: 2px solid #bfbfbf;
+  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+  text-indent: 15px;
+  color: #000000;
+  font-size: 16px;
+  transition: 0.35s;
+}
+header .header-box nav .inner-box .search-box input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1294117647);
+}
+header .header-box nav .inner-box .search-box a {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  text-indent: -9999px;
+  border: 2px solid #bfbfbf;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+header .header-box nav .inner-box .search-box a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 2px;
+  bottom: -2px;
+  right: -7px;
+  background-color: #bfbfbf;
+  transform: rotate(45deg);
 }
 
 .main-visual-sect {

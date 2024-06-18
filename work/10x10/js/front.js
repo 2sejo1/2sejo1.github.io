@@ -1,4 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 화면 너비에 따른 css 링크 변경
+  let isSmallScreen = window.innerWidth <= 1024;
+
+  function setInitialCSS() {
+    const cssLink = document.getElementById("cssLink");
+    if (isSmallScreen) {
+      cssLink.href = "./css/style-m.css";
+    } else {
+      cssLink.href = "./css/style-pc.css";
+    }
+  }
+
+  function loadCSS() {
+    const cssLink = document.getElementById("cssLink");
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 1024 && !isSmallScreen) {
+      cssLink.href = "./css/style-m.css";
+      isSmallScreen = true;
+    } else if (screenWidth > 1024 && isSmallScreen) {
+      cssLink.href = "./css/style-pc.css";
+      isSmallScreen = false;
+    }
+  }
+
+  setInitialCSS();
+  window.addEventListener("resize", loadCSS);
+  // //화면 너비에 따른 css 링크 변경
+
+  // 스크롤 시 헤더 배경 색 (mobile)
+  window.addEventListener("scroll", function () {
+    let scrTop = window.scrollY;
+    let headerBox = document.querySelector(".mobile-main-header");
+
+    if (scrTop > 0) {
+      headerBox.classList.add("on");
+    } else {
+      headerBox.classList.remove("on");
+    }
+  });
+
+  // //스크롤 시 헤더 배경 색 (mobile)
+
   // nav : sub mn box
   document.querySelectorAll(".nav-list ul > li").forEach(function (element) {
     element.addEventListener("mouseenter", function () {
@@ -9,6 +52,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   // // nav : sub mn box
+
+  //  aside mn : flow text
+
+  let flowLeft = 0;
+
+  let flowWidth = document.querySelector(
+    ".mobile-aside-mn-box .notice-box"
+  ).clientWidth;
+
+  console.log(flowWidth);
+
+  let flowArea = flowWidth;
+
+  setInterval(() => {
+    // #mobileMn 요소가 존재하는지 확인합니다.
+    const mobileMn = document.querySelector("#mobileMn");
+
+    // mobileMn 요소가 존재할 때만 아래 코드를 실행합니다.
+
+    if (mobileMn) {
+      if (flowLeft > -flowArea) {
+        flowLeft--;
+      } else if (flowLeft === -flowArea) {
+        flowLeft = flowArea;
+      }
+      document.querySelector(".mobile-aside-mn-box .flow-text").style.left =
+        flowLeft + "px";
+    }
+  }, 10);
+
+  // // aside mn : flow text
+
+  //  aside mn : close btn
+  document
+    .querySelector(".aside-mn-btn")
+    .addEventListener("click", function () {
+      document.querySelector(".mobile-aside-mn-box").classList.add("on");
+      document.querySelector(".mobile-aside-mn-box").id = "mobileMn";
+    });
+
+  document
+    .querySelector(".mobile-aside-mn-box .close-btn")
+    .addEventListener("click", function () {
+      document.querySelector(".mobile-aside-mn-box").classList.remove("on");
+      document.querySelector(".mobile-aside-mn-box").id = "";
+    });
+  // //  aside mn : close btn
 
   // main visual swiper
   const mainVisualSwiper = new Swiper(".main-visual-swiper", {
@@ -29,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Navigation arrows 좌/우 컨트롤 버튼
     navigation: {
-      nextEl: ".main-visual-prev",
-      prevEl: ".main-visual-next",
+      nextEl: ".main-visual-next",
+      prevEl: ".main-visual-prev",
     },
   });
 
@@ -189,15 +279,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // your coustom option
   });
 
-  document.getElementById("trigger").addEventListener("click", () => {
-    Fancybox.show([
-      {
-        src: "https://www.google.com/maps/@51.5039653,-0.1246493,14.12z",
-        width: 800,
-        height: 600,
-      },
-    ]);
-  });
+  // document.getElementById("trigger").addEventListener("click", () => {
+  //   Fancybox.show([
+  //     {
+  //       src: "https://www.google.com/maps/@51.5039653,-0.1246493,14.12z",
+  //       width: 800,
+  //       height: 600,
+  //     },
+  //   ]);
+  // });
   // // look book : fancybox
 
   //  hover tab mn

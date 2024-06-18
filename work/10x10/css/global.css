@@ -29,6 +29,11 @@
   --titleSize: 32px;
   --mainVisualSize: 40px;
 
+  /* mobile */
+  --titleSizeM: 35px;
+  --mainVisualSizeM: 32px;
+  /* mobile */
+
   --microSize: 10px;
   --reallySmallSize: 11px;
   --soSmallSize: 12px;
