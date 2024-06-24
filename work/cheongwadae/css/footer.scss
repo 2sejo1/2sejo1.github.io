@@ -1,0 +1,58 @@
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  background-color: #2a2d34;
+  color: #ffffff80;
+  font-family: var(--pre-font);
+  transition: 0.35s;
+  @media screen and (max-width: 1190px) {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 30px;
+  }
+  h1 {
+    display: block;
+    @media screen and (max-width: 1190px) {
+      width: 350px;
+      height: 32px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .copy-box {
+    text-align: right;
+    transition: 0.35s;
+    @media screen and (max-width: 1190px) {
+      text-align: center;
+    }
+    address {
+      margin-bottom: 30px;
+      font-size: 17px;
+      font-weight: 600;
+      @media screen and (max-width: 1190px) {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+    }
+    .inner-box {
+      display: flex;
+      gap: 50px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      transition: 0.35s;
+      @media screen and (max-width: 1190px) {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 13px;
+      }
+
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+}
