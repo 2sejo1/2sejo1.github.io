@@ -51,3 +51,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .catch((error) => console.error("Error loading footer:", error));
 });
+
+// main visual
+
+let visualCount = 1;
+let visualSlide = document.querySelectorAll(".slide-wrap .slide");
+
+applyTextAnimation(".main-visual-sect .scene1 .text-box p");
+
+setInterval(() => {
+  if (visualCount < visualSlide.length) {
+    visualCount++;
+  } else if ((visualCount = visualSlide.length)) {
+    visualCount = 1;
+  }
+
+  let visibleSlide = ".scene" + visualCount;
+
+  document.querySelectorAll(".slide-wrap .slide").forEach(function (e) {
+    e.classList.remove("on");
+  });
+
+  document.querySelector(visibleSlide).classList.add("on");
+
+  let split = visibleSlide + " .text-box p";
+
+  applyTextAnimation(split);
+}, 6000);
+
+// splitText
+gsap.registerPlugin(SplitText);
+
+function applyTextAnimation(slide) {
+  gsap.set(document.querySelector(slide), {
+    opacity: 1,
+  });
+
+  const split = new SplitText(document.querySelector(slide), {
+    type: "chars",
+  });
+
+  gsap.from(split.chars, {
+    x: 20,
+    y: 0,
+    opacity: 0,
+    duration: 1.5,
+    stagger: {
+      each: 0.09,
+      from: "start",
+    },
+  });
+}
+
+// // splitText
+
+// //main visual

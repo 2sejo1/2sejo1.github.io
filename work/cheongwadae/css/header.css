@@ -1,11 +1,3 @@
-@import url(./reset.css);
-@import url(./font.css);
-@import url(./global.css);
-body {
-  background-color: rgb(194, 194, 194);
-  overflow: hidden;
-}
-
 * {
   box-sizing: border-box;
 }
