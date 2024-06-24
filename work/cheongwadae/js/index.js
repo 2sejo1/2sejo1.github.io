@@ -106,3 +106,18 @@ function applyTextAnimation(slide) {
 // // splitText
 
 // //main visual
+
+// sect2
+const contentSwiper = new Swiper(".sect2 .content-swiper", {
+  // 추가 옵션 설정
+  slidesPerView: 1, // 한 화면에 나올 슬라이드 개수
+  spaceBetween: 50, // 슬라이드 사이 간격 px
+  loop: true, // 무한 반복 여부
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+// //sect2
