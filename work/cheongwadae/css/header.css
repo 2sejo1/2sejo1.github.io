@@ -22,6 +22,16 @@ img {
   font-family: var(--pre-font);
   transition: 0.35s;
 }
+.header-box::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5647058824);
+}
 .header-box:hover {
   background-color: #fff;
 }

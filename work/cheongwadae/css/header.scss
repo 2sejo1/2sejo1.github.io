@@ -22,6 +22,17 @@ img {
   font-family: var(--pre-font);
   transition: 0.35s;
 
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff90;
+  }
+
   &:hover {
     background-color: #fff;
     h1 {

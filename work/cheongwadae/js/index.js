@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // main visual
 
 let visualCount = 1;
-let visualSlide = document.querySelectorAll(".slide-wrap .slide");
+let visualSlide = document.querySelectorAll(".main-visual-sect .slide");
 
 applyTextAnimation(".main-visual-sect .scene1 .text-box p");
 
@@ -68,7 +68,7 @@ setInterval(() => {
 
   let visibleSlide = ".scene" + visualCount;
 
-  document.querySelectorAll(".slide-wrap .slide").forEach(function (e) {
+  document.querySelectorAll(".main-visual-sect .slide").forEach(function (e) {
     e.classList.remove("on");
   });
 
