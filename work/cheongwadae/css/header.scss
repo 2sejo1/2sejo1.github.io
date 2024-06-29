@@ -151,6 +151,7 @@ img {
             .sub-mn {
               z-index: 5;
               opacity: 1;
+              max-height: initial;
             }
           }
           .sub-mn {
@@ -158,6 +159,8 @@ img {
             display: block;
             width: 100%;
             min-width: 180px;
+            max-height: 0;
+            overflow: hidden;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
@@ -169,7 +172,7 @@ img {
             font-weight: 500;
             padding: 15px 10px;
             border-radius: 10px;
-            transition: 0.35s;
+            transition: 0.25s;
             color: #fff;
             @media screen and (min-width: 1191px) {
               font-size: 15px;
@@ -393,6 +396,7 @@ img {
           align-items: center;
           row-gap: 50px;
           width: 100%;
+          color: #333;
           @media screen and (max-width: 1190px) {
             flex-direction: column;
             flex-wrap: nowrap;
