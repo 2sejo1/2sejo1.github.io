@@ -4,13 +4,8 @@
 @import url(global.css);
 
 // common
-h5 {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 9999;
-  font-size: 100px;
-  font-weight: 800;
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -51,21 +46,101 @@ header {
       }
     }
     nav {
+      text-align: center;
       .main-menu {
         display: flex;
-        gap: 80px;
+        gap: 40px;
         font-size: 18px;
         font-weight: 500;
-        .sub-menu {
-          display: none;
+        li {
+          position: relative;
+          display: block;
+          width: 110px;
+          &:hover,
+          &:focus-within {
+            .sub-menu {
+              z-index: 10;
+              opacity: 1;
+              max-height: initial;
+            }
+          }
+          a {
+            display: block;
+            width: 100%;
+            padding: 20px 10px;
+          }
+          .sub-menu {
+            position: absolute;
+            width: 140%;
+            background-color: #fff;
+            color: #2467c7;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            display: block;
+            padding: 10px 0;
+            border-radius: 8px;
+            transition: 0.35s;
+            z-index: -1;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            li {
+              width: 100%;
+              a {
+                display: block;
+                width: 100%;
+                padding: 15px 10px;
+              }
+            }
+          }
         }
       }
     }
     .util-mn {
+      position: relative;
+      display: block;
       font-size: 18px;
       font-weight: 500;
+      text-align: center;
+      p {
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+      }
+      &:hover,
+      &:focus-within {
+        .sub-menu {
+          z-index: 10;
+          opacity: 1;
+          max-height: initial;
+        }
+      }
       .sub-menu {
-        display: none;
+        position: absolute;
+        width: 140%;
+        background-color: #fff;
+        color: #2467c7;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        display: block;
+        z-index: 10;
+        padding: 10px 0;
+        border-radius: 8px;
+        transition: 0.35s;
+        z-index: -1;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        li {
+          width: 100%;
+          a {
+            display: block;
+            width: 100%;
+            padding: 15px 10px;
+          }
+        }
       }
     }
   }
@@ -151,6 +226,7 @@ header {
           top: 5px;
           left: 7px;
           background-color: #fff;
+          animation: upDown 1.5s infinite;
         }
       }
     }
@@ -207,6 +283,7 @@ header {
         left: 50%;
         z-index: 3;
         transform: translateX(-50%);
+        animation: centerScale 1s infinite;
       }
       #red_car {
         display: block;
@@ -214,18 +291,21 @@ header {
         left: -60px;
         z-index: 3;
         transform: scale(0.9);
+        animation: redUpDown 2.2s infinite;
       }
       #talk1 {
         display: block;
         bottom: 193px;
         left: 58px;
         z-index: 4;
+        animation: rotateAni 1.8s infinite;
       }
       #cosmetic {
         display: block;
         bottom: 234px;
         right: 72px;
         z-index: 4;
+        animation: cosUpDown 2.2s infinite;
       }
       #dance3 {
         display: block;
@@ -233,6 +313,7 @@ header {
         left: 50%;
         z-index: 4;
         transform: translate(-115%, -30%);
+        animation: dan3Rotate 1s infinite;
       }
       #hug2 {
         display: block;
@@ -240,6 +321,7 @@ header {
         left: 50%;
         z-index: 4;
         transform: translate(5%, -10%);
+        animation: hug2Rotate 2s infinite;
       }
       #talk2 {
         display: block;
@@ -247,18 +329,21 @@ header {
         right: 50%;
         z-index: 4;
         transform: translate(-45%, 40%);
+        animation: talk2Scale 2s infinite;
       }
       #leaf_left {
         display: block;
         bottom: 53px;
         left: -40px;
         z-index: 5;
+        animation: leafL 2.8s infinite;
       }
       #leaf_right {
         display: block;
         bottom: 165px;
         right: -120px;
         z-index: 5;
+        animation: leafR 2.8s infinite;
       }
     }
   }
@@ -271,47 +356,52 @@ header {
     z-index: 13;
     transform: translate(-50%, 0%);
     margin: 0 0 100px 0;
-    li {
+    a {
+      position: relative;
       display: block;
       width: 100px;
       height: 100px;
+      border: 1px solid #fdd203;
+      border-radius: 50%;
+      background-color: #fdd20300;
+      transition: 0.35s;
+      span {
+        display: block;
+        text-indent: -9999px;
+        font-size: 0px;
+      }
       &:first-child {
         margin: 0 30px 0 0;
       }
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: 1px solid #fdd203;
-        border-radius: 50%;
-        text-indent: -9999px;
-        background-color: rgba(253, 210, 3, 0);
+      &:hover,
+      &:focus-within {
+        background-color: #fdd303;
+        &::before {
+          color: #fff;
+        }
       }
     }
     .facebook-btn {
-      position: relative;
       &::before {
         content: "\ebd3";
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        z-index: 15;
         transform: translate(-50%, -50%);
         font-family: "xeicon";
         font-size: 50px;
         color: #fdd203;
+        transition: 0.35s;
       }
     }
     .instagram-btn {
-      position: relative;
       &::before {
         content: "\ebe9";
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        z-index: 15;
         transform: translate(-50%, -50%);
         font-family: "xeicon";
         font-size: 50px;
@@ -370,6 +460,12 @@ header {
         color: #2467c7;
         border: 1px solid #2467c7;
         border-radius: 30px;
+        transition: 0.35s;
+        &:hover,
+        &:focus-within {
+          background-color: #2467c7;
+          color: #fff;
+        }
       }
     }
     .desc-box {
@@ -660,6 +756,13 @@ header {
           border: 2px solid var(--subGreen);
           border-radius: 30px;
           margin: 80px 0 0 0;
+          transition: 0.35s;
+
+          &:hover,
+          &:focus-within {
+            background-color: var(--subGreen);
+            color: #fff;
+          }
         }
       }
       .desc-box {
@@ -682,7 +785,8 @@ header {
               h3 {
                 transition: 0.35s;
               }
-              &:hover {
+              &:hover,
+              &:focus-within {
                 h3 {
                   color: var(--green);
                 }
@@ -824,3 +928,143 @@ footer {
   }
 }
 // //footer
+
+@keyframes upDown {
+  0% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes cosUpDown {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes rotateAni {
+  0% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes leafL {
+  0% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes leafR {
+  0% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes redUpDown {
+  0% {
+    transform: scale(0.9) translateY(3px);
+  }
+
+  50% {
+    transform: scale(0.9) translateY(0);
+  }
+
+  100% {
+    transform: scale(0.9) translateY(3px);
+  }
+}
+
+@keyframes centerScale {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes dan3Rotate {
+  0% {
+    transform: translate(-115%, -30%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(-115%, -30%) rotate(5deg);
+  }
+
+  100% {
+    transform: translate(-115%, -30%) rotate(-5deg);
+  }
+}
+
+@keyframes hug2Rotate {
+  0% {
+    transform: translate(5%, -10%) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(5%, -10%) rotate(-3deg);
+  }
+
+  100% {
+    transform: translate(5%, -10%) rotate(3deg);
+  }
+}
+
+@keyframes talk2Scale {
+  0% {
+    transform: translate(-45%, 40%) scale(1);
+  }
+
+  50% {
+    transform: translate(-45%, 40%) scale(1.04);
+  }
+
+  100% {
+    transform: translate(-45%, 40%) scale(1);
+  }
+}

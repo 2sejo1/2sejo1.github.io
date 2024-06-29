@@ -1,10 +1,5 @@
 $(document).ready(function () {
-  // 좌상단에 현재 스크롤 위치 띄우기
-  $(window).scroll(function () {
-    let scrTop = $(this).scrollTop();
-    $("h5").text(scrTop);
-  });
-  // //좌상단에 현재 스크롤 위치 띄우기
+
 
   // 스크롤 발생 시 페이지 이동
   $("section").mousewheel(function (e, delta) {
