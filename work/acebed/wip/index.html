@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에이스침대</title>
+    <!-- jquery 연결 -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <!-- swiper 연결 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="header-box">
+          <h1 class="logo">
+            <a href="#"><img src="img/header-logo.png" alt="ACE BED" /></a>
+          </h1>
+          <div class="gnb">
+            <ul>
+              <li><a href="#;">로그인</a></li>
+              <li><a href="#;">회원가입</a></li>
+              <li><a href="#;">웨딩멤버스</a></li>
+              <li><a href="#;">에이스 침대몰</a></li>
+            </ul>
+          </div>
+          <!-- nav -->
+          <nav>
+            <div class="eng-nav">
+              <ul>
+                <li>
+                  <a href="#;" class="eng-mn">
+                    <p>BED</p>
+                    <p>침대</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">프레임</a></li>
+                      <li><a href="#;">매트리스</a></li>
+                      <li><a href="#;">신제품</a></li>
+                      <li><a href="#;">제품 매뉴얼</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;" class="eng-mn">
+                    <p>FURNIURE</p>
+                    <p>가구</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">룸 세트</a></li>
+                      <li><a href="#;">리빙가구</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;" class="eng-mn">
+                    <p>STRESSLESS</p>
+                    <p>스트레스리스</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">1인용 리클라이너</a></li>
+                      <li><a href="#;">오피스 체어</a></li>
+                      <li><a href="#;">소파</a></li>
+                      <li><a href="#;">테이블&악세사리</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;" class="eng-mn">
+                    <p>SLEEP CARE</p>
+                    <p>슬립케어</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">마이크로케어</a></li>
+                      <li><a href="#;">스마트슬리브</a></li>
+                      <li><a href="#;">마이크로케어 쿨링패드</a></li>
+                      <li><a href="#;">마이크로가드에코플러스</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="kor-nav">
+              <ul>
+                <li>
+                  <a href="#;">
+                    <p>침대과학</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">스프링</a></li>
+                      <li><a href="#;">기술력</a></li>
+                      <li><a href="#;">특허 및 수상내역</a></li>
+                      <li><a href="#;">침대공학연구소</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;">
+                    <p>에이스 스토리</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">NOW</a></li>
+                      <li><a href="#;">SNS</a></li>
+                      <li><a href="#;">고객후기</a></li>
+                      <li><a href="#;">뉴스룸</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;">
+                    <p>고객체험</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">매트리스 체험존</a></li>
+                      <li><a href="#;">이동수면공학 연구소</a></li>
+                      <li><a href="#;">공장 견학 신청</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;">
+                    <p>이벤트</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">이벤트</a></li>
+                      <li><a href="#;">당첨자 안내</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#;">
+                    <p>매장안내</p>
+                  </a>
+                  <div class="sub-mn">
+                    <ul>
+                      <li><a href="#;">매장안내</a></li>
+                      <li><a href="#;">매장찾기</a></li>
+                      <li><a href="#;">에이스 스퀘어</a></li>
+                      <li><a href="#;">에이스 에비뉴</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="util-mn">
+                <li>
+                  <a href="#;" class="search-btn">
+                    <p>검색</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#;" class="menu-btn">
+                    <p>전체 메뉴 열기</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- //nav -->
+        </div>
+      </header>
+      <!-- //header -->
+      <!-- main -->
+      <main>
+        <!-- main visual -->
+        <section class="main-visual-sect">
+          <div class="main-visual-box">
+            <!-- Slider main container -->
+            <div class="swiper main-visual-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/main-w1.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/main-w2.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/main-w3.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/main-w4.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#;">
+                    <img src="img/main-w5.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div class="main-swiper-btn">
+                <a href="#;" class="swiper-button-prev main-prev-btn">
+                  <svg>
+                    <path class="btn-prev" d="M 40 10 Q 40 65 40 140"></path>
+                  </svg>
+                  <p><span>PREV</span></p>
+                </a>
+                <a href="#;" class="swiper-button-next main-next-btn">
+                  <svg>
+                    <path class="btn-next" d="M 10 10 Q 10 65 10 140"></path>
+                  </svg>
+                  <p><span>NEXT</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //main visual -->
+        <!-- science -->
+        <section class="science-sect">
+          <div class="science-box">
+            <h2 class="title">ACE SCIENCE</h2>
+            <a href="#;" class="more-btn">more</a>
+            <div class="slide-box">
+              <ul class="slide-mn">
+                <li class="on">HYBRID Z SPRING</li>
+                <li>5 FREE SYSTEM</li>
+                <li>NEW MATERIAL</li>
+                <li>ECO & HEALTH</li>
+              </ul>
+              <div class="video-slide">
+                <div class="video-wrapper">
+                  <div class="video-box">
+                    <video
+                      src="https://github.com/2sejo1/2sejo1.github.io/raw/main/work/acebed/video/1440_bg01.mp4"
+                      loop
+                      autoplay
+                      muted
+                    ></video>
+                  </div>
+                  <div class="video-box">
+                    <video
+                      src="https://github.com/2sejo1/2sejo1.github.io/raw/main/work/acebed/video/1440_bg02.mp4"
+                      loop
+                      autoplay
+                      muted
+                    ></video>
+                  </div>
+                  <div class="video-box">
+                    <video
+                      src="https://github.com/2sejo1/2sejo1.github.io/raw/main/work/acebed/video/1440_bg03.mp4"
+                      loop
+                      autoplay
+                      muted
+                    ></video>
+                  </div>
+                  <div class="video-box">
+                    <video
+                      src="https://github.com/2sejo1/2sejo1.github.io/raw/main/work/acebed/video/1440_bg04.mp4"
+                      loop
+                      autoplay
+                      muted
+                    ></video>
+                  </div>
+                </div>
+              </div>
+              <div class="txt-slide">
+                <div class="txt-wrapper">
+                  <div class="txt-box">
+                    <h3>
+                      오늘밤 어떤 스프링으로 <br />만든 침대에서
+                      <br />주무시겠습니까?
+                    </h3>
+                    <p>
+                      에이스만의 첨단 공학이 적용된 스프링은 <br />인체 곡선과
+                      하중 분포에 따라 위에서 한 번 <br />부드럽게 맞춰주고
+                      밑에서 또 한 번 <br />단단하게 받쳐줍니다.
+                    </p>
+                  </div>
+                  <div class="txt-box">
+                    <h3>
+                      휴식을 방해하는 <br />모든 것이 사라지는 순간,
+                      <br />완벽한 편안함이 <br />시작됩니다
+                    </h3>
+                    <p>
+                      꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터 자유롭게! 어떤 몸
+                      상태에도 적용되는 5 FREE SYSTEM으로 최상의 숙면 조건을
+                      만듭니다.
+                    </p>
+                  </div>
+                  <div class="txt-box">
+                    <h3>
+                      시원하게, 위생적으로 <br />최고의 잠을 위한 <br />새로운
+                      기술
+                    </h3>
+                    <p>
+                      최고 품질을 위해 중요한 소재 하나하나까지 직접 개발,
+                      생산한 신소재만을 사용합니다
+                    </p>
+                  </div>
+                  <div class="txt-box">
+                    <h3>
+                      피부에 가까운 만큼 <br />더욱 안전하게 <br />당신의 하루가
+                      <br />
+                      건강해집니다
+                    </h3>
+                    <p>
+                      최고 품질을 위해 중요한 소재 하나하나까지 직접 개발,
+                      생산한 신소재만을 사용합니다
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //science -->
+        <!-- collection -->
+        <section class="collection-sect">
+          <div class="collection-box">
+            <h2 class="title">ACE COLLECTION</h2>
+            <a href="#;" class="more-btn">more</a>
+            <div class="tab-mn">
+              <ul>
+                <li class="on"><a href="#new-product">신제품</a></li>
+                <li><a href="#recommended-product">추천제품</a></li>
+              </ul>
+            </div>
+            <div id="new-product" class="slide-box on">
+              <!-- Slider main container -->
+              <div class="new-product-swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/new1.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/new2.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/new3.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+            <div id="recommended-product" class="slide-box">
+              <!-- Slider main container -->
+              <div class="recommended-product-swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/recommended1.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/recommended2.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="img/recommended3.jpg" alt="" />
+                    </div>
+                    <div class="txt-box">
+                      <!-- 내용 기입 -->
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //collection -->
+        <!-- news -->
+        <section class="news-sect">
+          <div class="news-box">
+            <h2 class="title">ACE NEWS</h2>
+            <div class="slide-box">
+              <p class="news-txt">
+                에이스침대의<br />
+                새로운 소식을 알려드립니다
+              </p>
+              <div class="news-slide-box">
+                <!-- Slider main container -->
+                <div class="news-swiper swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <a href="#;">
+                        <img src="img/news1.jpg" alt="스타필드 수원점 OPEN" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#;">
+                        <img
+                          src="img/news2.jpg"
+                          alt="에이스스퀘어 대전동구점 OPEN"
+                        />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#;">
+                        <img
+                          src="img/news3.jpg"
+                          alt="에이스스퀘어 이천점 OPEN"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-mn">
+                <ul>
+                  <li class="on">
+                    <a href="#;">
+                      <span>매장오픈소식</span>
+                      <p>신세계 스타필드 수원점 OPEN</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <span>매장오픈소식</span>
+                      <p>에이스스퀘어 대전동구점 OPEN</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#;">
+                      <span>매장오픈소식</span>
+                      <p>에이스스퀘어 이천점 OPEN</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //news -->
+      </main>
+
+      <!-- //main -->
+      <!-- footer -->
+      <footer></footer>
+      <!-- //footer -->
+    </div>
+    <script src="front.js"></script>
+  </body>
+</html>

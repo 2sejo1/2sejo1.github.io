@@ -14,19 +14,10 @@
   --black100: #222;
   --gray: #999;
 
-  /* --justify-cen {
-    justify-content: center;
-  }
-  --justify-betw {
-    justify-content: space-between;
-  }
-  --align-cen {
-    align-items: center;
-  } */
-
   font-family: var(--mainEng-font), var(--mainKor-font);
 
   body {
     color: var(--black100);
+    font-family: var(--mainEng-font), var(--mainKor-font);
   }
 }
