@@ -1,6 +1,11 @@
 @import url(./reset.css);
 @import url(./font.css);
 @import url(./global.css);
+section {
+  border: 1px solid red;
+  margin-bottom: 120px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -24,6 +29,11 @@ img {
   position: relative;
 }
 
+@media screen and (max-width: 850px) {
+  .main-swiper-btn {
+    display: none;
+  }
+}
 .main-swiper-btn p span {
   opacity: 0;
   transition: 0.35s;
@@ -450,12 +460,15 @@ header .header-box .m-prod-btn {
 
 .sect1 {
   width: 100%;
-  border: 1px solid red;
 }
 .sect1 .sect1-box {
   width: 100%;
   height: calc(100vh - 280px);
-  margin: 85px 0;
+}
+@media screen and (max-width: 943px) {
+  .sect1 .sect1-box {
+    height: calc(100vh - 120px);
+  }
 }
 .sect1 .sect1-box .main-visual-swiper {
   width: 100%;
@@ -475,6 +488,16 @@ header .header-box .m-prod-btn {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 700px) {
+  .sect1 .sect1-box .main-visual-swiper .swiper-slide a p {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 851px) {
+  .sect1 .sect1-box .main-visual-swiper .swiper-pagination {
+    display: none;
+  }
 }
 
 .sect2 {

@@ -2,6 +2,11 @@
 @import url(./font.css);
 @import url(./global.css);
 
+section {
+  border: 1px solid red;
+  margin-bottom: 120px;
+}
+
 // common
 * {
   box-sizing: border-box;
@@ -27,6 +32,9 @@ img {
 }
 
 .main-swiper-btn {
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
   p {
     span {
       opacity: 0;
@@ -474,11 +482,12 @@ header {
 // sect1
 .sect1 {
   width: 100%;
-  border: 1px solid red;
   .sect1-box {
     width: 100%;
     height: calc(100vh - 280px);
-    margin: 85px 0;
+    @media screen and (max-width: 943px) {
+      height: calc(100vh - 120px);
+    }
     .main-visual-swiper {
       width: 100%;
       height: 100%;
@@ -496,7 +505,15 @@ header {
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            @media screen and (max-width: 700px) {
+              width: 100%;
+            }
           }
+        }
+      }
+      .swiper-pagination {
+        @media screen and (min-width: 851px) {
+          display: none;
         }
       }
     }
