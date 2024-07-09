@@ -21,26 +21,184 @@ img {
 .wrap {
   width: 100%;
 }
+
+.swiper {
+  position: relative;
+}
+
+.main-swiper-btn {
+  p {
+    span {
+      opacity: 0;
+      transition: 0.35s;
+    }
+  }
+  a {
+    &:hover {
+      p {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    display: none;
+  }
+  .main-prev-btn {
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 50px;
+      height: 150px;
+      path {
+        stroke: #c9c9c9;
+        stroke-width: 4;
+        fill: transparent;
+        transition: 1s;
+        stroke-linecap: round;
+      }
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      right: auto;
+      width: auto;
+      transform: translateY(-50%) rotate(-90deg);
+      font-family: "Metropolis";
+      font-size: 15px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+  }
+  .main-next-btn {
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 50px;
+      height: 150px;
+      path {
+        stroke: #c9c9c9;
+        stroke-width: 4;
+        fill: transparent;
+        transition: 1s;
+        stroke-linecap: round;
+      }
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 40px;
+      width: auto;
+      transform: translateY(-50%) rotate(90deg);
+      font-family: "Metropolis";
+      font-size: 15px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+section {
+  div {
+    .swiper {
+      .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        background: #fff;
+        opacity: 0.3;
+        border-radius: 5px;
+        margin: 0 5px;
+        transition: 0.5s;
+      }
+
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .only_mob {
+    display: block !important;
+  }
+  .only_web {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 943px) {
+  .only_mob {
+    display: block !important;
+  }
+  .only_web {
+    display: none !important;
+  }
+}
+
 //  //common
 
 // header
 
 header {
   width: 100%;
+  background-color: #fff;
+  padding-bottom: 20px;
+  @media screen and (max-width: 850px) {
+    padding-bottom: 0;
+  }
   .header-box {
     width: 100%;
     position: relative;
     padding: 0 80px;
-    height: 155px;
-    border: 1px solid red;
+    height: 140px;
+    transition: 0.35s;
+    @media screen and (max-width: 1024px) {
+      padding: 0 30px;
+    }
+    @media screen and (max-width: 850px) {
+      height: 70px;
+    }
     h1 {
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      transition: 0.35s;
       z-index: 3;
+      @media screen and (max-width: 1500px) {
+        left: 80px;
+        transform: translateX(0);
+      }
+      @media screen and (max-width: 1024px) {
+        left: 30px;
+        transform: translateX(0);
+      }
+      @media screen and (max-width: 850px) {
+        top: 50%;
+        bottom: initial;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 91px;
+        height: 24px;
+      }
     }
     .util-mn {
+      @media screen and (max-width: 850px) {
+        display: none;
+      }
       > ul {
         display: flex;
         justify-content: right;
@@ -119,6 +277,13 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 0 80px;
+        transition: 0.35s;
+        @media screen and (max-width: 1500px) {
+          padding: 0 80px 0 320px;
+        }
+        @media screen and (max-width: 1024px) {
+          padding: 0 30px 0 250px;
+        }
 
         .sub-mn-list {
           font-size: 15px;
@@ -158,10 +323,25 @@ header {
         }
 
         .product-box {
+          @media screen and (max-width: 850px) {
+            display: none;
+          }
           .main-menu-list {
             display: flex;
             > li {
               padding-right: 40px;
+              transition: 0.35s;
+
+              @media screen and (max-width: 1700px) {
+                padding-right: 20px;
+              }
+              @media screen and (max-width: 1500px) {
+                padding-right: 40px;
+              }
+              @media screen and (max-width: 1024px) {
+                padding-right: 20px;
+              }
+
               .eng-mn {
                 display: block;
                 font-size: 16px;
@@ -190,11 +370,22 @@ header {
         .etc-box {
           display: flex;
           gap: 40px;
+          @media screen and (max-width: 850px) {
+            display: none;
+          }
           .brand-box {
+            @media screen and (max-width: 1500px) {
+              display: none;
+            }
             .main-menu-list {
               display: flex;
               > li {
                 padding-left: 40px;
+                transition: 0.35s;
+                @media screen and (max-width: 1700px) {
+                  padding-left: 20px;
+                }
+
                 > a {
                   font-size: 16px;
                   font-weight: 500;
@@ -213,6 +404,9 @@ header {
             ul {
               display: flex;
               gap: 30px;
+              @media screen and (max-width: 850px) {
+                display: none;
+              }
               li {
                 button {
                   display: block;
@@ -237,6 +431,40 @@ header {
         }
       }
     }
+    .m-all-mn-btn {
+      position: absolute;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      width: 19px;
+      height: 20px;
+      padding: 3px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      background: url(../img/m-all-menu-btn.png) no-repeat center/19px auto;
+      @media screen and (min-width: 851px) {
+        display: none;
+      }
+    }
+    .m-prod-btn {
+      position: absolute;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      width: 23px;
+      height: 20px;
+      padding: 3px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      background: url(../img/m-prod-meun-btn.png) no-repeat center/23px auto;
+      @media screen and (min-width: 851px) {
+        display: none;
+      }
+    }
   }
 }
 //  //header
@@ -246,6 +474,33 @@ header {
 // sect1
 .sect1 {
   width: 100%;
+  border: 1px solid red;
+  .sect1-box {
+    width: 100%;
+    height: calc(100vh - 280px);
+    margin: 85px 0;
+    .main-visual-swiper {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          p {
+            display: block;
+            width: calc(100% - 160px);
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
 }
 // // sect1
 

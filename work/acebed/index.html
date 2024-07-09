@@ -6,6 +6,12 @@
     <title>에이스침대</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Swiper CDN 연결 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -15,6 +21,7 @@
           <h1>
             <a href="#"><img src="./img/header-logo.png" alt="ACE BED" /></a>
           </h1>
+
           <div class="util-mn">
             <ul>
               <li><a href="#;">로그인</a></li>
@@ -231,6 +238,12 @@
               <!-- //right nav -->
             </div>
           </nav>
+          <button class="m-all-mn-btn">
+            <span class="indent9999">모바일 전체 메뉴</span>
+          </button>
+          <button class="m-prod-btn">
+            <span class="indent9999">모바일 제품 메뉴</span>
+          </button>
         </div>
       </header>
       <!-- //header -->
@@ -284,11 +297,11 @@
                   <a href="#;">
                     <p
                       class="only_web"
-                      style="background-image: url(./img/main-w4.jpg)"
+                      style="background-image: url(./img/main-w4.png)"
                     ></p>
                     <p
                       class="only_mob"
-                      style="background-image: url(./img/main-m4.jpg)"
+                      style="background-image: url(./img/main-m4.png)"
                     ></p>
                   </a>
                 </div>
@@ -323,9 +336,6 @@
                   <p><span>NEXT</span></p>
                 </a>
               </div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </section>

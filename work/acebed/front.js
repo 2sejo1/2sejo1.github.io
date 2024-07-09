@@ -21,12 +21,38 @@ document.querySelectorAll(".nav-box").forEach(function (e) {
 });
 // // nav
 
+//  slide btn path
+// prev btn
+document.querySelectorAll(".main-prev-btn").forEach(function (e) {
+  e.addEventListener("mouseover", function () {
+    this.querySelector(".btn-prev").setAttribute("d", "M 40 10 Q 10 65 40 140");
+  });
+});
+
+document.querySelectorAll(".main-prev-btn").forEach(function (e) {
+  e.addEventListener("mouseout", function () {
+    this.querySelector(".btn-prev").setAttribute("d", "M 40 10 Q 40 65 40 140");
+  });
+});
+
+// next btn
+document.querySelectorAll(".main-next-btn").forEach(function (e) {
+  e.addEventListener("mouseover", function () {
+    this.querySelector(".btn-next").setAttribute("d", "M 10 10 Q 40 65 10 140");
+  });
+});
+
+document.querySelectorAll(".main-next-btn").forEach(function (e) {
+  e.addEventListener("mouseout", function () {
+    this.querySelector(".btn-next").setAttribute("d", "M 10 10 Q 10 65 10 140");
+  });
+});
+// // slide btn path
+
 const mainVisualSwiper = new Swiper(".main-visual-swiper", {
   // 추가 옵션 설정
   slidesPerView: 1, // 한 화면에 나올 슬라이드 개수
-  spaceBetween: 10, // 슬라이드 사이 간격 px
   loop: false, // 무한 반복 여부
-  centeredSlides: true, //활성 슬라이드를 항상 가운데에 배치
 
   // 자동 재생 설정
   autoplay: {
