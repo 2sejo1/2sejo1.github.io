@@ -97,20 +97,28 @@ const sect2Swiper = new Swiper(".sect2-swiper", {
 
   on: {
     init: function () {
-      //
+      // 슬라이더가 초기화될 때 첫 번째 슬라이드의 텍스트에 .on 클래스를 추가
+      const activeIndex = this.activeIndex;
+      $(".txt-area .txt-wrap .txt").removeClass("on");
+      $(".txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
     },
     slideChangeTransitionStart: function () {
-      //
+      // 슬라이드 전환이 시작될 때 모든 .on 클래스를 제거
+      $(".txt-area .txt-wrap .txt").removeClass("on");
+      // 슬라이드 전환이 시작될 때 전환 직전 슬라이드의 인덱스에 해당하는 텍스트에 .prev 클래스를 추가
+      const previousIndex = this.previousIndex;
+      $(".txt-area .txt-wrap .txt").eq(previousIndex).addClass("prev");
+      //현재 활성 슬라이드 인덱스에 해당하는 텍스트에 .on 클래스를 추가
+      const activeIndex = this.activeIndex;
+      $(".txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
     },
     slideChangeTransitionEnd: function () {
-      //
+      $(".txt-area .txt-wrap .txt").removeClass("prev");
     },
   },
 });
 
-// $(".mainCon .section.two .swiper-pagination span")
-//   .eq(0)
-//   .text("HYBRID Z SPRING");
-// $(".mainCon .section.two .swiper-pagination span").eq(1).text("5 FREE SYSTEM");
-// $(".mainCon .section.two .swiper-pagination span").eq(2).text("NEW MATERIAL");
-// $(".mainCon .section.two .swiper-pagination span").eq(3).text("ECO & HEALTH");
+$(".sect2 .swiper-pagination span").eq(0).text("HYBRID Z SPRING");
+$(".sect2 .swiper-pagination span").eq(1).text("5 FREE SYSTEM");
+$(".sect2 .swiper-pagination span").eq(2).text("NEW MATERIAL");
+$(".sect2 .swiper-pagination span").eq(3).text("ECO & HEALTH");
