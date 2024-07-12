@@ -695,7 +695,7 @@ header {
         color: transparent;
         @media screen and (min-width: 1281px) {
           font-size: 22px;
-          color: #0890c0;
+          color: var(--mainColor);
           font-family: var(--bold-font);
           background-color: transparent;
         }
@@ -857,6 +857,7 @@ header {
   width: 100%;
   padding: 150px 0;
   background: #f4f7fa;
+  margin-bottom: 0;
   .sect3-box {
     position: relative;
     .tab-list {
@@ -902,13 +903,13 @@ header {
             font-size: 17px;
           }
           &:hover {
-            color: #0890c0;
+            color: var(--mainColor);
             font-family: var(--bold-font);
             font-weight: 700;
           }
         }
         a.on {
-          color: #0890c0;
+          color: var(--mainColor);
           font-family: var(--bold-font);
           font-weight: 700;
         }
@@ -932,7 +933,7 @@ header {
               margin: auto;
               background: #dbdee1;
               .swiper-scrollbar-drag {
-                background: #0890c0;
+                background: var(--mainColor);
               }
             }
             .swiper {
@@ -1176,6 +1177,128 @@ header {
 // sect4
 .sect4 {
   width: 100%;
+  background-color: #f4f7fa;
+  .sect4-box {
+    padding: 50px;
+    .inner-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      transition: 0.35s;
+      @media screen and (max-width: 1500px) {
+        gap: 50px;
+      }
+      @media screen and (max-width: 1300px) {
+        gap: 30px;
+      }
+      @media screen and (max-width: 1100px) {
+        flex-direction: column;
+      }
+      .main-text {
+        font-size: 26px;
+        line-height: 40px;
+        font-family: var(--light-font);
+        font-weight: 400;
+        @media screen and (max-width: 1100px) {
+          display: none;
+        }
+      }
+      .swiper-box {
+        position: relative;
+        width: 40vw;
+        max-width: 720px;
+        height: 40vw;
+        max-height: 720px;
+        @media screen and (max-width: 1100px) {
+          width: 100%;
+          max-width: 720px;
+          height: initial;
+          max-height: initial;
+          padding-bottom: 50px;
+        }
+        .sect4-swiper {
+          width: 100%;
+
+          .swiper-slide {
+            width: 100%;
+            height: 100%;
+            .text-box {
+              margin-top: 30px;
+              .title-text {
+                font-size: 28px;
+                font-family: var(--bold-font);
+                font-weight: 700;
+                transition: 0.35s;
+                @media (max-width: 768px) {
+                  font-size: 22px;
+                }
+              }
+              .desc-text {
+                font-size: 34px;
+                margin-top: 17px;
+                font-family: var(--light-font);
+                font-weight: 400;
+                transition: 0.35s;
+                color: #737373;
+                @media (max-width: 768px) {
+                  font-size: 25px;
+                  margin-top: 10px;
+                }
+              }
+              @media screen and (min-width: 1101px) {
+                display: none;
+              }
+            }
+          }
+        }
+        .swiper-next-btn {
+          display: block;
+          width: 90px;
+          height: 16px;
+          margin-top: 30px;
+          background: url(../img/go-right-icon.png) no-repeat 0 0;
+          cursor: pointer;
+          transition: 0.35s;
+          @media screen and (min-width: 1101px) {
+            display: none;
+          }
+          @media screen and (max-width: 768px) {
+            width: 60px;
+            height: 16px;
+            background: url(../img/go-right-icon.png) no-repeat 0 0;
+            background-size: 100%;
+          }
+        }
+      }
+      .menu-box {
+        @media screen and (max-width: 1100px) {
+          display: none;
+        }
+        a.on {
+          color: var(--mainColor);
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 40px 0;
+          border-bottom: 1px solid #ebebeb;
+          color: #999;
+          word-break: keep-all;
+          .title-text {
+            font-size: 16px;
+            font-family: var(--bold-font);
+            font-weight: 700;
+          }
+          .desc-text {
+            font-size: 20px;
+            line-height: 32px;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
 }
 // // sect4
 

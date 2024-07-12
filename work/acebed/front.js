@@ -103,21 +103,21 @@ const sect2Swiper = new Swiper(".sect2-swiper", {
     init: function () {
       // 슬라이더가 초기화될 때 첫 번째 슬라이드의 텍스트에 .on 클래스를 추가
       const activeIndex = this.activeIndex;
-      $(".txt-area .txt-wrap .txt").removeClass("on");
-      $(".txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
+      $(".sect2 .txt-area .txt-wrap .txt").removeClass("on");
+      $(".sect2 .txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
     },
     slideChangeTransitionStart: function () {
       // 슬라이드 전환이 시작될 때 모든 .on 클래스를 제거
-      $(".txt-area .txt-wrap .txt").removeClass("on");
+      $(".sect2 .txt-area .txt-wrap .txt").removeClass("on");
       // 슬라이드 전환이 시작될 때 전환 직전 슬라이드의 인덱스에 해당하는 텍스트에 .prev 클래스를 추가
       const previousIndex = this.previousIndex;
-      $(".txt-area .txt-wrap .txt").eq(previousIndex).addClass("prev");
+      $(".sect2 .txt-area .txt-wrap .txt").eq(previousIndex).addClass("prev");
       //현재 활성 슬라이드 인덱스에 해당하는 텍스트에 .on 클래스를 추가
       const activeIndex = this.activeIndex;
-      $(".txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
+      $(".sect2 .txt-area .txt-wrap .txt").eq(activeIndex).addClass("on");
     },
     slideChangeTransitionEnd: function () {
-      $(".txt-area .txt-wrap .txt").removeClass("prev");
+      $(".sect2 .txt-area .txt-wrap .txt").removeClass("prev");
     },
   },
 });
@@ -318,3 +318,48 @@ const sect3RecommendedMobSwiper = new Swiper(".sect3-recommended-mob-swiper", {
 // // swiper
 
 // //sect3
+
+//  sect4
+const sect4Swiper = new Swiper(".sect4-swiper", {
+  // 추가 옵션 설정
+  speed: 1000,
+  slidesPerView: 1,
+  loop: true, // 무한 반복 여부
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".sect4 .swiper-next-btn",
+  },
+
+  observer: true,
+  observeparents: true,
+  noSwiping: true,
+  noSwipingClass: "subvis-stop-swiping",
+  updateOnWindowResize: true,
+
+  on: {
+    init: function () {
+      // 슬라이더가 초기화될 때 첫 번째 슬라이드의 텍스트에 .on 클래스를 추가
+      const activeIndex = this.realIndex;
+      $(".sect4 .menu-box a").removeClass("on");
+      $(".sect4 .menu-box a").eq(activeIndex).addClass("on");
+      console.log(activeIndex);
+    },
+    slideChangeTransitionStart: function () {
+      // 슬라이드 전환이 시작될 때 모든 .on 클래스를 제거
+      $(".sect4 .menu-box a").removeClass("on");
+
+      //현재 활성 슬라이드 인덱스에 해당하는 텍스트에 .on 클래스를 추가
+      const activeIndex = this.realIndex;
+      $(".sect4 .menu-box a").eq(activeIndex).addClass("on");
+      console.log(activeIndex);
+    },
+  },
+});
+
+$(".sect4 .menu-box a").on("click", function (e) {
+  e.preventDefault();
+  const index = $(this).data("index");
+  sect4Swiper.slideToLoop(index);
+});
+// // sect4
