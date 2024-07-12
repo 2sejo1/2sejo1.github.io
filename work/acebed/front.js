@@ -49,6 +49,7 @@ document.querySelectorAll(".main-next-btn").forEach(function (e) {
 });
 // // slide btn path
 
+// sect1
 const mainVisualSwiper = new Swiper(".main-visual-swiper", {
   // 추가 옵션 설정
   slidesPerView: 1, // 한 화면에 나올 슬라이드 개수
@@ -72,6 +73,9 @@ const mainVisualSwiper = new Swiper(".main-visual-swiper", {
   },
 });
 
+// // sect1
+
+// sect2
 const sect2Swiper = new Swiper(".sect2-swiper", {
   // 추가 옵션 설정
   speed: 1000,
@@ -122,3 +126,195 @@ $(".sect2 .swiper-pagination span").eq(0).text("HYBRID Z SPRING");
 $(".sect2 .swiper-pagination span").eq(1).text("5 FREE SYSTEM");
 $(".sect2 .swiper-pagination span").eq(2).text("NEW MATERIAL");
 $(".sect2 .swiper-pagination span").eq(3).text("ECO & HEALTH");
+
+// // sect2
+
+// sect3
+
+// tab
+document.querySelectorAll(".sect3 .tab-list li a").forEach(function (item) {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sect3 .tab-list li .on").classList.remove("on");
+    this.classList.add("on");
+    let href = this.getAttribute("href");
+    document.querySelector(".sect3 .product-wrap .on").classList.remove("on");
+    document.querySelector(href).classList.add("on");
+  });
+});
+
+// // tab
+
+// swiper
+const sect3NewWebSwiper = new Swiper(".sect3-new-web-swiper", {
+  // 추가 옵션 설정
+  slidesPerView: 1.5, // 한 화면에 나올 슬라이드 개수
+  spaceBetween: 50, // 슬라이드 사이 간격 px
+  loop: false, // 무한 반복 여부
+  centeredSlides: true, // 활성 슬라이드를 가운데 배치
+
+  // Responsive breakpoints 반응형 분기
+  breakpoints: {
+    1700: {
+      slidesPerView: 1.3,
+      spaceBetween: 50,
+    },
+    1500: {
+      slidesPerView: 1.2,
+      spaceBetween: 50,
+    },
+    1700: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    944: {
+      slidesPerView: 1.25,
+      spaceBetween: 50,
+    },
+  },
+
+  //스크롤바 사용 유무
+  scrollbar: {
+    el: ".sect3 #new-product .only-web .swiper-scrollbar",
+    hide: false,
+    draggable: true, // 스크롤바를 드래그해서 움직일수 있는지 여부
+  },
+
+  // If we need pagination 슬라이드 개수 표시 인디케이터
+  pagination: {
+    el: ".sect3 #new-product .only-web .swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".sect3 #new-product .only-web .swiper-button-next",
+    prevEl: ".sect3 #new-product .only-web .swiper-button-prev",
+  },
+});
+
+const sect3NewMobSwiper = new Swiper(".sect3-new-mob-swiper", {
+  // 추가 옵션 설정
+  slidesPerView: 2.5, // 한 화면에 나올 슬라이드 개수
+  spaceBetween: 30, // 슬라이드 사이 간격 px
+  loop: false, // 무한 반복 여부
+
+  breakpoints: {
+    800: {
+      slidesPerView: 4.5,
+      spaceBetween: 30,
+    },
+    720: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    600: {
+      slidesPerView: 3.5,
+      spaceBetween: 30,
+    },
+  },
+
+  //스크롤바 사용 유무
+  scrollbar: {
+    el: ".sect3 #new-product .only-mob .swiper-scrollbar",
+    hide: false,
+    draggable: true, // 스크롤바를 드래그해서 움직일수 있는지 여부
+  },
+
+  // If we need pagination 슬라이드 개수 표시 인디케이터
+  pagination: {
+    el: ".sect3 #new-product .only-mob .swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".sect3 #new-product .only-mob .swiper-button-next",
+    prevEl: ".sect3 #new-product .only-mob .swiper-button-prev",
+  },
+});
+
+const sect3RecommendedWebSwiper = new Swiper(".sect3-recommended-web-swiper", {
+  // 추가 옵션 설정
+  slidesPerView: 1.5, // 한 화면에 나올 슬라이드 개수
+  spaceBetween: 50, // 슬라이드 사이 간격 px
+  loop: false, // 무한 반복 여부
+  centeredSlides: true, // 활성 슬라이드를 가운데 배치
+
+  // Responsive breakpoints 반응형 분기
+  breakpoints: {
+    1700: {
+      slidesPerView: 1.3,
+      spaceBetween: 50,
+    },
+    1500: {
+      slidesPerView: 1.2,
+      spaceBetween: 50,
+    },
+    1700: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+    944: {
+      slidesPerView: 1.25,
+      spaceBetween: 50,
+    },
+  },
+
+  //스크롤바 사용 유무
+  scrollbar: {
+    el: ".sect3 #recommended-product .only-web .swiper-scrollbar",
+    hide: false,
+    draggable: true, // 스크롤바를 드래그해서 움직일수 있는지 여부
+  },
+
+  // If we need pagination 슬라이드 개수 표시 인디케이터
+  pagination: {
+    el: ".sect3 #recommended-product .only-web .swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".sect3 #recommended-product .only-web .swiper-button-next",
+    prevEl: ".sect3 #recommended-product .only-web .swiper-button-prev",
+  },
+});
+
+const sect3RecommendedMobSwiper = new Swiper(".sect3-recommended-mob-swiper", {
+  // 추가 옵션 설정
+  slidesPerView: 2.5, // 한 화면에 나올 슬라이드 개수
+  spaceBetween: 30, // 슬라이드 사이 간격 px
+  loop: false, // 무한 반복 여부
+
+  breakpoints: {
+    800: {
+      slidesPerView: 4.5,
+      spaceBetween: 30,
+    },
+    720: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    600: {
+      slidesPerView: 3.5,
+      spaceBetween: 30,
+    },
+  },
+
+  //스크롤바 사용 유무
+  scrollbar: {
+    el: ".sect3 #recommended-product .only-mob .swiper-scrollbar",
+    hide: false,
+    draggable: true, // 스크롤바를 드래그해서 움직일수 있는지 여부
+  },
+
+  // Navigation arrows 좌/우 컨트롤 버튼
+  navigation: {
+    nextEl: ".sect3 #recommended-product .only-mob .swiper-button-next",
+    prevEl: ".sect3 #recommended-product .only-mob .swiper-button-prev",
+  },
+});
+// // swiper
+
+// //sect3
