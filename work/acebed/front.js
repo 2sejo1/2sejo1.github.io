@@ -363,3 +363,15 @@ $(".sect4 .menu-box a").on("click", function (e) {
   sect4Swiper.slideToLoop(index);
 });
 // // sect4
+
+// footer
+
+document
+  .querySelector("footer .family-box .open")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector("footer .family-box .site-list")
+      .classList.toggle("on");
+  });
+// //footer
