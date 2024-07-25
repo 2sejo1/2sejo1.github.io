@@ -3,6 +3,7 @@
 @import url(global.css);
 html {
   scroll-behavior: smooth;
+  min-width: 1800px;
 }
 
 * {

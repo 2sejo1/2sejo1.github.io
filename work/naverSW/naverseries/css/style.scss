@@ -12,20 +12,55 @@
 img {
   max-width: 100%;
 }
+
+.indent9999 {
+  display: block;
+  font-size: 0px;
+  text-indent: -9999px;
+}
 // //commmon
 
+.menu-btn {
+  position: fixed;
+  display: block;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 50;
+  border: none;
+  padding: 0;
+  background: url(../img/menuOpen.png) no-repeat center center/ 90%;
+  cursor: pointer;
+  filter: invert(1);
+  @media screen and (min-width: 981px) {
+    display: none;
+  }
+}
+
+.fixed-box.on {
+  @media screen and (max-width: 980px) {
+    left: 0;
+  }
+}
 .fixed-box {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 200px;
   height: 100%;
   padding: 40px 10px;
   background-color: #000;
   z-index: 10;
   color: #fff;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.35s;
+  @media screen and (max-width: 980px) {
+    left: -200px;
+  }
   // header
   header {
     .header-box {
@@ -42,26 +77,26 @@ img {
         padding: 20px 30px;
         ul {
           padding: 20px 0;
-          li.webtoon {
-            position: relative;
-            &::after {
-              content: "click!";
-              position: absolute;
-              top: 11px;
-              right: 42px;
-              font-size: 16px;
-              color: #a2a2a2;
-              animation: move 1s infinite;
-            }
-          }
-          li.webtoon:hover {
-            color: #00e164;
-            font-weight: 600;
-            &::after {
-              color: #00e164;
-              font-weight: 400;
-            }
-          }
+          // li.webtoon {
+          //   position: relative;
+          //   &::after {
+          //     content: "click!";
+          //     position: absolute;
+          //     top: 11px;
+          //     right: 42px;
+          //     font-size: 16px;
+          //     color: #a2a2a2;
+          //     animation: move 1s infinite;
+          //   }
+          // }
+          // li.webtoon:hover {
+          //   color: #00e164;
+          //   font-weight: 600;
+          //   &::after {
+          //     color: #00e164;
+          //     font-weight: 400;
+          //   }
+          // }
 
           li.on {
             color: #00e164;
@@ -190,26 +225,37 @@ img {
   .bg {
     position: fixed;
     z-index: -1;
-    width: 100%;
-
+    min-width: 100%;
+    height: 100%;
     video {
-      width: 100%;
+      display: block;
+      margin: auto 0 auto auto;
+      height: 100%;
     }
   }
   .main-visual-box {
     width: 100%;
     overflow: hidden;
+    .main-visual-wrapper.on {
+      @media screen and (max-width: 980px) {
+        margin: 0 0 0 200px;
+      }
+    }
     .main-visual-wrapper {
       display: flex;
       margin: 0 0 0 200px;
+      transition: 0.35s;
+      @media screen and (max-width: 980px) {
+        margin: 0;
+      }
 
       article {
         position: relative;
         flex-shrink: 0;
         width: 380px;
         height: 100vh;
-        background-color: #111;
-        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 20px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
         &::before {
           content: "";
           position: absolute;
@@ -230,7 +276,7 @@ img {
           position: relative;
           border-top: 10px solid #00e164;
           padding: 70px 20px;
-          color: #fff;
+          color: #333;
           h2 {
             font-size: 30px;
             font-weight: 700;
@@ -250,9 +296,11 @@ img {
             line-height: 25px;
             padding: 50px 10px;
             margin: 0 0 50px 0;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: #ffffffa5;
-            color: #000;
+            border: 1px dashed #8f8f8f;
+            // border-style: dotted;
+            border-radius: 5px;
+            background-color: #ececec;
+            color: #333;
           }
 
           &::after {
@@ -275,13 +323,13 @@ img {
               margin: 0 0 200px 0;
             }
             &:nth-of-type(2n) {
-              color: #ffffff81;
+              color: #333;
               &::after {
                 opacity: 0.5;
               }
             }
             &:nth-of-type(2n-1) {
-              color: #fffffff1;
+              color: #333;
               &::after {
                 opacity: 0.8;
               }
@@ -296,6 +344,7 @@ img {
               left: 0;
               background: url(../img/dd.png) no-repeat center center/100%;
               opacity: 0.5;
+              filter: brightness(0);
             }
             p {
               font-size: 18px;

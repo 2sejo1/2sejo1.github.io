@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  document.querySelector(".menu-btn").addEventListener("click", function () {
+    document.querySelector(".fixed-box").classList.toggle("on");
+    document.querySelector(".main-visual-wrapper").classList.toggle("on");
+  });
+
   //custom scroll
   $(function () {
     $("article").mCustomScrollbar({

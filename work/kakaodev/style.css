@@ -4,6 +4,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  min-width: 1200px;
+}
 
 img {
   max-width: 100%;
