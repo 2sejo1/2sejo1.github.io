@@ -1,3 +1,8 @@
+document.querySelector(".m-btn").addEventListener("click", function () {
+  document.querySelector(".m-nav").classList.toggle("on");
+  document.querySelector(".wrap").classList.toggle("on");
+});
+
 $(document).ready(function () {
   //  side nav icon : on-off
   $(window).scroll(function () {
@@ -9,8 +14,8 @@ $(document).ready(function () {
       // console.log(secTop);
 
       if (scrTop >= secTop) {
-        $(".m-nav li a").removeClass("on");
-        $(".m-nav li").eq(i).find("a").addClass("on");
+        $(".remote-nav li a").removeClass("on");
+        $(".remote-nav li").eq(i).find("a").addClass("on");
       }
     });
   });
@@ -110,9 +115,16 @@ $(document).ready(function () {
         e.preventDefault();
         let contentID = this.getAttribute("href");
         let contentElement = document.getElementById(contentID.slice(1));
-        let contentH = contentElement.clientHeight;
 
-        contentElement.parentElement.style.maxHeight = contentH + 200 + "px";
+        function updateContentHeight() {
+          let contentH = contentElement.clientHeight;
+          contentElement.parentElement.style.maxHeight = contentH + 200 + "px";
+        }
+
+        updateContentHeight();
+
+        window.addEventListener("resize", updateContentHeight);
+        window.addEventListener("load", updateContentHeight);
       });
     });
 
@@ -311,9 +323,16 @@ $(document).ready(function () {
   //  tab mn : post on-off
 
   document.querySelectorAll(".content").forEach(function (element) {
+    function updateTabHeight() {
+      let currentTab = element.querySelector(".tab-box.on");
+      if (currentTab) {
+        let tabHeight = currentTab.clientHeight;
+        element.querySelector(".tab-wrap").style.height = tabHeight + "px";
+      }
+    }
+
     element.addEventListener("click", function (e) {
       e.preventDefault();
-      // console.log(e.target);
       if (e.target.classList.contains("tab")) {
         let closestLi = e.target.closest("li");
         let closestLiA = closestLi.querySelector("a");
@@ -324,16 +343,20 @@ $(document).ready(function () {
         element.querySelector("li.on").classList.remove("on");
 
         thisTab.classList.add("on");
-        let tabHeight = document.getElementById(hrefLiA.slice(1)).clientHeight;
+        let tabHeight = thisTab.clientHeight;
         element.querySelector(".tab-wrap").style.height = tabHeight + "px";
-        // console.log(tabHeight);
-        thisTab.classList.add("on");
 
         if (closestLi) {
           closestLi.classList.add("on");
         }
+
+        // Update tab height on window resize
+        window.addEventListener("resize", updateTabHeight);
       }
     });
+
+    // Initial tab height update on page load
+    window.addEventListener("load", updateTabHeight);
   });
 
   // 버튼 눌러 < e.target 써서 이벤트 위임으로 처리
