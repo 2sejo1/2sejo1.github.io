@@ -1,0 +1,147 @@
+@import url(./frame.css);
+
+#history-frame {
+  color: #101213;
+}
+
+#history-frame .history-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#history-frame .history-list > li {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 80px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+#history-frame .history-list > li .year {
+  width: 200px;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
+
+#history-frame .history-list > li .inner-box {
+  width: calc(100% - 230px);
+}
+
+#history-frame .history-list > li .inner-box .content-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#history-frame .history-list > li .inner-box .content-list > li {
+  width: calc(25% - 20px);
+}
+
+#history-frame .history-list > li .inner-box .content-list a {
+  display: block;
+  transition: 0.35s;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+#history-frame .history-list > li .inner-box .content-list a:hover {
+  color: #d82316;
+  border-color: #d82316;
+}
+
+#history-frame .history-list > li .inner-box .content-list a .img-box img {
+  width: 100%;
+}
+
+#history-frame .history-list > li .inner-box .content-list a .title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 20px 0 10px 0;
+}
+
+#history-frame .history-list > li .inner-box .content-list a ul li {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+#history-frame .history-list > li .inner-box .award-box {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+#history-frame .history-list > li .inner-box .award-box .award {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  color: #b8b8b8;
+  margin-top: 20px;
+}
+
+#history-frame .history-list > li .inner-box .award-box .desc-box {
+  width: 100%;
+  padding: 30px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #292929;
+}
+
+#history-frame .history-list > li .inner-box .award-box .desc-box .prize {
+  margin-bottom: 30px;
+}
+
+#history-frame
+  .history-list
+  > li
+  .inner-box
+  .award-box
+  .desc-box
+  .content-desc {
+  padding: 5px 0 5px 15px;
+  border-left: 3px solid #6d6d6d;
+}
+
+#history-frame
+  .history-list
+  > li
+  .inner-box
+  .award-box
+  .desc-box
+  .content-desc
+  .content-title {
+  margin-bottom: 10px;
+}
+
+#history-frame
+  .history-list
+  > li
+  .inner-box
+  .award-box
+  .desc-box
+  .content-desc
+  .content-person {
+  color: #6d6d6d;
+  font-weight: 300;
+}
+
+#history-frame
+  .history-list
+  > li
+  .inner-box
+  .award-box
+  .desc-box
+  .content-desc
+  .content-person
+  span {
+  color: #ec90a2;
+  font-weight: 500;
+  margin-right: 10px;
+}

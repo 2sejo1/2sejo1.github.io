@@ -1,0 +1,66 @@
+@import url(./frame.css);
+
+#recruit-frame {
+  color: #101213;
+}
+
+#recruit-frame .recruit-box {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#recruit-frame .word-box {
+  width: calc(100% - 200px);
+  margin: 0 auto;
+  padding: 50px 0;
+  background: url(../img/footer-bg.jpg);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+#recruit-frame .info-box {
+  margin-top: 150px;
+}
+
+#recruit-frame .info-box .notice {
+  color: #d82316;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 0;
+  border-bottom: 2px solid #c9c9c9;
+}
+
+#recruit-frame .info-box .info-list .type .desc {
+  display: flex;
+  gap: 30px;
+}
+
+#recruit-frame .info-box .info-list > li {
+  display: flex;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 50px 30px;
+}
+
+#recruit-frame .info-box .info-list > li .name {
+  width: 200px;
+  padding-top: 8px;
+}
+
+#recruit-frame .info-box .info-list > li .name p {
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#recruit-frame .info-box .info-list > li .desc {
+  width: calc(100% - 200px);
+}
+
+#recruit-frame .info-box .info-list > li .desc p {
+  padding: 8px 0;
+}

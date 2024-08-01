@@ -1,0 +1,155 @@
+@import url(./frame.css);
+
+/* title box */
+#about-frame .title-box {
+  position: relative;
+  color: #808080;
+  padding-top: 50px;
+  margin-bottom: 150px;
+}
+#about-frame .title-box::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #d82316;
+}
+
+#about-frame .title-box p {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#about-frame .title-box span {
+  font-size: 14px;
+  font-weight: 300;
+}
+/* // title box */
+
+/* about emk */
+#about-frame .about-emk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 200px;
+}
+#about-frame .about-emk .img-box {
+  display: flex;
+  width: calc(100% - 650px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-frame .about-emk .img-box img {
+  width: 310px;
+}
+
+#about-frame .about-emk .img-box p {
+  text-align: center;
+  color: #707070;
+  font-size: 18px;
+  white-space: nowrap;
+  margin-top: 40px;
+  font-weight: 300;
+}
+
+#about-frame .about-emk .img-box p em {
+  font-weight: 600;
+}
+
+#about-frame .about-emk .text-box {
+  width: 600px;
+}
+
+#about-frame .about-emk .text-box .title {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #101213;
+  margin-bottom: 30px;
+}
+
+#about-frame .about-emk .text-box .desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #666;
+}
+
+#about-frame .about-emk .text-box .desc p {
+  padding: 20px 0;
+}
+/* // about emk */
+
+/* features box */
+#about-frame .features-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+#about-frame .features-box .item {
+  width: calc(50% - 40px);
+}
+
+#about-frame .features-box .item .img-box {
+  width: 100%;
+}
+
+#about-frame .features-box .item .img-box img {
+  width: 100%;
+}
+
+#about-frame .features-box .item .title {
+  padding: 40px 0 30px 0;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #101213;
+}
+
+#about-frame .features-box .item .desc {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+#about-frame .features-box .item .desc p {
+  padding: 10px 0;
+}
+/* //features box */
+
+/*  goal box */
+#about-frame .goal-box {
+  width: calc(100% - 100px);
+  padding: 200px 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22px;
+  color: #666;
+  font-weight: 300;
+  line-height: 32px;
+  word-break: keep-all;
+}
+
+#about-frame .goal-box p {
+  padding: 10px 50px;
+  border-width: 0 5px 0 5px;
+  border-style: solid;
+  border-color: #d82316;
+}
+
+#about-frame .goal-box em {
+  font-weight: 500;
+  color: #101213;
+}
+/* // goal box */

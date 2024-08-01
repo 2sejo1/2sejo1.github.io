@@ -1,0 +1,17 @@
+
+.frame-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  color: #fff;
+  background: url(../img/frame-title-bg.jpg) center center/cover;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+.frame-head h2 {
+  margin-top: 50px;
+}

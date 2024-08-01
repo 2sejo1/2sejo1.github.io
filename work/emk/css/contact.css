@@ -1,0 +1,92 @@
+@import url(./frame.css);
+
+#contact-frame {
+  color: #101213;
+}
+
+#contact-frame .contact-box {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#contact-frame .contact-box > ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 52px;
+  text-align: center;
+}
+
+#contact-frame .contact-box > ul > li {
+  position: relative;
+  width: 30%;
+}
+
+#contact-frame .contact-box > ul > li:last-child::after {
+  display: none;
+}
+
+#contact-frame .contact-box > ul > li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 2px;
+  height: 100%;
+  background-color: #dddddd;
+}
+
+#contact-frame .contact-box > ul > li .img-box {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+#contact-frame .contact-box > ul > li .img-box img {
+  height: 100%;
+}
+
+#contact-frame .contact-box > ul > li .text-box .title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#contact-frame .contact-box > ul > li .text-box ul {
+  padding: 30px 50px;
+  text-align: left;
+  font-size: 15px;
+}
+
+#contact-frame .contact-box > ul > li .text-box ul li {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 5px 0;
+}
+
+#contact-frame .contact-box > ul > li .text-box ul li .name {
+  width: 30px;
+  font-weight: 600;
+}
+
+#contact-frame .contact-box > ul > li.ticket .text-box ul li .name {
+  width: 80px;
+}
+
+#contact-frame .contact-box .address {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 100px 0;
+  font-size: 18px;
+}
+
+#contact-frame .contact-box .address .name {
+  font-weight: 600;
+}
+
+#contact-frame .contact-box .address a span {
+  color: #a4a4a4;
+  margin-left: 20px;
+}
