@@ -21,6 +21,80 @@ document.querySelectorAll(".nav-box").forEach(function (e) {
 });
 // // nav
 
+// mobile menu
+
+document
+  .querySelector("nav .nav-wrap .site-box .menu-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".mobile-mn-window").classList.add("open");
+  });
+
+document
+  .querySelector(".mobile-mn-window .m-all-mn-box .close-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".mobile-mn-window").classList.remove("open");
+    document
+      .querySelector(".mobile-mn-window .m-all-mn-box")
+      .classList.remove("open");
+  });
+
+///////
+
+document.querySelector(".m-prod-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".mobile-mn-window .m-prod-box").classList.add("open");
+});
+document
+  .querySelector(".mobile-mn-window .m-prod-box .close-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    document
+      .querySelector(".mobile-mn-window .m-prod-box")
+      .classList.remove("open");
+  });
+
+document.querySelector(".m-all-mn-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  document
+    .querySelector(".mobile-mn-window .m-all-mn-box")
+    .classList.add("open");
+});
+
+////////
+
+document
+  .querySelectorAll(".mobile-mn-window .mobile-mn-box .mobile-mn-list .main-mn")
+  .forEach(function (e) {
+    e.addEventListener("click", function () {
+      document
+        .querySelectorAll(
+          ".mobile-mn-window .mobile-mn-box .mobile-mn-list .main-mn.on"
+        )
+        .forEach(function (elem) {
+          if (elem !== e) {
+            elem.classList.remove("on");
+          }
+        });
+      e.classList.toggle("on");
+    });
+  });
+
+////////
+
+window.addEventListener("resize", function () {
+  document.querySelector(".mobile-mn-window").classList.remove("open");
+  document
+    .querySelector(".mobile-mn-window .m-prod-box")
+    .classList.remove("open");
+  document
+    .querySelector(".mobile-mn-window .m-all-mn-box")
+    .classList.remove("open");
+});
+
+// // mobile menu
+
 //  slide btn path
 // prev btn
 document.querySelectorAll(".main-prev-btn").forEach(function (e) {
